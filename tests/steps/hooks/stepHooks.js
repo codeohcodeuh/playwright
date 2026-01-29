@@ -1,7 +1,9 @@
-const { test } = require('@playwright/test');
+const { createBdd } = require('playwright-bdd');
 const { logStep, endScenarioLog } = require('../../support/logger');
 
-test.afterEach(async (_, testInfo) => {
+const { After } = createBdd();
+
+After(async ({}, testInfo) => {
   endScenarioLog(testInfo);
 });
 
