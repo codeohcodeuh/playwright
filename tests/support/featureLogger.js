@@ -6,7 +6,7 @@ function sanitize(name) {
 }
 
 function createFeatureLogger(testInfo) {
-  const featureName = sanitize(testInfo.titlePath[0]);
+  const featureName = sanitize(testInfo?.titlePath?.[0] ?? 'unknown_feature');
   const timestamp = new Date()
     .toISOString()
     .replace(/[-:]/g, '')

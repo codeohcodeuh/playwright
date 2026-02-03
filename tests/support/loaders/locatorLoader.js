@@ -1,9 +1,18 @@
 const cache = new Map();
+const config = require('../../config');
 
+/**
+ * Loads locators for an application.
+ */
 async function loadLocators(app) {
+  if (!app) {
+    throw new Error('App name is required to load locators');
+  }
+
   if (!cache.has(app)) {
+    console.log(`Fetching locators for ${app}`);
     const res = await fetch(
-      `http://localhost:3002/api/exports/locators/${app}`
+      `${config.expeditestUrl}/api/exports/locators/${app}`
     );
 
     if (!res.ok) {

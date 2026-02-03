@@ -1,0 +1,29 @@
+[2026-02-03T12:40:22.353Z] FEATURE: tests/features/sample.feature.spec.js
+[2026-02-03T12:40:22.354Z] SCENARIO: Navigate to the application
+[2026-02-03T12:40:22.354Z] START TIME: 2026-02-03T12:40:22.354Z
+[2026-02-03T12:40:22.354Z] ENV: QA
+[2026-02-03T12:40:22.354Z] APP: AeriaLink
+[2026-02-03T12:40:22.354Z] DATA KEYS: AeriaLink.MCH.Niche.00002, AeriaLink.MCH.Niche.00003
+[2026-02-03T12:40:22.382Z] BASE URL: https://qa-portal5.int.aerialink.net/login
+[2026-02-03T12:40:22.382Z] LOCATORS LOADED: 4
+[2026-02-03T12:40:22.407Z] START STEP #1: Given the user navigates to the application : 
+[2026-02-03T12:40:22.407Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-03T12:40:22.407Z] 		Navigating to the application URL: https://qa-portal5.int.aerialink.net/login
+[2026-02-03T12:40:25.500Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-03T12:40:25.500Z] END STEP #1: Given the user navigates to the application (0m 3s)
+
+
+[2026-02-03T12:40:25.504Z] START STEP #2: When the user clicks on the webElement {word} on the {word} page : 
+[2026-02-03T12:40:25.504Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-03T12:40:25.504Z] 		Locator BTN-Login.Landing.default
+[2026-02-03T12:40:25.504Z] 		Locator value: //button[text()='Login']
+[2026-02-03T12:40:25.504Z] 		Performing click action on the locator
+[2026-02-03T12:40:27.535Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-03T12:40:27.535Z] END STEP #2: When the user clicks on the webElement {word} on the {word} page (0m 2s)
+
+
+[2026-02-03T12:40:27.539Z] START STEP #3: When /^the user enters a value (.+) on the webElement (\S+) on the (\S+) page$/ : 
+[2026-02-03T12:40:27.539Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-03T12:40:27.540Z] STEP END: 3: When /^the user enters a value (.+) on the webElement (\S+) on the (\S+) page$/ (0m 0s)
+[2026-02-03T12:40:27.540Z] STEP FAILED: 3: When /^the user enters a value (.+) on the webElement (\S+) on the (\S+) page$/
+[2026-02-03T12:40:27.540Z] ERROR: Locator not found for key 'INP-Email.default.Login'. Check contextData.locators

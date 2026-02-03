@@ -3,7 +3,8 @@ const { logStep, endScenarioLog } = require('../../support/logger');
 
 const { After } = createBdd();
 
-After(async ({}, testInfo) => {
+After(async ({ $test }) => {
+  const testInfo = $test.info();
   endScenarioLog(testInfo);
 });
 

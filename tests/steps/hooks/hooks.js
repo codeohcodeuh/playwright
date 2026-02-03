@@ -9,20 +9,32 @@ const { loadTestData } = require('../../support/loaders/dataLoader');
 const { startScenarioLog } = require('../../support/logger');
 const { createFeatureLogger } = require('../../support/featureLogger');
 
-Before(async ({ page }, testInfo) => {
+Before(async ({ page, $test, $bddFileData }) => {
+  const testInfo = $test.info();
 
 
   // Create feature log file
   const logger = createFeatureLogger(testInfo);
   testInfo.logger = logger;
-  logger.log(`FEATURE: ${testInfo.titlePath[0]}`);
-  logger.log(`SCENARIO: ${testInfo.title}`);
+  logger.log(`FEATURE: ${testInfo.titlePath?.[0] ?? 'unknown_feature'}`);
+  logger.log(`SCENARIO: ${testInfo.title ?? 'unknown_scenario'}`);
   logger.log(`START TIME: ${new Date().toISOString()}`);
 
   // Parse tags
-  const tags = testInfo.annotations
-    .filter(a => a.type === 'tag')
-    .map(a => a.description);
+  let tags = Array.isArray(testInfo.tags) ? testInfo.tags : [];
+
+  if (tags.length === 0) {
+    tags = testInfo.annotations
+      ?.filter(a => a.type === 'tag')
+      .map(a => a.description) ?? [];
+  }
+
+  if (tags.length === 0 && Array.isArray($bddFileData)) {
+    const scenarioData =
+      $bddFileData.find(data => data.pwTestLine === testInfo.location?.line) ||
+      $bddFileData[0];
+    tags = scenarioData?.tags ?? [];
+  }
 
   const ctx = parseTags(tags);
   logger.log(`ENV: ${ctx.env}`);

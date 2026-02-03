@@ -1,3 +1,5 @@
+// Not in use, as we want to give more control to the user
+
 function buildLocatorEngine(page, locators) {
     return {
       click: async (key) => {
