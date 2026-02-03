@@ -16,7 +16,7 @@ When(
       );
     }
 
-    logger?.log(`\t\tLocator ${locatorKey}`);
+    logger?.log(`\t\tLocator \t: ${locatorKey}`);
     logger?.log(`\t\tLocator value: ${locatorValue}`);
     logger?.log(`\t\tPerforming click action on the locator`);
 
@@ -39,7 +39,7 @@ When(
       );
     }
 
-    logger?.log(`\t\tLocator ${locatorKey}`);
+    logger?.log(`\t\tLocator \t: ${locatorKey}`);
     logger?.log(`\t\tLocator value: ${locatorValue}`);
     logger?.log(`\t\tPerforming double click action on the locator`);
 
@@ -62,7 +62,7 @@ When(
       );
     }
 
-    logger?.log(`\t\tLocator ${locatorKey}`);
+    logger?.log(`\t\tLocator \t: ${locatorKey}`);
     logger?.log(`\t\tLocator value: ${locatorValue}`);
     logger?.log(`\t\tPerforming right click action on the locator`);
 

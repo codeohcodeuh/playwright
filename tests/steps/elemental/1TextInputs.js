@@ -3,7 +3,7 @@ const { Given, When, Then } = require('../hooks/bdd');
 
 // When the user enters a value valueName on the webElement INP-Email on the Login.default page
 When(
-  /^the user enters a value (.*) on the webElement {word} on the {word} page$/,
+  'the user enters a value {string} on the webElement {word} on the {word} page',
   async ({ page }, testInfo, valueName, elementName, pageName) => {
     const logger = testInfo?.logger;
 
@@ -14,9 +14,9 @@ When(
       throw new Error(
         `Locator not found for key '${locatorKey}'. Check contextData.locators`
       );
-    }
+    } 
 
-    logger?.log(`\t\tLocator ${locatorKey}`);
+    logger?.log(`\t\tLocator \t :${locatorKey}`);
     logger?.log(`\t\tLocator value: ${locatorValue}`);
     logger?.log(`\t\tEntering value: ${valueName}`);
 
