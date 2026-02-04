@@ -10,3 +10,4 @@ The login
     When the user clicks on the webElement BTN-SignIn on the Login.default page
     When the user clicks on the webElement MNU-Configuration on the NavigationSideBar.default page
     When the user clicks on the webElement MNI-Connections on the NavigationSideBar.default page
+    Then the user verifies the Connections page at the exhaustive factor of 10 percent

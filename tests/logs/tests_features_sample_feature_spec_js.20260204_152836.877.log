@@ -1,0 +1,20 @@
+[2026-02-04T15:28:36.877Z] FEATURE: tests/features/sample.feature.spec.js
+[2026-02-04T15:28:36.877Z] SCENARIO: Navigate to the application
+[2026-02-04T15:28:36.877Z] START TIME: 2026-02-04T15:28:36.877Z
+[2026-02-04T15:28:36.878Z] ENV: QA
+[2026-02-04T15:28:36.878Z] APP: AeriaLink
+[2026-02-04T15:28:36.878Z] DATA KEYS: AeriaLink.MCH.Niche.00002, AeriaLink.MCH.Niche.00003
+[2026-02-04T15:28:36.954Z] BASE URL: https://qa-portal5.int.aerialink.net/login
+[2026-02-04T15:28:36.954Z] LOCATORS LOADED: 26
+[2026-02-04T15:28:36.965Z] START STEP #1: Given the user navigates to the application : 
+[2026-02-04T15:28:36.965Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T15:28:36.965Z] 		Navigating to the application URL: https://qa-portal5.int.aerialink.net/login
+[2026-02-04T15:28:40.809Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T15:28:40.809Z] END STEP #1: Given the user navigates to the application (0m 3s)
+
+
+[2026-02-04T15:28:40.814Z] START STEP #2: When the user clicks on the webElement {word} on the {word} page : 
+[2026-02-04T15:28:40.814Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T15:28:40.814Z] STEP END: 2: When the user clicks on the webElement {word} on the {word} page (0m 0s)
+[2026-02-04T15:28:40.814Z] STEP FAILED: 2: When the user clicks on the webElement {word} on the {word} page
+[2026-02-04T15:28:40.814Z] ERROR: Locator not found for key 'BTN-Login.Landing.default'. Check contextData.locators

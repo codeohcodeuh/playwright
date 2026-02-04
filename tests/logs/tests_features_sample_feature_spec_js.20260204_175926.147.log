@@ -1,0 +1,141 @@
+[2026-02-04T17:59:26.147Z] FEATURE: tests/features/sample.feature.spec.js
+[2026-02-04T17:59:26.147Z] SCENARIO: Navigate to the application
+[2026-02-04T17:59:26.148Z] START TIME: 2026-02-04T17:59:26.148Z
+[2026-02-04T17:59:26.148Z] ENV: QA
+[2026-02-04T17:59:26.148Z] APP: AeriaLink
+[2026-02-04T17:59:26.148Z] DATA KEYS: AeriaLink.MCH.Niche.00002, AeriaLink.MCH.Niche.00003
+[2026-02-04T17:59:26.174Z] BASE URL: https://qa-portal5.int.aerialink.net/login
+[2026-02-04T17:59:26.174Z] LOCATORS LOADED: 48
+[2026-02-04T17:59:26.185Z] START STEP #1: Given the user navigates to the application : 
+[2026-02-04T17:59:26.186Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:26.186Z] 		Navigating to the application URL: https://qa-portal5.int.aerialink.net/login
+[2026-02-04T17:59:29.150Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T17:59:29.150Z] END STEP #1: Given the user navigates to the application (0m 2s)
+
+
+[2026-02-04T17:59:29.154Z] START STEP #2: When the user clicks on the webElement {word} on the {word} page : 
+[2026-02-04T17:59:29.154Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:29.154Z] 		Locator 	: BTN-Login.Landing.default
+[2026-02-04T17:59:29.154Z] 		Locator value: //button[text()='Login']
+[2026-02-04T17:59:29.154Z] 		Performing click action on the locator
+[2026-02-04T17:59:31.062Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T17:59:31.062Z] END STEP #2: When the user clicks on the webElement {word} on the {word} page (0m 1s)
+
+
+[2026-02-04T17:59:31.066Z] START STEP #3: When the user enters a value {string} on the webElement {word} on the {word} page : 
+[2026-02-04T17:59:31.066Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:31.066Z] 		Locator 	 :INP-Email.Login.default
+[2026-02-04T17:59:31.066Z] 		Locator value: //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@id='signInFormUsername']
+[2026-02-04T17:59:31.066Z] 		Entering value: nishan.manoraj@goconvey.com
+[2026-02-04T17:59:33.413Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T17:59:33.413Z] END STEP #3: When the user enters a value {string} on the webElement {word} on the {word} page (0m 2s)
+
+
+[2026-02-04T17:59:33.414Z] START STEP #4: When the user enters a value {string} on the webElement {word} on the {word} page : 
+[2026-02-04T17:59:33.414Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:33.414Z] 		Locator 	 :INP-Password.Login.default
+[2026-02-04T17:59:33.414Z] 		Locator value: //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@id='signInFormPassword']
+[2026-02-04T17:59:33.414Z] 		Entering value: Surekha@123
+[2026-02-04T17:59:33.434Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T17:59:33.434Z] END STEP #4: When the user enters a value {string} on the webElement {word} on the {word} page (0m 0s)
+
+
+[2026-02-04T17:59:33.435Z] START STEP #5: When the user clicks on the webElement {word} on the {word} page : 
+[2026-02-04T17:59:33.435Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:33.435Z] 		Locator 	: BTN-SignIn.Login.default
+[2026-02-04T17:59:33.435Z] 		Locator value: //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@name='signInSubmitButton']
+[2026-02-04T17:59:33.435Z] 		Performing click action on the locator
+[2026-02-04T17:59:35.974Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T17:59:35.974Z] END STEP #5: When the user clicks on the webElement {word} on the {word} page (0m 2s)
+
+
+[2026-02-04T17:59:35.976Z] START STEP #6: When the user clicks on the webElement {word} on the {word} page : 
+[2026-02-04T17:59:35.976Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:35.976Z] 		Locator 	: MNU-Configuration.NavigationSideBar.default
+[2026-02-04T17:59:35.976Z] 		Locator value: //button[contains(.,'Configuration')]
+[2026-02-04T17:59:35.976Z] 		Performing click action on the locator
+[2026-02-04T17:59:38.316Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T17:59:38.316Z] END STEP #6: When the user clicks on the webElement {word} on the {word} page (0m 2s)
+
+
+[2026-02-04T17:59:38.316Z] START STEP #7: When the user clicks on the webElement {word} on the {word} page : 
+[2026-02-04T17:59:38.316Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:38.316Z] 		Locator 	: MNI-Connections.NavigationSideBar.default
+[2026-02-04T17:59:38.316Z] 		Locator value: //li/a[contains(.,'Connections')]
+[2026-02-04T17:59:38.316Z] 		Performing click action on the locator
+[2026-02-04T17:59:39.067Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-02-04T17:59:39.067Z] END STEP #7: When the user clicks on the webElement {word} on the {word} page (0m 0s)
+
+
+[2026-02-04T17:59:39.070Z] START STEP #8: Then the user verifies the Connections page at the exhaustive factor of {int} percent : 
+[2026-02-04T17:59:39.070Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-02-04T17:59:39.070Z] 
+========== CONNECTIONS EXHAUSTIVE VALIDATION ==========
+
+[2026-02-04T17:59:39.070Z] Exhaustive Factor: 10%
+[2026-02-04T17:59:39.070Z] 
+--- LOCATOR RESOLUTION ---
+[2026-02-04T17:59:39.070Z] BTN-CurrentPage.CommonPagination.default => //a[@aria-current='page']
+[2026-02-04T17:59:39.070Z] BTN-FirstPage.CommonPagination.default => //span/a[contains(@class, 'paginate_button')][1]
+[2026-02-04T17:59:39.070Z] BTN-LastPage.CommonPagination.default => (//span/a[contains(@class, 'paginate_button')])[last()]
+[2026-02-04T17:59:39.070Z] BTN-NextPage.CommonPagination.default => //a[text()='Next']
+[2026-02-04T17:59:39.070Z] BTN-PreviousPage.CommonPagination.default => //a[text()='Previous']
+[2026-02-04T17:59:39.070Z] DDI-Show1000Entries.CommonPagination.default => //label[contains(text(),'Show')]//select/option[text()='1000']
+[2026-02-04T17:59:39.070Z] DDI-Show100Entries.CommonPagination.default => //label[contains(text(),'Show')]//select/option[text()='100']
+[2026-02-04T17:59:39.070Z] DDI-Show300Entries.CommonPagination.default => //label[contains(text(),'Show')]//select/option[text()='300']
+[2026-02-04T17:59:39.070Z] DDI-Show500Entries.CommonPagination.default => //label[contains(text(),'Show')]//select/option[text()='500']
+[2026-02-04T17:59:39.070Z] DDN-ShowNumberOfEntries.CommonPagination.default => //label[contains(text(),'Show')]//select
+[2026-02-04T17:59:39.070Z] TXT-TotalEntries.CommonPagination.default => //div[contains(text(),'entries')]
+[2026-02-04T17:59:39.070Z] TXT-NoMatchingRecords.CommonTable.NoRecords => //td[text()='No matching records found']
+[2026-02-04T17:59:39.070Z] BTN-AddNewConnection.Connections.default => //button[@id='new-record-button']
+[2026-02-04T17:59:39.070Z] BTN-CurrentPage.Connections.default => //a[@aria-current='page']
+[2026-02-04T17:59:39.070Z] BTN-FirstPage.Connections.default => //span/a[contains(@class, 'paginate_button')][1]
+[2026-02-04T17:59:39.070Z] BTN-LastPage.Connections.default => (//span/a[contains(@class, 'paginate_button')])[last()]
+[2026-02-04T17:59:39.070Z] BTN-NextPage.Connections.default => //a[text()='Next']
+[2026-02-04T17:59:39.070Z] BTN-PreviousPage.Connections.default => //a[text()='Previous']
+[2026-02-04T17:59:39.070Z] BTN-Reset.Connections.default => //button[@id='option-search-reset']
+[2026-02-04T17:59:39.070Z] BTN-Search.Connections.default => //button[@id='option-search']
+[2026-02-04T17:59:39.070Z] DDI-1stAccount.Connections.default => //ul[@id='select2-account-id-results']/li[1]
+[2026-02-04T17:59:39.070Z] DDI-1stConnection.Connections.default => //ul[@id='select2-connection-id-results']/li[1]
+[2026-02-04T17:59:39.070Z] DDI-AllAccounts.Connections.default => //ul[@id='select2-account-id-results']/li
+[2026-02-04T17:59:39.070Z] DDI-AllConnections.Connections.default => //ul[@id='select2-connection-id-results']/li
+[2026-02-04T17:59:39.070Z] DDI-OutputDownload.Connections.default => //select[@id='options-output']/option[text()='Download']
+[2026-02-04T17:59:39.070Z] DDI-OutputScreen.Connections.default => //select[@id='options-output']/option[text()='Screen']
+[2026-02-04T17:59:39.070Z] DDI-SortByConnectionIdAscending.Connections.default => //select[@id='sort']/option[contains(text(),'Connection ID Ascending')]
+[2026-02-04T17:59:39.070Z] DDI-SortByConnectionIdDescending.Connections.default => //select[@id='sort']/option[contains(text(),'Connection ID Desending')]
+[2026-02-04T17:59:39.070Z] DDI-SortByConnectionNameDescending.Connections.default => //select[@id='sort']/option[contains(text(),'Connection Name Descending')]
+[2026-02-04T17:59:39.070Z] DDI-SortByLastUpdatedAscending.Connections.default => //select[@id='sort']/option[contains(text(),'Last Updated Ascending')]
+[2026-02-04T17:59:39.070Z] DDI-SortByLastUpdatedDescending.Connections.default => //select[@id='sort']/option[contains(text(),'Last Updated Descending')]
+[2026-02-04T17:59:39.070Z] DDN-Account.Connections.default => //span[@id='select2-account-id-container']/..//b
+[2026-02-04T17:59:39.070Z] DDN-Connection.Connections.default => //span[@id='select2-connection-id-container']/..//b
+[2026-02-04T17:59:39.070Z] DDN-Output.Connections.default => //select[@id='options-output']
+[2026-02-04T17:59:39.070Z] DDN-SortBy.Connections.default => //select[@id='sort']
+[2026-02-04T17:59:39.070Z] DDN-SortByConnectionNameAscending.Connections.default => //select[@id='sort']/option[contains(text(),'Connection Name Ascending')]
+[2026-02-04T17:59:39.070Z] INP-AccountSearchText.Connections.default => //input[@aria-controls='select2-account-id-results']
+[2026-02-04T17:59:39.070Z] INP-ConnectionGUID.Connections.default => //input[@id='connectionGUID']
+[2026-02-04T17:59:39.070Z] INP-ConnectionSearchText.Connections.default => //input[@aria-controls='select2-connection-id-results']
+[2026-02-04T17:59:39.070Z] TRW-1stRow.Connections.default => //tbody/tr[1]
+[2026-02-04T17:59:39.070Z] TRW-AllRows.Connections.default => //tbody/tr
+[2026-02-04T17:59:39.070Z] TXT-TotalEntries.Connections.default => //div[contains(text(),'entries')]
+[2026-02-04T17:59:39.070Z] BTN-Login.Landing.default => //button[text()='Login']
+[2026-02-04T17:59:39.070Z] BTN-SignIn.Login.default => //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@name='signInSubmitButton']
+[2026-02-04T17:59:39.070Z] INP-Email.Login.default => //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@id='signInFormUsername']
+[2026-02-04T17:59:39.070Z] INP-Password.Login.default => //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@id='signInFormPassword']
+[2026-02-04T17:59:39.070Z] MNI-Connections.NavigationSideBar.default => //li/a[contains(.,'Connections')]
+[2026-02-04T17:59:39.070Z] MNU-Configuration.NavigationSideBar.default => //button[contains(.,'Configuration')]
+[2026-02-04T17:59:41.611Z] Parent Accounts Total: 90, Executing: 9
+[2026-02-04T17:59:41.712Z] 
+--- PARENT: New Tel Systems [347] ---
+[2026-02-04T17:59:42.270Z] Pagination hops: FIRST
+[2026-02-04T17:59:42.270Z] 	Pagination: FIRST
+[2026-02-04T17:59:50.284Z] 
+--- PARENT: OrthoChart, LLC [224] ---
+[2026-02-04T17:59:50.882Z] Pagination hops: FIRST
+[2026-02-04T17:59:50.883Z] 	Pagination: FIRST
+[2026-02-04T17:59:53.323Z] 
+--- PARENT: Alert Tech [14] ---
+[2026-02-04T17:59:53.882Z] Pagination hops: NEXT
+[2026-02-04T17:59:53.883Z] 	Pagination: NEXT
+[2026-02-04T17:59:55.688Z] STEP END: 8: Then the user verifies the Connections page at the exhaustive factor of {int} percent (0m 16s)
+[2026-02-04T17:59:55.688Z] STEP FAILED: 8: Then the user verifies the Connections page at the exhaustive factor of {int} percent
+[2026-02-04T17:59:55.688Z] ERROR: page.textContent: Target page, context or browser has been closed
