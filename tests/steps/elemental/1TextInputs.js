@@ -1,7 +1,8 @@
 const { createBdd } = require('playwright-bdd');
 const { Given, When, Then } = require('../hooks/bdd');
 
-// When the user enters a value valueName on the webElement INP-Email on the Login.default page
+
+//When the user enters a value "nishan.manoraj@goconvey.com" on the webElement INP-Email on the Login.default page
 When(
   'the user enters a value {string} on the webElement {word} on the {word} page',
   async ({ page }, testInfo, valueName, elementName, pageName) => {
