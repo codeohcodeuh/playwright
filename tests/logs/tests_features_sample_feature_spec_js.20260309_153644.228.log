@@ -1,0 +1,1603 @@
+[2026-03-09T15:36:44.228Z] FEATURE: tests/features/sample.feature.spec.js
+[2026-03-09T15:36:44.228Z] SCENARIO: Navigate to the application
+[2026-03-09T15:36:44.228Z] START TIME: 2026-03-09T15:36:44.228Z
+[2026-03-09T15:36:44.229Z] ENV: QA
+[2026-03-09T15:36:44.229Z] APP: AeriaLink
+[2026-03-09T15:36:44.229Z] DATA KEYS: AeriaLink.MCH.Niche.00002, AeriaLink.MCH.Niche.00003
+[2026-03-09T15:36:44.565Z] BASE URL: https://qa-portal5.int.aerialink.net/login
+[2026-03-09T15:36:44.565Z] LOCATORS LOADED: 63
+[2026-03-09T15:36:44.571Z] START STEP #1: Given the user navigates to the application : 
+[2026-03-09T15:36:44.571Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:44.571Z] 		Navigating to the application URL: https://qa-portal5.int.aerialink.net/login
+[2026-03-09T15:36:48.250Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-03-09T15:36:48.250Z] END STEP #1: Given the user navigates to the application (0m 3s)
+
+
+[2026-03-09T15:36:48.256Z] START STEP #2: When the user clicks on the webElement {word} on the {word} page : 
+[2026-03-09T15:36:48.256Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:48.256Z] 		Locator 	: BTN-Login.Landing.default
+[2026-03-09T15:36:48.256Z] 		Locator value: //button[text()='Login']
+[2026-03-09T15:36:48.256Z] 		Performing click action on the locator
+[2026-03-09T15:36:49.816Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-03-09T15:36:49.816Z] END STEP #2: When the user clicks on the webElement {word} on the {word} page (0m 1s)
+
+
+[2026-03-09T15:36:49.819Z] START STEP #3: When the user enters a value {string} on the webElement {word} on the {word} page : 
+[2026-03-09T15:36:49.819Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:49.819Z] 		Locator 	 :INP-Email.Login.default
+[2026-03-09T15:36:49.819Z] 		Locator value: //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@id='signInFormUsername']
+[2026-03-09T15:36:49.819Z] 		Entering value: nishan.manoraj@goconvey.com
+[2026-03-09T15:36:52.160Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-03-09T15:36:52.160Z] END STEP #3: When the user enters a value {string} on the webElement {word} on the {word} page (0m 2s)
+
+
+[2026-03-09T15:36:52.161Z] START STEP #4: When the user enters a value {string} on the webElement {word} on the {word} page : 
+[2026-03-09T15:36:52.161Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:52.161Z] 		Locator 	 :INP-Password.Login.default
+[2026-03-09T15:36:52.161Z] 		Locator value: //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@id='signInFormPassword']
+[2026-03-09T15:36:52.161Z] 		Entering value: Surekha@123
+[2026-03-09T15:36:52.234Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-03-09T15:36:52.234Z] END STEP #4: When the user enters a value {string} on the webElement {word} on the {word} page (0m 0s)
+
+
+[2026-03-09T15:36:52.235Z] START STEP #5: When the user clicks on the webElement {word} on the {word} page : 
+[2026-03-09T15:36:52.235Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:52.235Z] 		Locator 	: BTN-SignIn.Login.default
+[2026-03-09T15:36:52.235Z] 		Locator value: //div[contains(@class,'modal-content') and contains(@class,'visible-md')]//input[@name='signInSubmitButton']
+[2026-03-09T15:36:52.235Z] 		Performing click action on the locator
+[2026-03-09T15:36:53.422Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-03-09T15:36:53.422Z] END STEP #5: When the user clicks on the webElement {word} on the {word} page (0m 1s)
+
+
+[2026-03-09T15:36:53.423Z] START STEP #6: When the user clicks on the webElement {word} on the {word} page : 
+[2026-03-09T15:36:53.423Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:53.423Z] 		Locator 	: MNU-Configuration.NavigationSideBar.default
+[2026-03-09T15:36:53.423Z] 		Locator value: //button[contains(.,'Configuration')]
+[2026-03-09T15:36:53.423Z] 		Performing click action on the locator
+[2026-03-09T15:36:56.916Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-03-09T15:36:56.916Z] END STEP #6: When the user clicks on the webElement {word} on the {word} page (0m 3s)
+
+
+[2026-03-09T15:36:56.916Z] START STEP #7: When the user clicks on the webElement {word} on the {word} page : 
+[2026-03-09T15:36:56.916Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:56.916Z] 		Locator 	: MNI-Connections.NavigationSideBar.default
+[2026-03-09T15:36:56.916Z] 		Locator value: //li/a[contains(.,'Connections')]
+[2026-03-09T15:36:56.916Z] 		Performing click action on the locator
+[2026-03-09T15:36:57.634Z] ⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆⬆
+[2026-03-09T15:36:57.634Z] END STEP #7: When the user clicks on the webElement {word} on the {word} page (0m 0s)
+
+
+[2026-03-09T15:36:57.635Z] START STEP #8: Then the user verifies the Connections page as a {word} : 
+[2026-03-09T15:36:57.635Z] ⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇⬇
+[2026-03-09T15:36:57.637Z] Clicking on the Exclude Sub-accounts checkbox
+[2026-03-09T15:37:05.187Z] 								Performing CLICK action | Element: CHK-ExcludeSubAccounts.Connections.default | Locator: //label[text()='Exclude Sub-accounts']/../input
+[2026-03-09T15:37:05.187Z] The selected role is "admin"
+[2026-03-09T15:37:05.187Z] 						 Exhaustive Factor from config (exhaustiveFactor in config.js) = 5
+
+
+[2026-03-09T15:37:05.187Z] ➡️  Validation I. Checking the number of parent accounts in the API against the UI
+[2026-03-09T15:37:05.187Z] 		SELECTION-Step I.1: Loading the data from the category-counts API
+[2026-03-09T15:37:05.187Z] 				Calling category-counts API: http://localhost:3000/api/connections/category-counts
+[2026-03-09T15:37:07.997Z] 		 				Parents: [{"accountID":347,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":137,"uIRep":"New Tel Systems [347]"},{"accountID":224,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":33,"uIRep":"OrthoChart, LLC [224]"},{"accountID":14,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":24,"uIRep":"Alert Tech [14]"},{"accountID":581,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":24,"uIRep":"Medallia [581]"},{"accountID":370,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":17,"uIRep":"DEV [370]"},{"accountID":389,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":16,"uIRep":"ProKeep [389]"},{"accountID":36,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":13,"uIRep":"Screen-Magic Mobile Media Inc. [36]"},{"accountID":7,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":10,"uIRep":"Upwire [7]"},{"accountID":18,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":9,"uIRep":"University of Michigan, Survey Research Operations - Production Account [18]"},{"accountID":476,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":9,"uIRep":"PowerNet Global [476]"},{"accountID":837,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":8,"uIRep":"J.B. Hunt Transport, Inc. [837]"},{"accountID":129,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":7,"uIRep":"Instant Evaluate, Inc. [129]"},{"accountID":21,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":6,"uIRep":"Land O'Lakes Inc [21]"},{"accountID":257,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":6,"uIRep":"CRC International Inc. [257]"},{"accountID":268,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":6,"uIRep":"CSF Corporation [268]"},{"accountID":317,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":6,"uIRep":"Proximiti [317]"},{"accountID":148,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":5,"uIRep":"Cisco Systems, Inc [148]"},{"accountID":281,"accountStatus":"VALID","active":0,"parent":true,"connectionCount":5,"uIRep":"Aizan Technologies [281] --Inactive--"},{"accountID":286,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":5,"uIRep":"Ytel Inc. [286]"},{"accountID":530,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":5,"uIRep":"Seventh Compass, Inc [530]"},{"accountID":16,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":4,"uIRep":"StudioPlus Software [16]"},{"accountID":60,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":4,"uIRep":"Openity [60]"},{"accountID":116,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":4,"uIRep":"Sinch (CLX Networks) [116]"},{"accountID":214,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":4,"uIRep":"Call-Em-All [214]"},{"accountID":275,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":4,"uIRep":"360 Degree Cloud [275]"},{"accountID":319,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":4,"uIRep":"DID Logic [319]"},{"accountID":615,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":4,"uIRep":"Utility Telecom [615]"},{"accountID":11,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"TSG Global Inc [11]"},{"accountID":40,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"mGage [40]"},{"accountID":146,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"AMN Healthcare, Inc. [146]"},{"accountID":189,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"Text My Main Number, Inc. [189]"},{"accountID":227,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"Marlimar Interactive [227]"},{"accountID":282,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"Text Aspect [282]"},{"accountID":342,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"Moblico [342]"},{"accountID":378,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"United Internet Services, LLC (Voicetel) [378]"},{"accountID":529,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"Text Legal, LLC [529]"},{"accountID":1174,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"VertexOne Software [1174]"},{"accountID":1581,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"Sachi Tech [1581]"},{"accountID":5000,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":3,"uIRep":"QA Testers [5000]"},{"accountID":31,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Property Trak LLC [31]"},{"accountID":52,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Mission Mobile [52]"},{"accountID":85,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"XOP Networks [85]"},{"accountID":89,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"MindMe, Inc. [89]"},{"accountID":96,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Appriss Inc. [96]"},{"accountID":133,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Kaplan Trucking Company [133]"},{"accountID":212,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Story County Attorney's Office [212]"},{"accountID":267,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"ICEA Service Bureau [267]"},{"accountID":300,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"AcroVoice Solutions Inc [300]"},{"accountID":344,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Textology [344]"},{"accountID":942,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Apeiron Systems [942]"},{"accountID":1087,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"Old World Industries [1087]"},{"accountID":5001,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":2,"uIRep":"James' Account of Testing [5001]"},{"accountID":76,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Wipro Technologies - Baldev Parida [76]"},{"accountID":90,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Savance, LLC [90]"},{"accountID":103,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Matrix42 GmbH [103]"},{"accountID":122,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"GCS Electronics & Communication [122]"},{"accountID":123,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Cooperative of American Physicians, Inc. [123]"},{"accountID":158,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Polk County Attorneys Office [158]"},{"accountID":194,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Screen Magic One Hop [194]"},{"accountID":195,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Admiral Pest Control [195]"},{"accountID":208,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Oasis Financial [208]"},{"accountID":220,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Jefferson County [220]"},{"accountID":277,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"The Law Offices of Kanner & Pintaluga [277]"},{"accountID":303,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Crimestar [303]"},{"accountID":313,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Beta Texting LLC [313]"},{"accountID":318,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"ES3 [318]"},{"accountID":322,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Textel LLC [322]"},{"accountID":358,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Hampton Lumber [358]"},{"accountID":442,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Aerialink Operations [442]"},{"accountID":526,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Arvig [526]"},{"accountID":531,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"CJS Financial, Inc [531]"},{"accountID":554,"accountStatus":"VALID","active":0,"parent":true,"connectionCount":1,"uIRep":"West Valley [554] --Inactive--"},{"accountID":658,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"State Farm Insurance [658]"},{"accountID":856,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Ethiqs [856]"},{"accountID":894,"accountStatus":"VALID","active":0,"parent":true,"connectionCount":1,"uIRep":"Bucktown Chiropractic [894] --Inactive--"},{"accountID":895,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Churchill Chiropractic [895]"},{"accountID":1013,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Grapevine Faith Christian School [1013]"},{"accountID":1184,"accountStatus":"VALID","active":0,"parent":true,"connectionCount":1,"uIRep":"Victory Telecom, Inc. [1184] --Inactive--"},{"accountID":1206,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Elite Golf Technology LLC [1206]"},{"accountID":1390,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"JRSoft LLC [1390]"},{"accountID":1440,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Aerialinkqa1 [1440]"},{"accountID":1441,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Aerialinkqa2 [1441]"},{"accountID":1472,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Broadnet Technologies LLC [1472]"},{"accountID":1586,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"JR Soft LLC [1586]"},{"accountID":5005,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Convey RCS [5005]"},{"accountID":5016,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"qa-test1 [5016]"},{"accountID":5053,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Jack Business [5053]"},{"accountID":5054,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":1,"uIRep":"Yaseen Test updated [5054]"}]
+[2026-03-09T15:37:07.997Z] 				Loaded 88 parent accounts from API
+[2026-03-09T15:37:07.997Z] 				All Accounts expected total (grandTotal): 3535
+
+[2026-03-09T15:37:07.997Z] 		SELECTION-Step I.2: Populating the Accounts from Account dropdown on the UI
+[2026-03-09T15:37:07.997Z] 				->Opening Account dropdown
+[2026-03-09T15:37:08.046Z] 					Performing CLICK action | Element: DDN-Account.Connections.default | Locator: //span[@id='select2-account-id-container']/..//b
+[2026-03-09T15:37:08.046Z] 				->Reading all account dropdown items
+[2026-03-09T15:37:08.083Z] 					Performing READ action | Element: DDI-AllAccounts.Connections.default | Locator: //ul[@id='select2-account-id-results']/li
+[2026-03-09T15:37:08.083Z] 				UI Accounts: ["Yaseen Test updated [5054]","Jack Business [5053]","Aerialink Inc. [1]","qa-test1 [5016]","Bucktown Chiropractic [894] --Inactive-- ","West Valley [554] --Inactive-- ","Moblico [342]","Cisco Systems, Inc [148]","Aizan Technologies [281] --Inactive-- ","Convey RCS [5005]","VertexOne Software [1174]","Broadnet Technologies LLC [1472]","Mission Mobile [52]","State Farm Insurance [658]","360 Degree Cloud [275]","PowerNet Global [476]","XOP Networks [85]","AMN Healthcare, Inc. [146]","Alert Tech [14]","The Law Offices of Kanner & Pintaluga [277]","James' Account of Testing [5001]","JR Soft LLC [1586]","Text Legal, LLC [529]","Crimestar [303]","QA Testers [5000]","Sachi Tech [1581]","Upwire [7]","TSG Global Inc [11]","StudioPlus Software [16]","University of Michigan, Survey Research Operations - Production Account [18]","Land O'Lakes Inc [21]","Property Trak LLC [31]","Screen-Magic Mobile Media Inc. [36]","mGage [40]","Openity [60]","Wipro Technologies - Baldev Parida [76]","MindMe, Inc. [89]","Savance, LLC [90]","Appriss Inc. [96]","Matrix42 GmbH [103]","Sinch (CLX Networks) [116]","GCS Electronics & Communication [122]","Cooperative of American Physicians, Inc. [123]","Instant Evaluate, Inc. [129]","Kaplan Trucking Company [133]","Polk County Attorneys Office [158]","Text My Main Number, Inc. [189]","Screen Magic One Hop [194]","Admiral Pest Control [195]","Oasis Financial [208]","Story County Attorney's Office [212]","Call-Em-All [214]","Jefferson County [220]","OrthoChart, LLC [224]","Marlimar Interactive [227]","CRC International Inc. [257]","ICEA Service Bureau [267]","CSF Corporation [268]","Text Aspect [282]","Ytel Inc. [286]","AcroVoice Solutions Inc [300]","Beta Texting LLC [313]","Proximiti [317]","ES3 [318]","DID Logic [319]","Textel LLC [322]","Textology [344]","New Tel Systems [347]","Hampton Lumber [358]","DEV [370]","United Internet Services, LLC (Voicetel) [378]","ProKeep [389]","Aerialink Operations [442]","Arvig [526]","Seventh Compass, Inc [530]","CJS Financial, Inc [531]","Medallia [581]","Utility Telecom [615]","J.B. Hunt Transport, Inc. [837]","Ethiqs [856]","Churchill Chiropractic [895]","Apeiron Systems [942]","Grapevine Faith Christian School [1013]","Old World Industries [1087]","Victory Telecom, Inc. [1184] --Inactive-- ","Elite Golf Technology LLC [1206]","JRSoft LLC [1390]","Aerialinkqa1 [1440]","Aerialinkqa2 [1441]","Aerialink Inc. Global Data [0]"]
+[2026-03-09T15:37:08.084Z] 				Number of API Parent IDs: 88
+[2026-03-09T15:37:08.084Z] 				API Parent IDs: [347,224,14,581,370,389,36,7,18,476,837,129,21,257,268,317,148,281,286,530,16,60,116,214,275,319,615,11,40,146,189,227,282,342,378,529,1174,1581,5000,31,52,85,89,96,133,212,267,300,344,942,1087,5001,76,90,103,122,123,158,194,195,208,220,277,303,313,318,322,358,442,526,531,554,658,856,894,895,1013,1184,1206,1390,1440,1441,1472,1586,5005,5016,5053,5054]
+[2026-03-09T15:37:08.084Z] 				Number of UI Account IDs: 90
+[2026-03-09T15:37:08.084Z] 				UI Account IDs: [5054,5053,1,5016,894,554,342,148,281,5005,1174,1472,52,658,275,476,85,146,14,277,5001,1586,529,303,5000,1581,7,11,16,18,21,31,36,40,60,76,89,90,96,103,116,122,123,129,133,158,189,194,195,208,212,214,220,224,227,257,267,268,282,286,300,313,317,318,319,322,344,347,358,370,378,389,442,526,530,531,581,615,837,856,895,942,1013,1087,1184,1206,1390,1440,1441,0]
+[2026-03-09T15:37:08.084Z] 
+				The 2 additional accounts allowed in the UI are: 1. All Accounts, and 2. Aerialink Inc. Global Data [0]
+[2026-03-09T15:37:08.084Z] 
+
+[2026-03-09T15:37:08.084Z] 		 🆔 → I.1.0
+[2026-03-09T15:37:08.084Z] 				Difference between UI and API account IDs: 2
+[2026-03-09T15:37:08.084Z] 
+						✅Validation I. PASSED | The accountIDs count on UI has exceeded the accountIDs count on API by more than 2
+
+[2026-03-09T15:37:08.084Z] 				IDs in UI but missing in API: 1, 0
+[2026-03-09T15:37:08.084Z] 
+
+							🧠 Parent Selection Strategy: distribution-aware, future-proof, exhaustiveFactor=5%
+[2026-03-09T15:37:08.084Z] 						🧠 Parent Selection Strategy (Exhaustive Coverage)
+      Parents are selected using a stratified, distribution-aware strategy
+      based on connectionCount rather than hard-coded account IDs.
+        • High-volume parents are always included to cover aggregation,
+          pagination, and performance-sensitive paths.
+        • Mid-range parents are proportionally sampled to reflect
+          real-world usage patterns.
+        • Low-volume (long-tail) parents are sampled to catch edge cases
+          such as off-by-one errors and empty-state scenarios.
+      Exhaustive Factor Levels:
+        - 5%   : Critical high-risk parents only (fast smoke coverage)
+        - 10%  : Adds representative mid-range parents
+        - 25%  : Covers typical customer usage
+        - 50%  : Broad regression coverage
+        - 75%  : Deep long-tail validation
+        - 100% : Full parent coverage
+      This strategy is future-proof and automatically adapts as parent
+      accounts and their connection distributions change over time.
+[2026-03-09T15:37:08.084Z] 				Bucket distribution: {"A":1,"B":1,"C":4,"D":6,"E":27,"F":49}
+[2026-03-09T15:37:08.084Z] 				Selected parents (2): [{"accountID":347,"connectionCount":137},{"accountID":224,"connectionCount":33}]
+[2026-03-09T15:37:08.084Z] 🧠 Parent selection applied | Exhaustive=5% | Selected 2 of 88 parents based on distribution
+
+
+
+[2026-03-09T15:37:08.084Z] 				Total accounts: 3
+[2026-03-09T15:37:08.084Z] 				Accounts to process: 3 (2 parents + account [1])
+[2026-03-09T15:37:08.084Z] 				Validation II. Connections table validation: Record Counts(UI and API), Number of Rows Connection Selection,
+[2026-03-09T15:37:08.084Z] 				We will be validating the connections table for the accounts in the selected parents
+[2026-03-09T15:37:08.084Z] 				selected parents: [{"accountID":347,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":137,"uIRep":"New Tel Systems [347]"},{"accountID":224,"accountStatus":"VALID","active":1,"parent":true,"connectionCount":33,"uIRep":"OrthoChart, LLC [224]"}]
+[2026-03-09T15:37:08.084Z] 						Is this the last account: false
+
+
+
+
+[2026-03-09T15:37:08.084Z] SELECTION II.1: [347] Selecting CONNECTIONS for the account: [347] whose connection-Count is:137)
+[2026-03-09T15:37:08.084Z] ➡️  			SELECTION II.1: Choosing the Accounts dropdown and selecting the account: [347] and opening the Connections dropdown to list its Connections options
+[2026-03-09T15:37:08.084Z] 						->Closing any open dropdowns by clicking on the ConnectionGUID input field
+[2026-03-09T15:37:08.242Z] 								Performing CLICK action | Element: INP-ConnectionGUID.Connections.default | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:37:08.242Z] 						->Clicking on Account dropdown
+[2026-03-09T15:37:08.384Z] 								Performing CLICK action | Element: DDN-Account.Connections.default | Locator: //span[@id='select2-account-id-container']/..//b
+[2026-03-09T15:37:08.385Z] 						->Typing "[347]" into the Account Search Text field
+[2026-03-09T15:37:08.402Z] 								Performing FILL action | Element: INP-AccountSearchText.Connections.default | Locator: //input[@aria-controls='select2-account-id-results'] | Value: [347]
+[2026-03-09T15:37:08.402Z] 						->Selecting the first account "[347]" from the Account dropdown
+[2026-03-09T15:37:08.411Z] 								Performing READ action | Element: DDI-1stAccount.Connections.default | Locator: //ul[@id='select2-account-id-results']/li[1] | Options found: 1
+[2026-03-09T15:37:08.527Z] 								Performing CLICK action | Element: DDI-1stAccount.Connections.default
+[2026-03-09T15:37:10.544Z] 						connectionsToTest before load (account changed to [347]): []
+[2026-03-09T15:37:10.544Z] 						->Clicking Connections dropdown (DDN-Connection.Connections.default)
+[2026-03-09T15:37:10.991Z] 								Performing CLICK action | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:37:10.991Z] 						->Reading all connection options (DDI-AllConnections.Connections.default)
+[2026-03-09T15:37:11.004Z] 								Performing READ action | Element: DDI-AllConnections.Connections.default | Locator: //ul[@id='select2-connection-id-results']/li | List of Connections count: 138
+
+[2026-03-09T15:37:11.004Z] 				connectionsToTest after load: ["All Connections","[4344]","[1084]","[1083]","[1024]","[1023]","[4727]","[5146]"]
+[2026-03-09T15:37:11.004Z] 				Connections to test: All Connections, [4344], [1084], [1083], [1024], [1023], [4727], [5146]
+[2026-03-09T15:37:11.004Z] 				Connections in dropdown: 137. Using 7 ( exhaustive factor: 5%): All Connections, [4344], [1084], [1083]...
+[2026-03-09T15:37:11.004Z] 
+
+[2026-03-09T15:37:11.004Z] 												Connections selected for testing the account: [347]
+[2026-03-09T15:37:11.004Z] 						[1] : All Connections
+[2026-03-09T15:37:11.004Z] 						[2] : [4344]
+[2026-03-09T15:37:11.004Z] 						[3] : [1084]
+[2026-03-09T15:37:11.004Z] 						[4] : [1083]
+[2026-03-09T15:37:11.004Z] 						[5] : [1024]
+[2026-03-09T15:37:11.004Z] 						[6] : [1023]
+[2026-03-09T15:37:11.004Z] 						[7] : [4727]
+[2026-03-09T15:37:11.004Z] 						[8] : [5146]
+[2026-03-09T15:37:11.004Z] 							Account # 1 of 3
+[2026-03-09T15:37:11.004Z] 								Connection #1 of 8
+[2026-03-09T15:37:11.004Z] 								Is this the last connection: false
+[2026-03-09T15:37:11.004Z] Validation II.1.1: Testing connection filter: All Connections | [347].All Connections
+[2026-03-09T15:37:11.024Z] 						->Entering 'All Connections' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:37:11.024Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:37:11.030Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:37:11.059Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:37:13.628Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: All Connections | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:37:13.934Z] 						->Checking if the connection is visible with the connection string: All Connections
+[2026-03-09T15:37:13.948Z] 								Connection 1st option innerText: All Connections
+[2026-03-09T15:37:13.948Z] 					🧪 Val-step II.1.1.0 Validate if the 1st option in the Connection dropdown contains the connection string: All Connections
+[2026-03-09T15:37:13.948Z] 					 🆔 → II.1.1.0
+[2026-03-09T15:37:13.948Z] 						✅ Val-step II.1.1.0: Connection "All Connections" is found in the 1st option text: All Connections)
+[2026-03-09T15:37:13.948Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:37:14.277Z] 						->Clicking Search button
+[2026-03-09T15:37:15.434Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:37:15.434Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:37:15.434Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:37:21.276Z] 								Search Results text: Search Results accountIdentifiers: 347 excludeChildren: true
+[2026-03-09T15:37:21.276Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:37:21.276Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:37:21.290Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:37:21.290Z] 						UI Showing entries text: "Showing 1 to 100 of 137 entries"
+[2026-03-09T15:37:21.290Z] 									Parsed start index: 1
+[2026-03-09T15:37:21.290Z] 									Parsed end index: 100
+[2026-03-09T15:37:21.290Z] 									Parsed total entries: 137
+[2026-03-09T15:37:21.290Z] 								Expected visible rows (end - start + 1): 100
+[2026-03-09T15:37:21.290Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:37:21.303Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:37:21.303Z] 						Actual table row count: 100
+[2026-03-09T15:37:21.317Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:37:21.317Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:37:21.317Z] 						Validating for Account: '[347]' & Connection: 'All Connections'
+[2026-03-09T15:37:21.333Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:37:21.333Z] 						✅ Val-step II.1.1.2:  Total Connections count from the API matches the total entries from the UI. Expected: 137, Found: 137
+[2026-03-09T15:37:21.333Z] 						✅ Val-step II.1.1.3: Visible row count matched with the expected number. Expected: 100, Found: 100
+[2026-03-09T15:37:21.333Z] 							Account # 1 of 3
+[2026-03-09T15:37:21.333Z] 								Connection #2 of 8
+[2026-03-09T15:37:21.333Z] 								Is this the last connection: false
+[2026-03-09T15:37:21.333Z] Validation II.1.2: Testing connection filter: [4344] | [347].[4344]
+[2026-03-09T15:37:21.423Z] 						->Entering '[4344]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:37:21.423Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:37:21.433Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:37:21.433Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:37:23.506Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [4344] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:37:23.819Z] 						->Checking if the connection is visible with the connection string: [4344]
+[2026-03-09T15:37:23.838Z] 								Connection 1st option innerText: [4344]
+[2026-03-09T15:37:23.838Z] 					🧪 Val-step II.1.2.0 Validate if the 1st option in the Connection dropdown contains the connection string: [4344]
+[2026-03-09T15:37:23.838Z] 					 🆔 → II.1.2.0
+[2026-03-09T15:37:23.838Z] 						✅ Val-step II.1.2.0: Connection "[4344]" is found in the 1st option text: [4344])
+[2026-03-09T15:37:23.838Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:37:24.181Z] 						->Clicking Search button
+[2026-03-09T15:37:25.402Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:37:25.402Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:37:25.402Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:37:32.733Z] 								Search Results text: Search Results accountIdentifiers: 347 connectionIdentifiers: 4344 excludeChildren: true
+[2026-03-09T15:37:32.733Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:37:32.733Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:37:32.739Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:37:32.739Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:37:32.739Z] 									Parsed start index: 1
+[2026-03-09T15:37:32.739Z] 									Parsed end index: 1
+[2026-03-09T15:37:32.739Z] 									Parsed total entries: 1
+[2026-03-09T15:37:32.739Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:37:32.739Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:37:32.744Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:37:32.744Z] 						Actual table row count: 1
+[2026-03-09T15:37:32.749Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:37:32.749Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:37:32.749Z] 						Validating for Account: '[347]' & Connection: '[4344]'
+[2026-03-09T15:37:32.754Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:37:32.754Z] 						❌ Val-step II.1.2.2: Total Connections count from the API does not match the total entries from the UI. Expected: 137, Found: 1
+[2026-03-09T15:37:32.754Z] 						✅ Val-step II.1.2.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:37:32.754Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [347]. UI: 1, API: 137
+[2026-03-09T15:37:32.754Z] 							Account # 1 of 3
+[2026-03-09T15:37:32.754Z] 								Connection #3 of 8
+[2026-03-09T15:37:32.754Z] 								Is this the last connection: false
+[2026-03-09T15:37:32.754Z] Validation II.1.3: Testing connection filter: [1084] | [347].[1084]
+[2026-03-09T15:37:32.939Z] 						->Entering '[1084]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:37:32.939Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:37:32.948Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:37:32.948Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:37:35.012Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [1084] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:37:35.324Z] 						->Checking if the connection is visible with the connection string: [1084]
+[2026-03-09T15:37:35.335Z] 								Connection 1st option innerText: AHC Appliance - Conversations [1084]
+[2026-03-09T15:37:35.335Z] 					🧪 Val-step II.1.3.0 Validate if the 1st option in the Connection dropdown contains the connection string: [1084]
+[2026-03-09T15:37:35.335Z] 					 🆔 → II.1.3.0
+[2026-03-09T15:37:35.335Z] 						✅ Val-step II.1.3.0: Connection "[1084]" is found in the 1st option text: AHC Appliance - Conversations [1084])
+[2026-03-09T15:37:35.335Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:37:35.669Z] 						->Clicking Search button
+[2026-03-09T15:37:36.427Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:37:36.427Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:37:36.427Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:37:44.290Z] 								Search Results text: Search Results accountIdentifiers: 347 connectionIdentifiers: 1084 excludeChildren: true
+[2026-03-09T15:37:44.290Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:37:44.290Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:37:44.297Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:37:44.297Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:37:44.297Z] 									Parsed start index: 1
+[2026-03-09T15:37:44.297Z] 									Parsed end index: 1
+[2026-03-09T15:37:44.297Z] 									Parsed total entries: 1
+[2026-03-09T15:37:44.297Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:37:44.297Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:37:44.304Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:37:44.304Z] 						Actual table row count: 1
+[2026-03-09T15:37:44.311Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:37:44.311Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:37:44.311Z] 						Validating for Account: '[347]' & Connection: '[1084]'
+[2026-03-09T15:37:44.324Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:37:44.324Z] 						❌ Val-step II.1.3.2: Total Connections count from the API does not match the total entries from the UI. Expected: 137, Found: 1
+[2026-03-09T15:37:44.324Z] 						✅ Val-step II.1.3.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:37:44.324Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [347]. UI: 1, API: 137
+[2026-03-09T15:37:44.324Z] 							Account # 1 of 3
+[2026-03-09T15:37:44.324Z] 								Connection #4 of 8
+[2026-03-09T15:37:44.324Z] 								Is this the last connection: false
+[2026-03-09T15:37:44.324Z] Validation II.1.4: Testing connection filter: [1083] | [347].[1083]
+[2026-03-09T15:37:44.619Z] 						->Entering '[1083]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:37:44.619Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:37:44.629Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:37:44.629Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:37:46.672Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [1083] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:37:46.988Z] 						->Checking if the connection is visible with the connection string: [1083]
+[2026-03-09T15:37:47.014Z] 								Connection 1st option innerText: AHC Appliance - HTTP API [1083]
+[2026-03-09T15:37:47.014Z] 					🧪 Val-step II.1.4.0 Validate if the 1st option in the Connection dropdown contains the connection string: [1083]
+[2026-03-09T15:37:47.014Z] 					 🆔 → II.1.4.0
+[2026-03-09T15:37:47.014Z] 						✅ Val-step II.1.4.0: Connection "[1083]" is found in the 1st option text: AHC Appliance - HTTP API [1083])
+[2026-03-09T15:37:47.014Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:37:47.361Z] 						->Clicking Search button
+[2026-03-09T15:37:48.273Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:37:48.273Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:37:48.273Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:37:55.685Z] 								Search Results text: Search Results accountIdentifiers: 347 connectionIdentifiers: 1083 excludeChildren: true
+[2026-03-09T15:37:55.685Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:37:55.685Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:37:55.693Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:37:55.693Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:37:55.693Z] 									Parsed start index: 1
+[2026-03-09T15:37:55.693Z] 									Parsed end index: 1
+[2026-03-09T15:37:55.693Z] 									Parsed total entries: 1
+[2026-03-09T15:37:55.693Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:37:55.693Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:37:55.699Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:37:55.699Z] 						Actual table row count: 1
+[2026-03-09T15:37:55.704Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:37:55.704Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:37:55.704Z] 						Validating for Account: '[347]' & Connection: '[1083]'
+[2026-03-09T15:37:55.710Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:37:55.710Z] 						❌ Val-step II.1.4.2: Total Connections count from the API does not match the total entries from the UI. Expected: 137, Found: 1
+[2026-03-09T15:37:55.710Z] 						✅ Val-step II.1.4.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:37:55.710Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [347]. UI: 1, API: 137
+[2026-03-09T15:37:55.710Z] 							Account # 1 of 3
+[2026-03-09T15:37:55.710Z] 								Connection #5 of 8
+[2026-03-09T15:37:55.710Z] 								Is this the last connection: false
+[2026-03-09T15:37:55.710Z] Validation II.1.5: Testing connection filter: [1024] | [347].[1024]
+[2026-03-09T15:37:56.466Z] 						->Entering '[1024]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:37:56.467Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:37:56.477Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:37:56.477Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:37:58.554Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [1024] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:37:58.871Z] 						->Checking if the connection is visible with the connection string: [1024]
+[2026-03-09T15:37:58.891Z] 								Connection 1st option innerText: Ambo Properties LLC - Conversations [1024]
+[2026-03-09T15:37:58.891Z] 					🧪 Val-step II.1.5.0 Validate if the 1st option in the Connection dropdown contains the connection string: [1024]
+[2026-03-09T15:37:58.891Z] 					 🆔 → II.1.5.0
+[2026-03-09T15:37:58.891Z] 						✅ Val-step II.1.5.0: Connection "[1024]" is found in the 1st option text: Ambo Properties LLC - Conversations [1024])
+[2026-03-09T15:37:58.891Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:37:59.235Z] 						->Clicking Search button
+[2026-03-09T15:38:00.143Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:38:00.143Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:38:00.143Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:38:06.989Z] 								Search Results text: Search Results accountIdentifiers: 347 connectionIdentifiers: 1024 excludeChildren: true
+[2026-03-09T15:38:06.989Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:38:06.989Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:38:06.996Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:38:06.996Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:38:06.996Z] 									Parsed start index: 1
+[2026-03-09T15:38:06.996Z] 									Parsed end index: 1
+[2026-03-09T15:38:06.996Z] 									Parsed total entries: 1
+[2026-03-09T15:38:06.996Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:38:06.996Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:38:07.006Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:38:07.006Z] 						Actual table row count: 1
+[2026-03-09T15:38:07.010Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:38:07.010Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:38:07.010Z] 						Validating for Account: '[347]' & Connection: '[1024]'
+[2026-03-09T15:38:07.015Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:38:07.015Z] 						❌ Val-step II.1.5.2: Total Connections count from the API does not match the total entries from the UI. Expected: 137, Found: 1
+[2026-03-09T15:38:07.015Z] 						✅ Val-step II.1.5.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:38:07.015Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [347]. UI: 1, API: 137
+[2026-03-09T15:38:07.015Z] 							Account # 1 of 3
+[2026-03-09T15:38:07.015Z] 								Connection #6 of 8
+[2026-03-09T15:38:07.015Z] 								Is this the last connection: false
+[2026-03-09T15:38:07.015Z] Validation II.1.6: Testing connection filter: [1023] | [347].[1023]
+[2026-03-09T15:38:07.045Z] 						->Entering '[1023]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:38:07.045Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:38:07.053Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:38:07.053Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:38:09.113Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [1023] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:38:09.422Z] 						->Checking if the connection is visible with the connection string: [1023]
+[2026-03-09T15:38:09.437Z] 								Connection 1st option innerText: Ambo Properties LLC - HTTP API [1023]
+[2026-03-09T15:38:09.437Z] 					🧪 Val-step II.1.6.0 Validate if the 1st option in the Connection dropdown contains the connection string: [1023]
+[2026-03-09T15:38:09.437Z] 					 🆔 → II.1.6.0
+[2026-03-09T15:38:09.437Z] 						✅ Val-step II.1.6.0: Connection "[1023]" is found in the 1st option text: Ambo Properties LLC - HTTP API [1023])
+[2026-03-09T15:38:09.437Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:38:09.776Z] 						->Clicking Search button
+[2026-03-09T15:38:10.835Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:38:10.835Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:38:10.835Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:38:19.722Z] 								Search Results text: Search Results accountIdentifiers: 347 connectionIdentifiers: 1023 excludeChildren: true
+[2026-03-09T15:38:19.722Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:38:19.722Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:38:19.730Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:38:19.730Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:38:19.730Z] 									Parsed start index: 1
+[2026-03-09T15:38:19.730Z] 									Parsed end index: 1
+[2026-03-09T15:38:19.730Z] 									Parsed total entries: 1
+[2026-03-09T15:38:19.730Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:38:19.730Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:38:19.736Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:38:19.736Z] 						Actual table row count: 1
+[2026-03-09T15:38:19.744Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:38:19.744Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:38:19.744Z] 						Validating for Account: '[347]' & Connection: '[1023]'
+[2026-03-09T15:38:19.756Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:38:19.756Z] 						❌ Val-step II.1.6.2: Total Connections count from the API does not match the total entries from the UI. Expected: 137, Found: 1
+[2026-03-09T15:38:19.756Z] 						✅ Val-step II.1.6.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:38:19.756Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [347]. UI: 1, API: 137
+[2026-03-09T15:38:19.756Z] 							Account # 1 of 3
+[2026-03-09T15:38:19.756Z] 								Connection #7 of 8
+[2026-03-09T15:38:19.756Z] 								Is this the last connection: false
+[2026-03-09T15:38:19.756Z] Validation II.1.7: Testing connection filter: [4727] | [347].[4727]
+[2026-03-09T15:38:19.976Z] 						->Entering '[4727]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:38:19.976Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:38:19.989Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:38:19.989Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:38:22.046Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [4727] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:38:22.359Z] 						->Checking if the connection is visible with the connection string: [4727]
+[2026-03-09T15:38:22.377Z] 								Connection 1st option innerText: Bais Yaakov D’Rav Hirsch - Conversations [4727]
+[2026-03-09T15:38:22.377Z] 					🧪 Val-step II.1.7.0 Validate if the 1st option in the Connection dropdown contains the connection string: [4727]
+[2026-03-09T15:38:22.377Z] 					 🆔 → II.1.7.0
+[2026-03-09T15:38:22.377Z] 						✅ Val-step II.1.7.0: Connection "[4727]" is found in the 1st option text: Bais Yaakov D’Rav Hirsch - Conversations [4727])
+[2026-03-09T15:38:22.377Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:38:22.709Z] 						->Clicking Search button
+[2026-03-09T15:38:23.653Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:38:23.653Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:38:23.653Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:38:30.562Z] 								Search Results text: Search Results accountIdentifiers: 347 connectionIdentifiers: 4727 excludeChildren: true
+[2026-03-09T15:38:30.562Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:38:30.562Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:38:30.570Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:38:30.570Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:38:30.570Z] 									Parsed start index: 1
+[2026-03-09T15:38:30.570Z] 									Parsed end index: 1
+[2026-03-09T15:38:30.570Z] 									Parsed total entries: 1
+[2026-03-09T15:38:30.570Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:38:30.570Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:38:30.576Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:38:30.576Z] 						Actual table row count: 1
+[2026-03-09T15:38:30.581Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:38:30.581Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:38:30.581Z] 						Validating for Account: '[347]' & Connection: '[4727]'
+[2026-03-09T15:38:30.587Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:38:30.587Z] 						❌ Val-step II.1.7.2: Total Connections count from the API does not match the total entries from the UI. Expected: 137, Found: 1
+[2026-03-09T15:38:30.587Z] 						✅ Val-step II.1.7.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:38:30.587Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [347]. UI: 1, API: 137
+[2026-03-09T15:38:30.587Z] 							Account # 1 of 3
+[2026-03-09T15:38:30.587Z] 								Connection #8 of 8
+[2026-03-09T15:38:30.587Z] 								Is this the last connection: true
+[2026-03-09T15:38:30.587Z] Validation II.1.8: Testing connection filter: [5146] | [347].[5146]
+[2026-03-09T15:38:30.777Z] 						->Entering '[5146]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:38:30.777Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:38:30.786Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:38:30.786Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:38:32.844Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [5146] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:38:33.163Z] 						->Checking if the connection is visible with the connection string: [5146]
+[2026-03-09T15:38:33.181Z] 								Connection 1st option innerText: BD Health - conversation [5146]
+[2026-03-09T15:38:33.181Z] 					🧪 Val-step II.1.8.0 Validate if the 1st option in the Connection dropdown contains the connection string: [5146]
+[2026-03-09T15:38:33.181Z] 					 🆔 → II.1.8.0
+[2026-03-09T15:38:33.181Z] 						✅ Val-step II.1.8.0: Connection "[5146]" is found in the 1st option text: BD Health - conversation [5146])
+[2026-03-09T15:38:33.181Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:38:33.516Z] 						->Clicking Search button
+[2026-03-09T15:38:34.454Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:38:34.454Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'347')]
+[2026-03-09T15:38:34.454Z] 						->Waiting for Search Results accountID: 347
+[2026-03-09T15:38:39.958Z] 								Search Results text: Search Results accountIdentifiers: 347 connectionIdentifiers: 5146 excludeChildren: true
+[2026-03-09T15:38:39.958Z] 						Connection count for [347] from API is 137
+[2026-03-09T15:38:39.958Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:38:39.967Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:38:39.967Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:38:39.967Z] 									Parsed start index: 1
+[2026-03-09T15:38:39.967Z] 									Parsed end index: 1
+[2026-03-09T15:38:39.967Z] 									Parsed total entries: 1
+[2026-03-09T15:38:39.967Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:38:39.967Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:38:39.973Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:38:39.973Z] 						Actual table row count: 1
+[2026-03-09T15:38:39.978Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:38:39.978Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:38:39.978Z] 						Validating for Account: '[347]' & Connection: '[5146]'
+[2026-03-09T15:38:39.983Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:38:39.983Z] 						❌ Val-step II.1.8.2: Total Connections count from the API does not match the total entries from the UI. Expected: 137, Found: 1
+[2026-03-09T15:38:39.983Z] 						✅ Val-step II.1.8.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:38:39.983Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [347]. UI: 1, API: 137
+[2026-03-09T15:38:39.983Z] ➡️  				Validation V.1: Validate the Connection GUID field (account: [347])
+[2026-03-09T15:38:39.983Z] 						->Closing any open dropdowns by clicking on the ConnectionGUID input field
+[2026-03-09T15:38:40.579Z] 								Performing CLICK action | Element: INP-ConnectionGUID.Connections.default | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:38:40.580Z] 						->Reading first row first cell (Connection GUID)
+[2026-03-09T15:38:40.587Z] 								Performing READ action | Element: TRW-1stRow.Connections.default/td[1] | Locator: //tbody/tr[1]/td[1] | Value: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E
+[2026-03-09T15:38:40.588Z] 						✅ Validation IV.1.1: GUID length validated (36 characters)
+[2026-03-09T15:38:40.588Z] 						->GUID test IV.1.2:1/5: trimmed
+[2026-03-09T15:38:40.600Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (36 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:38:41.674Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:38:48.709Z] 								READ first row td[1] after search | Expected: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Actual: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Match: true
+[2026-03-09T15:38:48.709Z] 						->GUID test IV.1.2:2/5: spaces at beginning
+[2026-03-09T15:38:48.729Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (39 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:38:49.808Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:38:56.990Z] 								READ first row td[1] after search | Expected: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Actual: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Match: true
+[2026-03-09T15:38:56.990Z] 						->GUID test IV.1.2:3/5: spaces at end
+[2026-03-09T15:38:57.006Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (39 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:38:57.965Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:39:07.242Z] 								READ first row td[1] after search | Expected: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Actual: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Match: true
+[2026-03-09T15:39:07.242Z] 						->GUID test IV.1.2:4/5: spaces at both ends
+[2026-03-09T15:39:07.260Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (42 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:39:08.043Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:39:17.105Z] 								READ first row td[1] after search | Expected: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Actual: 10D3BFB0-27B4-4639-A2D0-F404F9270E5E | Match: true
+[2026-03-09T15:39:17.105Z] 						->GUID test IV.1.2:5/5: 30 character substring
+[2026-03-09T15:39:17.117Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (30 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:39:18.148Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:39:27.004Z] 								✅ Validation IV.1.2: Expecting No matching records | Visible: false
+[2026-03-09T15:39:27.005Z] 						✅ Validation IV.1.2: GUID tests completed
+[2026-03-09T15:39:27.005Z] 
+
+
+						Validation VI.1: Validate the Reset button | Account: [347]
+[2026-03-09T15:39:27.005Z] 						->Collecting Previous Values (before Reset)
+[2026-03-09T15:39:27.012Z] 								READ selected Account | Element: DDN-Account.Connections.default/../../span[1]/span | Value: New Tel Systems [347]
+[2026-03-09T15:39:27.018Z] 								READ selected Connection | Element: DDN-Connection.Connections.default/../../span[1]/span | Value: BD Health - conversation [5146]
+[2026-03-09T15:39:27.023Z] 								READ selected Sort | Locator: //select[@id='sort']/option[@selected][last()] | Value: Last Updated Descending
+[2026-03-09T15:39:27.033Z] 								READ selected Output | Locator: //select[@id='options-output']/option[@selected='selected'] | Value: Screen
+[2026-03-09T15:39:27.041Z] 								READ Connection GUID input | Element: INP-ConnectionGUID.Connections.default | Value: 10D3BFB0-27B4-4639-A2D0-F404F9
+[2026-03-09T15:39:27.041Z] 						Previous Values: {"selectedAccount":"New Tel Systems [347]","selectedConnection":"BD Health - conversation [5146]","sortBy":"Last Updated Descending","output":"Screen","connectionGuid":"10D3BFB0-27B4-4639-A2D0-F404F9"}
+[2026-03-09T15:39:27.041Z] 						->Clicking Reset button
+[2026-03-09T15:39:27.826Z] 								Performing CLICK action | Element: BTN-Reset.Connections.default | Locator: //button[@id='option-search-reset']
+[2026-03-09T15:39:35.153Z] 						->Verifying values after Reset
+[2026-03-09T15:39:35.174Z] 								READ Account after Reset | Value: Aerialink Inc. [1]
+[2026-03-09T15:39:35.183Z] 								READ Connection after Reset | Value: All Connections
+[2026-03-09T15:39:35.192Z] 								READ Sort after Reset | Value: Last Updated Descending
+[2026-03-09T15:39:35.198Z] 								READ Output after Reset | Value: Screen
+[2026-03-09T15:39:35.204Z] 								READ Connection GUID after Reset | Value: (empty)
+[2026-03-09T15:39:35.221Z] 						After Reset: Account=Aerialink Inc. [1] (expected Aerialink Inc. [1]) ✅ | Connection=All Connections ✅ | GUID empty=✅ | Output=Screen ✅ | Sort=Last Updated Descending ✅ | No NMR=✅ | Rows=33
+[2026-03-09T15:39:35.221Z] 						Is this the last account: false
+
+
+
+
+[2026-03-09T15:39:35.221Z] SELECTION II.2: [224] Selecting CONNECTIONS for the account: [224] whose connection-Count is:33)
+[2026-03-09T15:39:35.221Z] ➡️  			SELECTION II.2: Choosing the Accounts dropdown and selecting the account: [224] and opening the Connections dropdown to list its Connections options
+[2026-03-09T15:39:35.221Z] 						->Closing any open dropdowns by clicking on the ConnectionGUID input field
+[2026-03-09T15:39:35.237Z] 								Performing CLICK action | Element: INP-ConnectionGUID.Connections.default | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:39:35.237Z] 						->Clicking on Account dropdown
+[2026-03-09T15:39:35.387Z] 								Performing CLICK action | Element: DDN-Account.Connections.default | Locator: //span[@id='select2-account-id-container']/..//b
+[2026-03-09T15:39:35.387Z] 						->Typing "[224]" into the Account Search Text field
+[2026-03-09T15:39:35.411Z] 								Performing FILL action | Element: INP-AccountSearchText.Connections.default | Locator: //input[@aria-controls='select2-account-id-results'] | Value: [224]
+[2026-03-09T15:39:35.411Z] 						->Selecting the first account "[224]" from the Account dropdown
+[2026-03-09T15:39:35.429Z] 								Performing READ action | Element: DDI-1stAccount.Connections.default | Locator: //ul[@id='select2-account-id-results']/li[1] | Options found: 1
+[2026-03-09T15:39:35.581Z] 								Performing CLICK action | Element: DDI-1stAccount.Connections.default
+[2026-03-09T15:39:37.598Z] 						connectionsToTest before load (account changed to [224]): []
+[2026-03-09T15:39:37.598Z] 						->Clicking Connections dropdown (DDN-Connection.Connections.default)
+[2026-03-09T15:39:38.056Z] 								Performing CLICK action | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:39:38.056Z] 						->Reading all connection options (DDI-AllConnections.Connections.default)
+[2026-03-09T15:39:38.063Z] 								Performing READ action | Element: DDI-AllConnections.Connections.default | Locator: //ul[@id='select2-connection-id-results']/li | List of Connections count: 34
+
+[2026-03-09T15:39:38.064Z] 				connectionsToTest after load: ["All Connections","[2620]","[2839]"]
+[2026-03-09T15:39:38.064Z] 				Connections to test: All Connections, [2620], [2839]
+[2026-03-09T15:39:38.064Z] 				Connections in dropdown: 33. Using 2 ( exhaustive factor: 5%): All Connections, [2620], [2839]
+[2026-03-09T15:39:38.064Z] 
+
+[2026-03-09T15:39:38.064Z] 												Connections selected for testing the account: [224]
+[2026-03-09T15:39:38.064Z] 						[1] : All Connections
+[2026-03-09T15:39:38.064Z] 						[2] : [2620]
+[2026-03-09T15:39:38.064Z] 						[3] : [2839]
+[2026-03-09T15:39:38.064Z] 							Account # 2 of 3
+[2026-03-09T15:39:38.064Z] 								Connection #1 of 3
+[2026-03-09T15:39:38.064Z] 								Is this the last connection: false
+[2026-03-09T15:39:38.064Z] Validation II.2.1: Testing connection filter: All Connections | [224].All Connections
+[2026-03-09T15:39:38.094Z] 						->Entering 'All Connections' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:39:38.094Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:39:38.103Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:39:38.124Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:39:40.704Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: All Connections | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:39:41.019Z] 						->Checking if the connection is visible with the connection string: All Connections
+[2026-03-09T15:39:41.044Z] 								Connection 1st option innerText: All Connections
+[2026-03-09T15:39:41.044Z] 					🧪 Val-step II.2.1.0 Validate if the 1st option in the Connection dropdown contains the connection string: All Connections
+[2026-03-09T15:39:41.044Z] 					 🆔 → II.2.1.0
+[2026-03-09T15:39:41.044Z] 						✅ Val-step II.2.1.0: Connection "All Connections" is found in the 1st option text: All Connections)
+[2026-03-09T15:39:41.044Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:39:41.388Z] 						->Clicking Search button
+[2026-03-09T15:39:42.293Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:39:42.293Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'224')]
+[2026-03-09T15:39:42.293Z] 						->Waiting for Search Results accountID: 224
+[2026-03-09T15:39:48.293Z] 								Search Results text: Search Results accountIdentifiers: 224 excludeChildren: true
+[2026-03-09T15:39:48.293Z] 						Connection count for [224] from API is 33
+[2026-03-09T15:39:48.293Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:39:48.299Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:39:48.299Z] 						UI Showing entries text: "Showing 1 to 33 of 33 entries"
+[2026-03-09T15:39:48.299Z] 									Parsed start index: 1
+[2026-03-09T15:39:48.299Z] 									Parsed end index: 33
+[2026-03-09T15:39:48.299Z] 									Parsed total entries: 33
+[2026-03-09T15:39:48.299Z] 								Expected visible rows (end - start + 1): 33
+[2026-03-09T15:39:48.299Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:39:48.305Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:39:48.305Z] 						Actual table row count: 33
+[2026-03-09T15:39:48.310Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:39:48.310Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:39:48.310Z] 						Validating for Account: '[224]' & Connection: 'All Connections'
+[2026-03-09T15:39:48.315Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:39:48.315Z] 						✅ Val-step II.2.1.2:  Total Connections count from the API matches the total entries from the UI. Expected: 33, Found: 33
+[2026-03-09T15:39:48.315Z] 						✅ Val-step II.2.1.3: Visible row count matched with the expected number. Expected: 33, Found: 33
+[2026-03-09T15:39:48.316Z] 							Account # 2 of 3
+[2026-03-09T15:39:48.316Z] 								Connection #2 of 3
+[2026-03-09T15:39:48.316Z] 								Is this the last connection: false
+[2026-03-09T15:39:48.316Z] Validation II.2.2: Testing connection filter: [2620] | [224].[2620]
+[2026-03-09T15:39:48.340Z] 						->Entering '[2620]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:39:48.340Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:39:48.352Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:39:48.352Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:39:50.425Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [2620] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:39:50.744Z] 						->Checking if the connection is visible with the connection string: [2620]
+[2026-03-09T15:39:50.769Z] 								Connection 1st option innerText: Ortho : OPEN [2620]
+[2026-03-09T15:39:50.769Z] 					🧪 Val-step II.2.2.0 Validate if the 1st option in the Connection dropdown contains the connection string: [2620]
+[2026-03-09T15:39:50.769Z] 					 🆔 → II.2.2.0
+[2026-03-09T15:39:50.769Z] 						✅ Val-step II.2.2.0: Connection "[2620]" is found in the 1st option text: Ortho : OPEN [2620])
+[2026-03-09T15:39:50.769Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:39:51.116Z] 						->Clicking Search button
+[2026-03-09T15:39:51.972Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:39:51.972Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'224')]
+[2026-03-09T15:39:51.972Z] 						->Waiting for Search Results accountID: 224
+[2026-03-09T15:39:58.299Z] 								Search Results text: Search Results accountIdentifiers: 224 connectionIdentifiers: 2620 excludeChildren: true
+[2026-03-09T15:39:58.299Z] 						Connection count for [224] from API is 33
+[2026-03-09T15:39:58.299Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:39:58.304Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:39:58.304Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:39:58.304Z] 									Parsed start index: 1
+[2026-03-09T15:39:58.304Z] 									Parsed end index: 1
+[2026-03-09T15:39:58.304Z] 									Parsed total entries: 1
+[2026-03-09T15:39:58.304Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:39:58.304Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:39:58.310Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:39:58.310Z] 						Actual table row count: 1
+[2026-03-09T15:39:58.316Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:39:58.316Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:39:58.316Z] 						Validating for Account: '[224]' & Connection: '[2620]'
+[2026-03-09T15:39:58.321Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:39:58.321Z] 						❌ Val-step II.2.2.2: Total Connections count from the API does not match the total entries from the UI. Expected: 33, Found: 1
+[2026-03-09T15:39:58.321Z] 						✅ Val-step II.2.2.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:39:58.321Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [224]. UI: 1, API: 33
+[2026-03-09T15:39:58.321Z] 							Account # 2 of 3
+[2026-03-09T15:39:58.321Z] 								Connection #3 of 3
+[2026-03-09T15:39:58.321Z] 								Is this the last connection: true
+[2026-03-09T15:39:58.321Z] Validation II.2.3: Testing connection filter: [2839] | [224].[2839]
+[2026-03-09T15:39:58.438Z] 						->Entering '[2839]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:39:58.438Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:39:58.445Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:39:58.445Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:40:00.509Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [2839] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:40:00.822Z] 						->Checking if the connection is visible with the connection string: [2839]
+[2026-03-09T15:40:00.863Z] 								Connection 1st option innerText: Ortho Chart - Buckley [2839]
+[2026-03-09T15:40:00.863Z] 					🧪 Val-step II.2.3.0 Validate if the 1st option in the Connection dropdown contains the connection string: [2839]
+[2026-03-09T15:40:00.863Z] 					 🆔 → II.2.3.0
+[2026-03-09T15:40:00.863Z] 						✅ Val-step II.2.3.0: Connection "[2839]" is found in the 1st option text: Ortho Chart - Buckley [2839])
+[2026-03-09T15:40:00.863Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:40:01.197Z] 						->Clicking Search button
+[2026-03-09T15:40:01.966Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:40:01.966Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'224')]
+[2026-03-09T15:40:01.966Z] 						->Waiting for Search Results accountID: 224
+[2026-03-09T15:40:09.319Z] 								Search Results text: Search Results accountIdentifiers: 224 connectionIdentifiers: 2839 excludeChildren: true
+[2026-03-09T15:40:09.319Z] 						Connection count for [224] from API is 33
+[2026-03-09T15:40:09.319Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:40:09.325Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:40:09.325Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:40:09.325Z] 									Parsed start index: 1
+[2026-03-09T15:40:09.325Z] 									Parsed end index: 1
+[2026-03-09T15:40:09.325Z] 									Parsed total entries: 1
+[2026-03-09T15:40:09.325Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:40:09.325Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:40:09.331Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:40:09.331Z] 						Actual table row count: 1
+[2026-03-09T15:40:09.335Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:40:09.335Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:40:09.335Z] 						Validating for Account: '[224]' & Connection: '[2839]'
+[2026-03-09T15:40:09.340Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:40:09.340Z] 						❌ Val-step II.2.3.2: Total Connections count from the API does not match the total entries from the UI. Expected: 33, Found: 1
+[2026-03-09T15:40:09.340Z] 						✅ Val-step II.2.3.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:40:09.340Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [224]. UI: 1, API: 33
+[2026-03-09T15:40:09.340Z] ➡️  				Validation V.2: Validate the Connection GUID field (account: [224])
+[2026-03-09T15:40:09.340Z] 						->Closing any open dropdowns by clicking on the ConnectionGUID input field
+[2026-03-09T15:40:10.113Z] 								Performing CLICK action | Element: INP-ConnectionGUID.Connections.default | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:40:10.113Z] 						->Reading first row first cell (Connection GUID)
+[2026-03-09T15:40:10.123Z] 								Performing READ action | Element: TRW-1stRow.Connections.default/td[1] | Locator: //tbody/tr[1]/td[1] | Value: 82DCF598-02C5-46E9-ABA6-0A26DE23A133
+[2026-03-09T15:40:10.123Z] 						✅ Validation IV.2.1: GUID length validated (36 characters)
+[2026-03-09T15:40:10.123Z] 						->GUID test IV.2.2:1/5: trimmed
+[2026-03-09T15:40:10.135Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (36 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:40:11.355Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:40:19.169Z] 								READ first row td[1] after search | Expected: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Actual: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Match: true
+[2026-03-09T15:40:19.169Z] 						->GUID test IV.2.2:2/5: spaces at beginning
+[2026-03-09T15:40:19.185Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (39 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:40:20.060Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:40:28.596Z] 								READ first row td[1] after search | Expected: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Actual: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Match: true
+[2026-03-09T15:40:28.596Z] 						->GUID test IV.2.2:3/5: spaces at end
+[2026-03-09T15:40:28.620Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (39 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:40:29.704Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:40:38.129Z] 								READ first row td[1] after search | Expected: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Actual: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Match: true
+[2026-03-09T15:40:38.129Z] 						->GUID test IV.2.2:4/5: spaces at both ends
+[2026-03-09T15:40:38.144Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (42 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:40:39.192Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:40:46.329Z] 								READ first row td[1] after search | Expected: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Actual: 82DCF598-02C5-46E9-ABA6-0A26DE23A133 | Match: true
+[2026-03-09T15:40:46.329Z] 						->GUID test IV.2.2:5/5: 30 character substring
+[2026-03-09T15:40:46.341Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (30 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:40:47.663Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:40:59.522Z] 								✅ Validation IV.2.2: Expecting No matching records | Visible: false
+[2026-03-09T15:40:59.522Z] 						✅ Validation IV.2.2: GUID tests completed
+[2026-03-09T15:40:59.522Z] 
+
+
+						Validation VI.2: Validate the Reset button | Account: [224]
+[2026-03-09T15:40:59.522Z] 						->Collecting Previous Values (before Reset)
+[2026-03-09T15:40:59.531Z] 								READ selected Account | Element: DDN-Account.Connections.default/../../span[1]/span | Value: OrthoChart, LLC [224]
+[2026-03-09T15:40:59.537Z] 								READ selected Connection | Element: DDN-Connection.Connections.default/../../span[1]/span | Value: Ortho Chart - Buckley [2839]
+[2026-03-09T15:40:59.543Z] 								READ selected Sort | Locator: //select[@id='sort']/option[@selected][last()] | Value: Last Updated Descending
+[2026-03-09T15:40:59.550Z] 								READ selected Output | Locator: //select[@id='options-output']/option[@selected='selected'] | Value: Screen
+[2026-03-09T15:40:59.558Z] 								READ Connection GUID input | Element: INP-ConnectionGUID.Connections.default | Value: 82DCF598-02C5-46E9-ABA6-0A26DE
+[2026-03-09T15:40:59.559Z] 						Previous Values: {"selectedAccount":"OrthoChart, LLC [224]","selectedConnection":"Ortho Chart - Buckley [2839]","sortBy":"Last Updated Descending","output":"Screen","connectionGuid":"82DCF598-02C5-46E9-ABA6-0A26DE"}
+[2026-03-09T15:40:59.559Z] 						->Clicking Reset button
+[2026-03-09T15:41:00.739Z] 								Performing CLICK action | Element: BTN-Reset.Connections.default | Locator: //button[@id='option-search-reset']
+[2026-03-09T15:41:10.505Z] 						->Verifying values after Reset
+[2026-03-09T15:41:10.532Z] 								READ Account after Reset | Value: Aerialink Inc. [1]
+[2026-03-09T15:41:10.540Z] 								READ Connection after Reset | Value: All Connections
+[2026-03-09T15:41:10.547Z] 								READ Sort after Reset | Value: Last Updated Descending
+[2026-03-09T15:41:10.554Z] 								READ Output after Reset | Value: Screen
+[2026-03-09T15:41:10.560Z] 								READ Connection GUID after Reset | Value: (empty)
+[2026-03-09T15:41:10.579Z] 						After Reset: Account=Aerialink Inc. [1] (expected Aerialink Inc. [1]) ✅ | Connection=All Connections ✅ | GUID empty=✅ | Output=Screen ✅ | Sort=Last Updated Descending ✅ | No NMR=✅ | Rows=33
+[2026-03-09T15:41:10.579Z] 						Is this the last account: true
+
+
+
+
+[2026-03-09T15:41:10.579Z] SELECTION II.3: [1] Selecting CONNECTIONS for the account: [1] whose connection-Count is:3535)
+[2026-03-09T15:41:10.579Z] ➡️  			SELECTION II.3: Choosing the Accounts dropdown and selecting the account: [1] and opening the Connections dropdown to list its Connections options
+[2026-03-09T15:41:10.579Z] 						->Closing any open dropdowns by clicking on the ConnectionGUID input field
+[2026-03-09T15:41:10.597Z] 								Performing CLICK action | Element: INP-ConnectionGUID.Connections.default | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:41:10.597Z] 						->Clicking on Account dropdown
+[2026-03-09T15:41:10.665Z] 								Performing CLICK action | Element: DDN-Account.Connections.default | Locator: //span[@id='select2-account-id-container']/..//b
+[2026-03-09T15:41:10.665Z] 						->Typing "[1]" into the Account Search Text field
+[2026-03-09T15:41:10.695Z] 								Performing FILL action | Element: INP-AccountSearchText.Connections.default | Locator: //input[@aria-controls='select2-account-id-results'] | Value: [1]
+[2026-03-09T15:41:10.695Z] 						->Selecting the first account "[1]" from the Account dropdown
+[2026-03-09T15:41:10.712Z] 								Performing READ action | Element: DDI-1stAccount.Connections.default | Locator: //ul[@id='select2-account-id-results']/li[1] | Options found: 1
+[2026-03-09T15:41:10.874Z] 								Performing CLICK action | Element: DDI-1stAccount.Connections.default
+[2026-03-09T15:41:12.888Z] 						connectionsToTest before load (account changed to [1]): []
+[2026-03-09T15:41:12.888Z] 						->Clicking Connections dropdown (DDN-Connection.Connections.default)
+[2026-03-09T15:41:13.340Z] 								Performing CLICK action | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:41:13.340Z] 						->Reading all connection options (DDI-AllConnections.Connections.default)
+[2026-03-09T15:41:13.353Z] 								Performing READ action | Element: DDI-AllConnections.Connections.default | Locator: //ul[@id='select2-connection-id-results']/li | List of Connections count: 34
+
+[2026-03-09T15:41:13.353Z] 				connectionsToTest after load: ["All Connections","[10128]","[538]"]
+[2026-03-09T15:41:13.353Z] 				Connections to test: All Connections, [10128], [538]
+[2026-03-09T15:41:13.353Z] 				Connections in dropdown: 33. Using 2 ( exhaustive factor: 5%): All Connections, [10128], [538]
+[2026-03-09T15:41:13.353Z] 
+
+[2026-03-09T15:41:13.353Z] 												Connections selected for testing the account: [1]
+[2026-03-09T15:41:13.353Z] 						[1] : All Connections
+[2026-03-09T15:41:13.353Z] 						[2] : [10128]
+[2026-03-09T15:41:13.353Z] 						[3] : [538]
+[2026-03-09T15:41:13.353Z] 							Account # 3 of 3
+[2026-03-09T15:41:13.353Z] 								Connection #1 of 3
+[2026-03-09T15:41:13.353Z] 								Is this the last connection: false
+[2026-03-09T15:41:13.353Z] Validation II.3.1: Testing connection filter: All Connections | [1].All Connections
+[2026-03-09T15:41:13.375Z] 						->Entering 'All Connections' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:41:13.375Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:41:13.383Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:41:13.413Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:41:16.007Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: All Connections | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:41:16.326Z] 						->Checking if the connection is visible with the connection string: All Connections
+[2026-03-09T15:41:16.351Z] 								Connection 1st option innerText: All Connections
+[2026-03-09T15:41:16.351Z] 					🧪 Val-step II.3.1.0 Validate if the 1st option in the Connection dropdown contains the connection string: All Connections
+[2026-03-09T15:41:16.351Z] 					 🆔 → II.3.1.0
+[2026-03-09T15:41:16.351Z] 						✅ Val-step II.3.1.0: Connection "All Connections" is found in the 1st option text: All Connections)
+[2026-03-09T15:41:16.351Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:41:16.694Z] 						->Clicking Search button
+[2026-03-09T15:41:17.582Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:41:17.582Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'1')]
+[2026-03-09T15:41:17.582Z] 						->Waiting for Search Results accountID: 1
+[2026-03-09T15:41:26.447Z] 								Search Results text: Search Results accountIdentifiers: 1 excludeChildren: true
+[2026-03-09T15:41:26.447Z] 						Connection count for [1] from API is 3535
+[2026-03-09T15:41:26.447Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:41:26.455Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:41:26.455Z] 						UI Showing entries text: "Showing 1 to 33 of 33 entries"
+[2026-03-09T15:41:26.455Z] 									Parsed start index: 1
+[2026-03-09T15:41:26.455Z] 									Parsed end index: 33
+[2026-03-09T15:41:26.455Z] 									Parsed total entries: 33
+[2026-03-09T15:41:26.455Z] 								Expected visible rows (end - start + 1): 33
+[2026-03-09T15:41:26.455Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:41:26.461Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:41:26.461Z] 						Actual table row count: 33
+[2026-03-09T15:41:26.467Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:41:26.467Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:41:26.467Z] 						Validating for Account: '[1]' & Connection: 'All Connections'
+[2026-03-09T15:41:26.478Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:41:26.478Z] 						❌ Val-step II.3.1.2: Total Connections count from the API does not match the total entries from the UI. Expected: 3535, Found: 33
+[2026-03-09T15:41:26.478Z] 						✅ Val-step II.3.1.3: Visible row count matched with the expected number. Expected: 33, Found: 33
+[2026-03-09T15:41:26.478Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [1]. UI: 33, API: 3535
+[2026-03-09T15:41:26.478Z] 
+
+
+						 TRIAGING Account: [1] and Connection: All Connections
+[2026-03-09T15:41:26.478Z] 
+
+
+						 Validation III.: Pagination, Sorting and reset | For account: '[1]' & Connection: 'All Connections'
+[2026-03-09T15:41:26.478Z] 						We will perform the Pagination, Sorting and reset to only  this is account number 3
+[2026-03-09T15:41:26.478Z] 						 Looping over the SortBy options
+[2026-03-09T15:41:26.478Z] 						 Looping over the SortBy options: 6
+[2026-03-09T15:41:26.478Z] 						 SortBy options: Last Updated Ascending, Connection ID Ascending, Connection Name Ascending, Last Updated Descending, Connection ID Descending, Connection Name Descending
+[2026-03-09T15:41:26.492Z] 						III.1. Selecting Sort By "Last Updated Ascending" | Locator: //select[@id='sort']
+[2026-03-09T15:41:26.492Z] 						->Clicking on connection dropdown and entering the connection name in the input and selecting the connection
+[2026-03-09T15:41:26.498Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:41:26.833Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:41:27.360Z] 						->Filling the connection name in the input | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results'] | Value: All Connections 
+[2026-03-09T15:41:27.683Z] 						->Pressing backspace to delete the space | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:41:28.002Z] ❌ Click on connection dropdown and enter the connection name in the input and select the connection | locator.selectOption: Error: Element is not a <select> element
+Call log:
+[2m  - waiting for locator('//span[@id=\'select2-connection-id-container\']/..//b')[22m
+[2m    - locator resolved to <b role="presentation"></b>[22m
+[2m  - attempting select option action[22m
+[2m    - waiting for element to be visible and enabled[22m
+
+[2026-03-09T15:41:39.611Z] 							 Clicking on Search button | Locator: //button[@id='option-search']
+[2026-03-09T15:41:39.611Z] 						 Sort column for validation: Last Updated (Ascending) | Locator: //tbody/tr/td[8]
+[2026-03-09T15:41:39.611Z] 
+										 ---------- III.1.1 Show entries: 100 | Sort: Last Updated Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:41:39.643Z] 						 ACTION: Selected "Show 100 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:41:41.172Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:41:41.186Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:41:41.186Z] 						 PARSED: Total records = 33, Entries per page = 100, Total pages = 1
+[2026-03-09T15:41:41.186Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:41:41.214Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:41:41.746Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:41:41.746Z] ✅ 									Show 100 entries, page 1: Row count OK (33)
+[2026-03-09T15:41:41.763Z] 						 VALIDATION (page 1): Sort by Last Updated (Asc) | Sample values: [2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z...] | Result: PASS
+[2026-03-09T15:41:41.763Z] ✅ 									Show 100 entries, page 1: Sort order OK
+[2026-03-09T15:41:41.764Z] 
+										 ---------- III.1.2 Show entries: 300 | Sort: Last Updated Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:41:41.781Z] 						 ACTION: Selected "Show 300 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:41:43.301Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:41:43.311Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:41:43.312Z] 						 PARSED: Total records = 33, Entries per page = 300, Total pages = 1
+[2026-03-09T15:41:43.312Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:41:43.333Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:41:43.877Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:41:43.877Z] ✅ 									Show 300 entries, page 1: Row count OK (33)
+[2026-03-09T15:41:43.887Z] 						 VALIDATION (page 1): Sort by Last Updated (Asc) | Sample values: [2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z...] | Result: PASS
+[2026-03-09T15:41:43.887Z] ✅ 									Show 300 entries, page 1: Sort order OK
+[2026-03-09T15:41:43.887Z] 
+										 ---------- III.1.3 Show entries: 500 | Sort: Last Updated Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:41:43.901Z] 						 ACTION: Selected "Show 500 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:41:45.424Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:41:45.436Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:41:45.436Z] 						 PARSED: Total records = 33, Entries per page = 500, Total pages = 1
+[2026-03-09T15:41:45.436Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:41:45.460Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:41:46.000Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:41:46.000Z] ✅ 									Show 500 entries, page 1: Row count OK (33)
+[2026-03-09T15:41:46.010Z] 						 VALIDATION (page 1): Sort by Last Updated (Asc) | Sample values: [2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z...] | Result: PASS
+[2026-03-09T15:41:46.010Z] ✅ 									Show 500 entries, page 1: Sort order OK
+[2026-03-09T15:41:46.010Z] 
+										 ---------- III.1.4 Show entries: 1000 | Sort: Last Updated Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:41:46.024Z] 						 ACTION: Selected "Show 1000 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:41:47.542Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:41:47.555Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:41:47.555Z] 						 PARSED: Total records = 33, Entries per page = 1000, Total pages = 1
+[2026-03-09T15:41:47.555Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:41:47.577Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:41:48.115Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:41:48.115Z] ✅ 									Show 1000 entries, page 1: Row count OK (33)
+[2026-03-09T15:41:48.128Z] 						 VALIDATION (page 1): Sort by Last Updated (Asc) | Sample values: [2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z, 2014-11-06T21:19:36.000Z...] | Result: PASS
+[2026-03-09T15:41:48.128Z] ✅ 									Show 1000 entries, page 1: Sort order OK
+[2026-03-09T15:41:48.137Z] 						->URL before Download | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22lastUpdated%22%3A%22ASC%22%7D
+[2026-03-09T15:41:48.137Z] 
+
+
+						Validation III.II.3.1: CSV Download: UI Entries (before download) = 33 | Sort: Last Updated Ascending | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:41:48.137Z] 
+
+
+						 Account Count: 3 and Connection: All Connections
+[2026-03-09T15:41:48.137Z] 						->Selecting Download from Output dropdown
+[2026-03-09T15:41:48.149Z] 								Performing SELECT action | Element: DDN-Output.Connections.default | Locator: //select[@id='options-output'] | Value: Download
+[2026-03-09T15:41:48.149Z] 						->Clicking Search button to trigger download
+[2026-03-09T15:41:49.085Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:41:49.087Z] 								Download saved to: /Users/nishan.manoraj/Downloads/Connections.csv
+[2026-03-09T15:41:49.087Z] 						✅ Validation III.II.3.1: CSV: Downloaded rows = 33 | UI entries = 33 | Entries Result: PASS
+[2026-03-09T15:41:49.087Z] 						 Header of the csv: 
+"connectionID","connectionGUID","accountID","name","codeDistributionMethodID","defaultCodeID","destinationNumberFormat","enforceOptOut","disableInNetworkRouting","messageExpirationHours","segmentedMessageOption","replyHelp","replyStop","registeredDeliveryDisable","active","created","lastUpdated","enableInboundSC","utf16HttpStrip","spamFilterMT","spamFilterMO","spamOfflineMT","spamOfflineMO","moHttpTlvs","s3Bucket","s3ApiKey","s3ApiSecret","s3Params","defaultCode","isDefaultConnection"
+[2026-03-09T15:41:49.087Z] 						 First 2 rows of the csv: 
+82,"b8b392b8-dcfe-11e3-94de-02f2d79344c4",1,"Email2SMS Demo",0,0,false,false,false,24,2,"Aerialink Demo for email2sms:  For help call 563-449-9477 or email support@aerialink.com   Reply STOP to cancel.","Aerialink Demo for email2sms:  You have been unsubscribed and will receive no more messages.",false,true,"2014-05-16T13:33:52.000Z","2014-11-06T21:19:36.000Z",1,false,false,false,false,false,false,,,,,,false
+86,"cc479a40-eb31-11e3-94de-02f2d79344c4",1,"Mobile2Mobile Demo Users",0,0,false,false,false,24,2,"Aerialink Mobile2mobile contact us a support@aerialink.com","Aerialink Mobile2mobile contact us a support@aerialink.com",false,true,"2014-06-03T15:14:46.000Z","2014-11-06T21:19:36.000Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:41:49.087Z] 						 Last 2 rows of the csv: 
+10182,"fdecbe82-5d64-48f2-8e99-5246983d27c0",1,"v4JestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:29.470Z","2026-02-25T18:50:29.470Z",0,false,false,false,false,false,false,,,,,,false
+10183,"19edb48f-733a-4481-b949-79754e96dcf5",1,"v4xmlJestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:31.247Z","2026-02-25T18:50:31.247Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:41:49.088Z] 
+						 CSV saved to: /Users/nishan.manoraj/Downloads/III.II..3.1.Last Updated Ascending.[1].All Connections.csv
+[2026-03-09T15:41:59.794Z] 						->Entering the URL later | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22lastUpdated%22%3A%22ASC%22%7D
+[2026-03-09T15:42:01.214Z] 						III.2. Selecting Sort By "Connection ID Ascending" | Locator: //select[@id='sort']
+[2026-03-09T15:42:01.214Z] 						->Clicking on connection dropdown and entering the connection name in the input and selecting the connection
+[2026-03-09T15:42:01.225Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:42:01.266Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:42:01.798Z] 						->Filling the connection name in the input | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results'] | Value: All Connections 
+[2026-03-09T15:42:02.117Z] 						->Pressing backspace to delete the space | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:42:02.441Z] ❌ Click on connection dropdown and enter the connection name in the input and select the connection | locator.selectOption: Error: Element is not a <select> element
+Call log:
+[2m  - waiting for locator('//span[@id=\'select2-connection-id-container\']/..//b')[22m
+[2m    - locator resolved to <b role="presentation"></b>[22m
+[2m  - attempting select option action[22m
+[2m    - waiting for element to be visible and enabled[22m
+
+[2026-03-09T15:42:07.541Z] 							 Clicking on Search button | Locator: //button[@id='option-search']
+[2026-03-09T15:42:07.541Z] 						 Sort column for validation: Connection ID (Ascending) | Locator: //tbody/tr/td[4]
+[2026-03-09T15:42:07.541Z] 
+										 ---------- III.2.1 Show entries: 100 | Sort: Connection ID Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:07.573Z] 						 ACTION: Selected "Show 100 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:09.084Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:09.091Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:09.092Z] 						 PARSED: Total records = 33, Entries per page = 100, Total pages = 1
+[2026-03-09T15:42:09.092Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:09.115Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:09.662Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:09.662Z] ✅ 									Show 100 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:09.682Z] 						 VALIDATION (page 1): Sort by Connection ID (Asc) | Sample values: [1, 2, 3...] | Result: PASS
+[2026-03-09T15:42:09.682Z] ✅ 									Show 100 entries, page 1: Sort order OK
+[2026-03-09T15:42:09.682Z] 
+										 ---------- III.2.2 Show entries: 300 | Sort: Connection ID Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:09.696Z] 						 ACTION: Selected "Show 300 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:11.216Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:11.236Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:11.236Z] 						 PARSED: Total records = 33, Entries per page = 300, Total pages = 1
+[2026-03-09T15:42:11.236Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:11.266Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:11.788Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:11.788Z] ✅ 									Show 300 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:11.793Z] 						 VALIDATION (page 1): Sort by Connection ID (Asc) | Sample values: [1, 2, 3...] | Result: PASS
+[2026-03-09T15:42:11.793Z] ✅ 									Show 300 entries, page 1: Sort order OK
+[2026-03-09T15:42:11.793Z] 
+										 ---------- III.2.3 Show entries: 500 | Sort: Connection ID Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:11.804Z] 						 ACTION: Selected "Show 500 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:13.322Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:13.334Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:13.334Z] 						 PARSED: Total records = 33, Entries per page = 500, Total pages = 1
+[2026-03-09T15:42:13.334Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:13.355Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:13.878Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:13.878Z] ✅ 									Show 500 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:13.885Z] 						 VALIDATION (page 1): Sort by Connection ID (Asc) | Sample values: [1, 2, 3...] | Result: PASS
+[2026-03-09T15:42:13.885Z] ✅ 									Show 500 entries, page 1: Sort order OK
+[2026-03-09T15:42:13.885Z] 
+										 ---------- III.2.4 Show entries: 1000 | Sort: Connection ID Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:13.898Z] 						 ACTION: Selected "Show 1000 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:15.414Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:15.426Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:15.426Z] 						 PARSED: Total records = 33, Entries per page = 1000, Total pages = 1
+[2026-03-09T15:42:15.426Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:15.449Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:15.970Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:15.970Z] ✅ 									Show 1000 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:15.976Z] 						 VALIDATION (page 1): Sort by Connection ID (Asc) | Sample values: [1, 2, 3...] | Result: PASS
+[2026-03-09T15:42:15.976Z] ✅ 									Show 1000 entries, page 1: Sort order OK
+[2026-03-09T15:42:15.981Z] 						->URL before Download | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22connectionID%22%3A%22ASC%22%7D
+[2026-03-09T15:42:15.981Z] 
+
+
+						Validation III.II.3.2: CSV Download: UI Entries (before download) = 33 | Sort: Connection ID Ascending | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:15.981Z] 
+
+
+						 Account Count: 3 and Connection: All Connections
+[2026-03-09T15:42:15.981Z] 						->Selecting Download from Output dropdown
+[2026-03-09T15:42:15.992Z] 								Performing SELECT action | Element: DDN-Output.Connections.default | Locator: //select[@id='options-output'] | Value: Download
+[2026-03-09T15:42:15.992Z] 						->Clicking Search button to trigger download
+[2026-03-09T15:42:17.019Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:42:17.025Z] 								Download saved to: /Users/nishan.manoraj/Downloads/Connections.csv
+[2026-03-09T15:42:17.026Z] 						✅ Validation III.II.3.2: CSV: Downloaded rows = 33 | UI entries = 33 | Entries Result: PASS
+[2026-03-09T15:42:17.026Z] 						 Header of the csv: 
+"connectionID","connectionGUID","accountID","name","codeDistributionMethodID","defaultCodeID","destinationNumberFormat","enforceOptOut","disableInNetworkRouting","messageExpirationHours","segmentedMessageOption","replyHelp","replyStop","registeredDeliveryDisable","active","created","lastUpdated","enableInboundSC","utf16HttpStrip","spamFilterMT","spamFilterMO","spamOfflineMT","spamOfflineMO","moHttpTlvs","s3Bucket","s3ApiKey","s3ApiSecret","s3Params","defaultCode","isDefaultConnection"
+[2026-03-09T15:42:17.026Z] 						 First 2 rows of the csv: 
+1,"1256b5a2-a911-11e2-b3e1-02f2d793c2ee",1,"Aerialink System (Reserved)",0,0,false,false,false,24,2,"reply help from connection ","reply stop from connection ",false,true,"2013-04-19T16:49:16.000Z","2026-02-02T20:01:12.040Z",0,false,true,true,false,false,false,"","","","",,true
+2,"25ea11cc-a911-11e2-b3e1-02f2d793c2ee",1,"Conversations Production",0,0,false,false,false,24,2,"Aerialink: internal testing for SMS and MMS.  customerservice@messagebroadcast.com  Aerialink is a product of Message Broadcast.  Reply STOP to end.","You have successfully been unsubscribed. You will not receive any more messages from this number.",false,true,"2013-04-19T16:49:49.000Z","2025-08-29T20:56:08.300Z",0,false,false,false,false,false,false,"","","","",,false
+[2026-03-09T15:42:17.026Z] 						 Last 2 rows of the csv: 
+10182,"fdecbe82-5d64-48f2-8e99-5246983d27c0",1,"v4JestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:29.470Z","2026-02-25T18:50:29.470Z",0,false,false,false,false,false,false,,,,,,false
+10183,"19edb48f-733a-4481-b949-79754e96dcf5",1,"v4xmlJestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:31.247Z","2026-02-25T18:50:31.247Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:42:17.027Z] 
+						 CSV saved to: /Users/nishan.manoraj/Downloads/III.II..3.2.Connection ID Ascending.[1].All Connections.csv
+[2026-03-09T15:42:22.518Z] 						->Entering the URL later | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22connectionID%22%3A%22ASC%22%7D
+[2026-03-09T15:42:23.898Z] 						III.3. Selecting Sort By "Connection Name Ascending" | Locator: //select[@id='sort']
+[2026-03-09T15:42:23.898Z] 						->Clicking on connection dropdown and entering the connection name in the input and selecting the connection
+[2026-03-09T15:42:23.906Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:42:23.953Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:42:24.496Z] 						->Filling the connection name in the input | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results'] | Value: All Connections 
+[2026-03-09T15:42:24.825Z] 						->Pressing backspace to delete the space | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:42:25.146Z] ❌ Click on connection dropdown and enter the connection name in the input and select the connection | locator.selectOption: Error: Element is not a <select> element
+Call log:
+[2m  - waiting for locator('//span[@id=\'select2-connection-id-container\']/..//b')[22m
+[2m    - locator resolved to <b role="presentation"></b>[22m
+[2m  - attempting select option action[22m
+[2m    - waiting for element to be visible and enabled[22m
+
+[2026-03-09T15:42:34.107Z] 							 Clicking on Search button | Locator: //button[@id='option-search']
+[2026-03-09T15:42:34.107Z] 						 Sort column for validation: Connection Name (Ascending) | Locator: //tbody/tr/td[6]
+[2026-03-09T15:42:34.107Z] 
+										 ---------- III.3.1 Show entries: 100 | Sort: Connection Name Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:34.134Z] 						 ACTION: Selected "Show 100 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:35.655Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:35.671Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:35.671Z] 						 PARSED: Total records = 33, Entries per page = 100, Total pages = 1
+[2026-03-09T15:42:35.671Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:35.733Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:36.261Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:36.261Z] ✅ 									Show 100 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:36.279Z] 						 VALIDATION (page 1): Sort by Connection Name (Asc) | Sample values: [16jtest, Aerialink - API Test, Aerialink 10DLC Placeholder...] | Result: PASS
+[2026-03-09T15:42:36.279Z] ✅ 									Show 100 entries, page 1: Sort order OK
+[2026-03-09T15:42:36.279Z] 
+										 ---------- III.3.2 Show entries: 300 | Sort: Connection Name Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:36.291Z] 						 ACTION: Selected "Show 300 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:37.799Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:37.805Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:37.805Z] 						 PARSED: Total records = 33, Entries per page = 300, Total pages = 1
+[2026-03-09T15:42:37.805Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:37.828Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:38.368Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:38.368Z] ✅ 									Show 300 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:38.377Z] 						 VALIDATION (page 1): Sort by Connection Name (Asc) | Sample values: [16jtest, Aerialink - API Test, Aerialink 10DLC Placeholder...] | Result: PASS
+[2026-03-09T15:42:38.377Z] ✅ 									Show 300 entries, page 1: Sort order OK
+[2026-03-09T15:42:38.377Z] 
+										 ---------- III.3.3 Show entries: 500 | Sort: Connection Name Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:38.390Z] 						 ACTION: Selected "Show 500 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:39.913Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:39.927Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:39.927Z] 						 PARSED: Total records = 33, Entries per page = 500, Total pages = 1
+[2026-03-09T15:42:39.927Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:39.962Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:40.484Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:40.484Z] ✅ 									Show 500 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:40.491Z] 						 VALIDATION (page 1): Sort by Connection Name (Asc) | Sample values: [16jtest, Aerialink - API Test, Aerialink 10DLC Placeholder...] | Result: PASS
+[2026-03-09T15:42:40.491Z] ✅ 									Show 500 entries, page 1: Sort order OK
+[2026-03-09T15:42:40.491Z] 
+										 ---------- III.3.4 Show entries: 1000 | Sort: Connection Name Ascending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:42:40.503Z] 						 ACTION: Selected "Show 1000 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:42:42.023Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:42:42.032Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:42.032Z] 						 PARSED: Total records = 33, Entries per page = 1000, Total pages = 1
+[2026-03-09T15:42:42.032Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:42:42.058Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:42:42.590Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:42:42.590Z] ✅ 									Show 1000 entries, page 1: Row count OK (33)
+[2026-03-09T15:42:42.595Z] 						 VALIDATION (page 1): Sort by Connection Name (Asc) | Sample values: [16jtest, Aerialink - API Test, Aerialink 10DLC Placeholder...] | Result: PASS
+[2026-03-09T15:42:42.595Z] ✅ 									Show 1000 entries, page 1: Sort order OK
+[2026-03-09T15:42:42.601Z] 						->URL before Download | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22name%22%3A%22ASC%22%7D
+[2026-03-09T15:42:42.601Z] 
+
+
+						Validation III.II.3.3: CSV Download: UI Entries (before download) = 33 | Sort: Connection Name Ascending | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:42:42.601Z] 
+
+
+						 Account Count: 3 and Connection: All Connections
+[2026-03-09T15:42:42.601Z] 						->Selecting Download from Output dropdown
+[2026-03-09T15:42:42.611Z] 								Performing SELECT action | Element: DDN-Output.Connections.default | Locator: //select[@id='options-output'] | Value: Download
+[2026-03-09T15:42:42.612Z] 						->Clicking Search button to trigger download
+[2026-03-09T15:42:43.468Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:42:43.470Z] 								Download saved to: /Users/nishan.manoraj/Downloads/Connections.csv
+[2026-03-09T15:42:43.470Z] 						✅ Validation III.II.3.3: CSV: Downloaded rows = 33 | UI entries = 33 | Entries Result: PASS
+[2026-03-09T15:42:43.470Z] 						 Header of the csv: 
+"connectionID","connectionGUID","accountID","name","codeDistributionMethodID","defaultCodeID","destinationNumberFormat","enforceOptOut","disableInNetworkRouting","messageExpirationHours","segmentedMessageOption","replyHelp","replyStop","registeredDeliveryDisable","active","created","lastUpdated","enableInboundSC","utf16HttpStrip","spamFilterMT","spamFilterMO","spamOfflineMT","spamOfflineMO","moHttpTlvs","s3Bucket","s3ApiKey","s3ApiSecret","s3Params","defaultCode","isDefaultConnection"
+[2026-03-09T15:42:43.470Z] 						 First 2 rows of the csv: 
+10128,"db501ba5-c92a-4319-a3dc-9bf8ca8cfe41",1,"16jtest",0,,false,false,false,,2,,,false,true,"2026-01-15T18:43:37.033Z","2026-01-15T18:43:37.033Z",0,false,false,false,false,false,false,,,,,,false
+538,"71D64436-7545-4058-84BC-4F221F93DD8A",1,"Aerialink - API Test",0,0,false,true,false,24,2,"","",false,true,"2017-08-08T19:45:05.040Z","2025-08-22T18:43:32.640Z",0,false,false,false,false,false,false,"","","","",,false
+[2026-03-09T15:42:43.471Z] 						 Last 2 rows of the csv: 
+10183,"19edb48f-733a-4481-b949-79754e96dcf5",1,"v4xmlJestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:31.247Z","2026-02-25T18:50:31.247Z",0,false,false,false,false,false,false,,,,,,false
+10160,"1ef0e9fd-1c1c-44ee-8048-1562fc979458",1,"Yaseen Test conn",0,,false,false,false,0,2,"","",false,true,"2026-02-04T17:38:43.870Z","2026-02-04T18:36:48.147Z",0,false,false,false,false,false,false,"","","","",,false
+[2026-03-09T15:42:43.471Z] 
+						 CSV saved to: /Users/nishan.manoraj/Downloads/III.II..3.3.Connection Name Ascending.[1].All Connections.csv
+[2026-03-09T15:42:54.432Z] 						->Entering the URL later | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22name%22%3A%22ASC%22%7D
+[2026-03-09T15:42:55.820Z] 						III.4. Selecting Sort By "Last Updated Descending" | Locator: //select[@id='sort']
+[2026-03-09T15:42:55.820Z] 						->Clicking on connection dropdown and entering the connection name in the input and selecting the connection
+[2026-03-09T15:42:55.828Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:42:55.958Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:42:56.504Z] 						->Filling the connection name in the input | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results'] | Value: All Connections 
+[2026-03-09T15:42:56.846Z] 						->Pressing backspace to delete the space | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:42:57.170Z] ❌ Click on connection dropdown and enter the connection name in the input and select the connection | locator.selectOption: Error: Element is not a <select> element
+Call log:
+[2m  - waiting for locator('//span[@id=\'select2-connection-id-container\']/..//b')[22m
+[2m    - locator resolved to <b role="presentation"></b>[22m
+[2m  - attempting select option action[22m
+[2m    - waiting for element to be visible and enabled[22m
+
+[2026-03-09T15:43:02.093Z] 							 Clicking on Search button | Locator: //button[@id='option-search']
+[2026-03-09T15:43:02.093Z] 						 Sort column for validation: Last Updated (Descending) | Locator: //tbody/tr/td[8]
+[2026-03-09T15:43:02.093Z] 
+										 ---------- III.4.1 Show entries: 100 | Sort: Last Updated Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:02.117Z] 						 ACTION: Selected "Show 100 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:03.635Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:03.645Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:03.645Z] 						 PARSED: Total records = 33, Entries per page = 100, Total pages = 1
+[2026-03-09T15:43:03.645Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:03.668Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:04.196Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:04.196Z] ✅ 									Show 100 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:04.212Z] 						 VALIDATION (page 1): Sort by Last Updated (Desc) | Sample values: [2026-02-25T18:50:31.247Z, 2026-02-25T18:50:29.470Z, 2026-02-25T11:31:31.333Z...] | Result: PASS
+[2026-03-09T15:43:04.212Z] ✅ 									Show 100 entries, page 1: Sort order OK
+[2026-03-09T15:43:04.212Z] 
+										 ---------- III.4.2 Show entries: 300 | Sort: Last Updated Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:04.224Z] 						 ACTION: Selected "Show 300 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:05.746Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:05.761Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:05.761Z] 						 PARSED: Total records = 33, Entries per page = 300, Total pages = 1
+[2026-03-09T15:43:05.761Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:05.793Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:06.326Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:06.326Z] ✅ 									Show 300 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:06.336Z] 						 VALIDATION (page 1): Sort by Last Updated (Desc) | Sample values: [2026-02-25T18:50:31.247Z, 2026-02-25T18:50:29.470Z, 2026-02-25T11:31:31.333Z...] | Result: PASS
+[2026-03-09T15:43:06.336Z] ✅ 									Show 300 entries, page 1: Sort order OK
+[2026-03-09T15:43:06.336Z] 
+										 ---------- III.4.3 Show entries: 500 | Sort: Last Updated Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:06.348Z] 						 ACTION: Selected "Show 500 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:07.860Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:07.869Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:07.869Z] 						 PARSED: Total records = 33, Entries per page = 500, Total pages = 1
+[2026-03-09T15:43:07.869Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:07.892Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:08.425Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:08.425Z] ✅ 									Show 500 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:08.431Z] 						 VALIDATION (page 1): Sort by Last Updated (Desc) | Sample values: [2026-02-25T18:50:31.247Z, 2026-02-25T18:50:29.470Z, 2026-02-25T11:31:31.333Z...] | Result: PASS
+[2026-03-09T15:43:08.431Z] ✅ 									Show 500 entries, page 1: Sort order OK
+[2026-03-09T15:43:08.431Z] 
+										 ---------- III.4.4 Show entries: 1000 | Sort: Last Updated Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:08.444Z] 						 ACTION: Selected "Show 1000 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:09.958Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:09.969Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:09.969Z] 						 PARSED: Total records = 33, Entries per page = 1000, Total pages = 1
+[2026-03-09T15:43:09.969Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:09.994Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:10.534Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:10.534Z] ✅ 									Show 1000 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:10.544Z] 						 VALIDATION (page 1): Sort by Last Updated (Desc) | Sample values: [2026-02-25T18:50:31.247Z, 2026-02-25T18:50:29.470Z, 2026-02-25T11:31:31.333Z...] | Result: PASS
+[2026-03-09T15:43:10.544Z] ✅ 									Show 1000 entries, page 1: Sort order OK
+[2026-03-09T15:43:10.552Z] 						->URL before Download | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22lastUpdated%22%3A%22DESC%22%7D
+[2026-03-09T15:43:10.552Z] 
+
+
+						Validation III.II.3.4: CSV Download: UI Entries (before download) = 33 | Sort: Last Updated Descending | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:10.552Z] 
+
+
+						 Account Count: 3 and Connection: All Connections
+[2026-03-09T15:43:10.552Z] 						->Selecting Download from Output dropdown
+[2026-03-09T15:43:10.564Z] 								Performing SELECT action | Element: DDN-Output.Connections.default | Locator: //select[@id='options-output'] | Value: Download
+[2026-03-09T15:43:10.564Z] 						->Clicking Search button to trigger download
+[2026-03-09T15:43:11.434Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:43:11.437Z] 								Download saved to: /Users/nishan.manoraj/Downloads/Connections.csv
+[2026-03-09T15:43:11.437Z] 						✅ Validation III.II.3.4: CSV: Downloaded rows = 33 | UI entries = 33 | Entries Result: PASS
+[2026-03-09T15:43:11.437Z] 						 Header of the csv: 
+"connectionID","connectionGUID","accountID","name","codeDistributionMethodID","defaultCodeID","destinationNumberFormat","enforceOptOut","disableInNetworkRouting","messageExpirationHours","segmentedMessageOption","replyHelp","replyStop","registeredDeliveryDisable","active","created","lastUpdated","enableInboundSC","utf16HttpStrip","spamFilterMT","spamFilterMO","spamOfflineMT","spamOfflineMO","moHttpTlvs","s3Bucket","s3ApiKey","s3ApiSecret","s3Params","defaultCode","isDefaultConnection"
+[2026-03-09T15:43:11.437Z] 						 First 2 rows of the csv: 
+10183,"19edb48f-733a-4481-b949-79754e96dcf5",1,"v4xmlJestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:31.247Z","2026-02-25T18:50:31.247Z",0,false,false,false,false,false,false,,,,,,false
+10182,"fdecbe82-5d64-48f2-8e99-5246983d27c0",1,"v4JestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:29.470Z","2026-02-25T18:50:29.470Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:43:11.437Z] 						 Last 2 rows of the csv: 
+86,"cc479a40-eb31-11e3-94de-02f2d79344c4",1,"Mobile2Mobile Demo Users",0,0,false,false,false,24,2,"Aerialink Mobile2mobile contact us a support@aerialink.com","Aerialink Mobile2mobile contact us a support@aerialink.com",false,true,"2014-06-03T15:14:46.000Z","2014-11-06T21:19:36.000Z",0,false,false,false,false,false,false,,,,,,false
+142,"2b461478-5bc0-11e4-86f0-02f2d79344c4",1,"MMS SHORT CODE DEMO",0,0,false,false,false,24,2,,,false,true,"2014-10-24T20:56:04.000Z","2014-11-06T21:19:36.000Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:43:11.438Z] 
+						 CSV saved to: /Users/nishan.manoraj/Downloads/III.II..3.4.Last Updated Descending.[1].All Connections.csv
+[2026-03-09T15:43:17.535Z] 						->Entering the URL later | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22lastUpdated%22%3A%22DESC%22%7D
+[2026-03-09T15:43:18.827Z] 						III.5. Selecting Sort By "Connection ID Descending" | Locator: //select[@id='sort']
+[2026-03-09T15:43:18.827Z] 						->Clicking on connection dropdown and entering the connection name in the input and selecting the connection
+[2026-03-09T15:43:18.835Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:43:18.876Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:43:19.418Z] 						->Filling the connection name in the input | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results'] | Value: All Connections 
+[2026-03-09T15:43:19.753Z] 						->Pressing backspace to delete the space | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:43:20.077Z] ❌ Click on connection dropdown and enter the connection name in the input and select the connection | locator.selectOption: Error: Element is not a <select> element
+Call log:
+[2m  - waiting for locator('//span[@id=\'select2-connection-id-container\']/..//b')[22m
+[2m    - locator resolved to <b role="presentation"></b>[22m
+[2m  - attempting select option action[22m
+[2m    - waiting for element to be visible and enabled[22m
+
+[2026-03-09T15:43:24.913Z] 							 Clicking on Search button | Locator: //button[@id='option-search']
+[2026-03-09T15:43:24.914Z] 						 Sort column for validation: Connection ID (Descending) | Locator: //tbody/tr/td[4]
+[2026-03-09T15:43:24.914Z] 
+										 ---------- III.5.1 Show entries: 100 | Sort: Connection ID Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:24.956Z] 						 ACTION: Selected "Show 100 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:26.466Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:26.473Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:26.473Z] 						 PARSED: Total records = 33, Entries per page = 100, Total pages = 1
+[2026-03-09T15:43:26.473Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:26.507Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:27.049Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:27.049Z] ✅ 									Show 100 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:27.066Z] 						 VALIDATION (page 1): Sort by Connection ID (Desc) | Sample values: [10183, 10182, 10181...] | Result: PASS
+[2026-03-09T15:43:27.066Z] ✅ 									Show 100 entries, page 1: Sort order OK
+[2026-03-09T15:43:27.066Z] 
+										 ---------- III.5.2 Show entries: 300 | Sort: Connection ID Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:27.079Z] 						 ACTION: Selected "Show 300 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:28.601Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:28.615Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:28.615Z] 						 PARSED: Total records = 33, Entries per page = 300, Total pages = 1
+[2026-03-09T15:43:28.615Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:28.639Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:29.165Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:29.165Z] ✅ 									Show 300 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:29.172Z] 						 VALIDATION (page 1): Sort by Connection ID (Desc) | Sample values: [10183, 10182, 10181...] | Result: PASS
+[2026-03-09T15:43:29.172Z] ✅ 									Show 300 entries, page 1: Sort order OK
+[2026-03-09T15:43:29.172Z] 
+										 ---------- III.5.3 Show entries: 500 | Sort: Connection ID Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:29.184Z] 						 ACTION: Selected "Show 500 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:30.705Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:30.720Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:30.720Z] 						 PARSED: Total records = 33, Entries per page = 500, Total pages = 1
+[2026-03-09T15:43:30.720Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:30.747Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:31.273Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:31.273Z] ✅ 									Show 500 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:31.281Z] 						 VALIDATION (page 1): Sort by Connection ID (Desc) | Sample values: [10183, 10182, 10181...] | Result: PASS
+[2026-03-09T15:43:31.281Z] ✅ 									Show 500 entries, page 1: Sort order OK
+[2026-03-09T15:43:31.281Z] 
+										 ---------- III.5.4 Show entries: 1000 | Sort: Connection ID Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:31.295Z] 						 ACTION: Selected "Show 1000 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:32.818Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:32.829Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:32.829Z] 						 PARSED: Total records = 33, Entries per page = 1000, Total pages = 1
+[2026-03-09T15:43:32.829Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:32.855Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:33.388Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:33.388Z] ✅ 									Show 1000 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:33.394Z] 						 VALIDATION (page 1): Sort by Connection ID (Desc) | Sample values: [10183, 10182, 10181...] | Result: PASS
+[2026-03-09T15:43:33.394Z] ✅ 									Show 1000 entries, page 1: Sort order OK
+[2026-03-09T15:43:33.400Z] 						->URL before Download | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22connectionID%22%3A%22DESC%22%7D
+[2026-03-09T15:43:33.400Z] 
+
+
+						Validation III.II.3.5: CSV Download: UI Entries (before download) = 33 | Sort: Connection ID Descending | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:33.400Z] 
+
+
+						 Account Count: 3 and Connection: All Connections
+[2026-03-09T15:43:33.400Z] 						->Selecting Download from Output dropdown
+[2026-03-09T15:43:33.412Z] 								Performing SELECT action | Element: DDN-Output.Connections.default | Locator: //select[@id='options-output'] | Value: Download
+[2026-03-09T15:43:33.412Z] 						->Clicking Search button to trigger download
+[2026-03-09T15:43:34.279Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:43:34.281Z] 								Download saved to: /Users/nishan.manoraj/Downloads/Connections.csv
+[2026-03-09T15:43:34.281Z] 						✅ Validation III.II.3.5: CSV: Downloaded rows = 33 | UI entries = 33 | Entries Result: PASS
+[2026-03-09T15:43:34.282Z] 						 Header of the csv: 
+"connectionID","connectionGUID","accountID","name","codeDistributionMethodID","defaultCodeID","destinationNumberFormat","enforceOptOut","disableInNetworkRouting","messageExpirationHours","segmentedMessageOption","replyHelp","replyStop","registeredDeliveryDisable","active","created","lastUpdated","enableInboundSC","utf16HttpStrip","spamFilterMT","spamFilterMO","spamOfflineMT","spamOfflineMO","moHttpTlvs","s3Bucket","s3ApiKey","s3ApiSecret","s3Params","defaultCode","isDefaultConnection"
+[2026-03-09T15:43:34.282Z] 						 First 2 rows of the csv: 
+10183,"19edb48f-733a-4481-b949-79754e96dcf5",1,"v4xmlJestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:31.247Z","2026-02-25T18:50:31.247Z",0,false,false,false,false,false,false,,,,,,false
+10182,"fdecbe82-5d64-48f2-8e99-5246983d27c0",1,"v4JestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:29.470Z","2026-02-25T18:50:29.470Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:43:34.282Z] 						 Last 2 rows of the csv: 
+2,"25ea11cc-a911-11e2-b3e1-02f2d793c2ee",1,"Conversations Production",0,0,false,false,false,24,2,"Aerialink: internal testing for SMS and MMS.  customerservice@messagebroadcast.com  Aerialink is a product of Message Broadcast.  Reply STOP to end.","You have successfully been unsubscribed. You will not receive any more messages from this number.",false,true,"2013-04-19T16:49:49.000Z","2025-08-29T20:56:08.300Z",0,false,false,false,false,false,false,"","","","",,false
+1,"1256b5a2-a911-11e2-b3e1-02f2d793c2ee",1,"Aerialink System (Reserved)",0,0,false,false,false,24,2,"reply help from connection ","reply stop from connection ",false,true,"2013-04-19T16:49:16.000Z","2026-02-02T20:01:12.040Z",0,false,true,true,false,false,false,"","","","",,true
+[2026-03-09T15:43:34.282Z] 
+						 CSV saved to: /Users/nishan.manoraj/Downloads/III.II..3.5.Connection ID Descending.[1].All Connections.csv
+[2026-03-09T15:43:40.659Z] 						->Entering the URL later | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22connectionID%22%3A%22DESC%22%7D
+[2026-03-09T15:43:42.032Z] 						III.6. Selecting Sort By "Connection Name Descending" | Locator: //select[@id='sort']
+[2026-03-09T15:43:42.032Z] 						->Clicking on connection dropdown and entering the connection name in the input and selecting the connection
+[2026-03-09T15:43:42.044Z] 						->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default
+[2026-03-09T15:43:42.129Z] 						->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: //span[@id='select2-connection-id-container']/..//b
+[2026-03-09T15:43:42.656Z] 						->Filling the connection name in the input | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results'] | Value: All Connections 
+[2026-03-09T15:43:42.983Z] 						->Pressing backspace to delete the space | Element: INP-ConnectionSearchText.Connections.default | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:43:43.302Z] ❌ Click on connection dropdown and enter the connection name in the input and select the connection | locator.selectOption: Error: Element is not a <select> element
+Call log:
+[2m  - waiting for locator('//span[@id=\'select2-connection-id-container\']/..//b')[22m
+[2m    - locator resolved to <b role="presentation"></b>[22m
+[2m  - attempting select option action[22m
+[2m    - waiting for element to be visible and enabled[22m
+
+[2026-03-09T15:43:49.544Z] 							 Clicking on Search button | Locator: //button[@id='option-search']
+[2026-03-09T15:43:49.544Z] 						 Sort column for validation: Connection Name (Descending) | Locator: //tbody/tr/td[6]
+[2026-03-09T15:43:49.544Z] 
+										 ---------- III.6.1 Show entries: 100 | Sort: Connection Name Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:49.572Z] 						 ACTION: Selected "Show 100 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:51.086Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:51.097Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:51.097Z] 						 PARSED: Total records = 33, Entries per page = 100, Total pages = 1
+[2026-03-09T15:43:51.097Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:51.129Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:51.648Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:51.648Z] ✅ 									Show 100 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:51.661Z] 						 VALIDATION (page 1): Sort by Connection Name (Desc) | Sample values: [Yaseen Test conn, v4xmlJestTest, v4JestTest...] | Result: PASS
+[2026-03-09T15:43:51.661Z] ✅ 									Show 100 entries, page 1: Sort order OK
+[2026-03-09T15:43:51.661Z] 
+										 ---------- III.6.2 Show entries: 300 | Sort: Connection Name Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:51.675Z] 						 ACTION: Selected "Show 300 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:53.195Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:53.205Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:53.205Z] 						 PARSED: Total records = 33, Entries per page = 300, Total pages = 1
+[2026-03-09T15:43:53.205Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:53.224Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:53.746Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:53.746Z] ✅ 									Show 300 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:53.752Z] 						 VALIDATION (page 1): Sort by Connection Name (Desc) | Sample values: [Yaseen Test conn, v4xmlJestTest, v4JestTest...] | Result: PASS
+[2026-03-09T15:43:53.752Z] ✅ 									Show 300 entries, page 1: Sort order OK
+[2026-03-09T15:43:53.752Z] 
+										 ---------- III.6.3 Show entries: 500 | Sort: Connection Name Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:53.763Z] 						 ACTION: Selected "Show 500 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:55.282Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:55.294Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:55.294Z] 						 PARSED: Total records = 33, Entries per page = 500, Total pages = 1
+[2026-03-09T15:43:55.294Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:55.318Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:55.847Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:55.847Z] ✅ 									Show 500 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:55.855Z] 						 VALIDATION (page 1): Sort by Connection Name (Desc) | Sample values: [Yaseen Test conn, v4xmlJestTest, v4JestTest...] | Result: PASS
+[2026-03-09T15:43:55.855Z] ✅ 									Show 500 entries, page 1: Sort order OK
+[2026-03-09T15:43:55.855Z] 
+										 ---------- III.6.4 Show entries: 1000 | Sort: Connection Name Descending ---------- account: [1] & connection: All Connections
+[2026-03-09T15:43:55.867Z] 						 ACTION: Selected "Show 1000 entries" (selectOption label) | Locator: //label[contains(text(),'Show')]//select
+[2026-03-09T15:43:57.390Z] 						 WAIT: 1500ms after Show entries selection
+[2026-03-09T15:43:57.409Z] 						 READ: TXT-TotalEntries | Text: "Showing 1 to 33 of 33 entries" | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:57.409Z] 						 PARSED: Total records = 33, Entries per page = 1000, Total pages = 1
+[2026-03-09T15:43:57.409Z] 						 PAGES TO VALIDATE: 1st, 3rd, last where applicable | [1]
+[2026-03-09T15:43:57.436Z] 						 ACTION: Navigate to page 1 | Clicked First page (BTN-FirstPage.CommonPagination.default)
+[2026-03-09T15:43:57.958Z] 							 VALIDATION (page 1): Row count | Expected: 33, Actual: 33 => PASS e:33 a:33
+[2026-03-09T15:43:57.958Z] ✅ 									Show 1000 entries, page 1: Row count OK (33)
+[2026-03-09T15:43:57.965Z] 						 VALIDATION (page 1): Sort by Connection Name (Desc) | Sample values: [Yaseen Test conn, v4xmlJestTest, v4JestTest...] | Result: PASS
+[2026-03-09T15:43:57.965Z] ✅ 									Show 1000 entries, page 1: Sort order OK
+[2026-03-09T15:43:57.971Z] 						->URL before Download | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22name%22%3A%22DESC%22%7D
+[2026-03-09T15:43:57.971Z] 
+
+
+						Validation III.II.3.6: CSV Download: UI Entries (before download) = 33 | Sort: Connection Name Descending | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:43:57.971Z] 
+
+
+						 Account Count: 3 and Connection: All Connections
+[2026-03-09T15:43:57.971Z] 						->Selecting Download from Output dropdown
+[2026-03-09T15:43:57.982Z] 								Performing SELECT action | Element: DDN-Output.Connections.default | Locator: //select[@id='options-output'] | Value: Download
+[2026-03-09T15:43:57.982Z] 						->Clicking Search button to trigger download
+[2026-03-09T15:43:58.727Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:43:58.730Z] 								Download saved to: /Users/nishan.manoraj/Downloads/Connections.csv
+[2026-03-09T15:43:58.730Z] 						✅ Validation III.II.3.6: CSV: Downloaded rows = 33 | UI entries = 33 | Entries Result: PASS
+[2026-03-09T15:43:58.730Z] 						 Header of the csv: 
+"connectionID","connectionGUID","accountID","name","codeDistributionMethodID","defaultCodeID","destinationNumberFormat","enforceOptOut","disableInNetworkRouting","messageExpirationHours","segmentedMessageOption","replyHelp","replyStop","registeredDeliveryDisable","active","created","lastUpdated","enableInboundSC","utf16HttpStrip","spamFilterMT","spamFilterMO","spamOfflineMT","spamOfflineMO","moHttpTlvs","s3Bucket","s3ApiKey","s3ApiSecret","s3Params","defaultCode","isDefaultConnection"
+[2026-03-09T15:43:58.730Z] 						 First 2 rows of the csv: 
+10160,"1ef0e9fd-1c1c-44ee-8048-1562fc979458",1,"Yaseen Test conn",0,,false,false,false,0,2,"","",false,true,"2026-02-04T17:38:43.870Z","2026-02-04T18:36:48.147Z",0,false,false,false,false,false,false,"","","","",,false
+10183,"19edb48f-733a-4481-b949-79754e96dcf5",1,"v4xmlJestTest",0,,false,false,false,,2,,,false,false,"2026-02-25T18:50:31.247Z","2026-02-25T18:50:31.247Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:43:58.730Z] 						 Last 2 rows of the csv: 
+538,"71D64436-7545-4058-84BC-4F221F93DD8A",1,"Aerialink - API Test",0,0,false,true,false,24,2,"","",false,true,"2017-08-08T19:45:05.040Z","2025-08-22T18:43:32.640Z",0,false,false,false,false,false,false,"","","","",,false
+10128,"db501ba5-c92a-4319-a3dc-9bf8ca8cfe41",1,"16jtest",0,,false,false,false,,2,,,false,true,"2026-01-15T18:43:37.033Z","2026-01-15T18:43:37.033Z",0,false,false,false,false,false,false,,,,,,false
+[2026-03-09T15:43:58.731Z] 
+						 CSV saved to: /Users/nishan.manoraj/Downloads/III.II..3.6.Connection Name Descending.[1].All Connections.csv
+[2026-03-09T15:44:06.091Z] 						->Entering the URL later | URL: https://qa-portal5.int.aerialink.net/connections?accountID=1&connectionID=all&connectionGUID=&output=0&sort=%7B%22name%22%3A%22DESC%22%7D
+[2026-03-09T15:44:07.499Z] 							Account # 3 of 3
+[2026-03-09T15:44:07.499Z] 								Connection #2 of 3
+[2026-03-09T15:44:07.499Z] 								Is this the last connection: false
+[2026-03-09T15:44:07.499Z] Validation II.3.2: Testing connection filter: [10128] | [1].[10128]
+[2026-03-09T15:44:07.556Z] 						->Entering '[10128]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:44:07.556Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:44:07.566Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:44:07.566Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:44:09.618Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [10128] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:44:09.929Z] 						->Checking if the connection is visible with the connection string: [10128]
+[2026-03-09T15:44:09.946Z] 								Connection 1st option innerText: 16jtest [10128]
+[2026-03-09T15:44:09.946Z] 					🧪 Val-step II.3.2.0 Validate if the 1st option in the Connection dropdown contains the connection string: [10128]
+[2026-03-09T15:44:09.946Z] 					 🆔 → II.3.2.0
+[2026-03-09T15:44:09.946Z] 						✅ Val-step II.3.2.0: Connection "[10128]" is found in the 1st option text: 16jtest [10128])
+[2026-03-09T15:44:09.946Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:44:10.283Z] 						->Clicking Search button
+[2026-03-09T15:44:11.335Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:44:11.335Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'1')]
+[2026-03-09T15:44:11.335Z] 						->Waiting for Search Results accountID: 1
+[2026-03-09T15:44:15.699Z] 								Search Results text: Search Results accountIdentifiers: 1 connectionIdentifiers: 10128 excludeChildren: true
+[2026-03-09T15:44:15.699Z] 						Connection count for [1] from API is 3535
+[2026-03-09T15:44:15.699Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:44:15.705Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:44:15.705Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:44:15.705Z] 									Parsed start index: 1
+[2026-03-09T15:44:15.706Z] 									Parsed end index: 1
+[2026-03-09T15:44:15.706Z] 									Parsed total entries: 1
+[2026-03-09T15:44:15.706Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:44:15.706Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:44:15.711Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:44:15.711Z] 						Actual table row count: 1
+[2026-03-09T15:44:15.716Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:44:15.716Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:44:15.716Z] 						Validating for Account: '[1]' & Connection: '[10128]'
+[2026-03-09T15:44:15.723Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:44:15.723Z] 						❌ Val-step II.3.2.2: Total Connections count from the API does not match the total entries from the UI. Expected: 3535, Found: 1
+[2026-03-09T15:44:15.723Z] 						✅ Val-step II.3.2.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:44:15.723Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [1]. UI: 1, API: 3535
+[2026-03-09T15:44:15.723Z] 							Account # 3 of 3
+[2026-03-09T15:44:15.723Z] 								Connection #3 of 3
+[2026-03-09T15:44:15.723Z] 								Is this the last connection: true
+[2026-03-09T15:44:15.723Z] Validation II.3.3: Testing connection filter: [538] | [1].[538]
+[2026-03-09T15:44:15.751Z] 						->Entering '[538]' in INP-ConnectionSearchText and selecting
+[2026-03-09T15:44:15.751Z] 						->Checking if INP-ConnectionSearchText.Connections.default is visible
+[2026-03-09T15:44:15.757Z] 						->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input
+[2026-03-09T15:44:15.757Z] 						->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default
+[2026-03-09T15:44:17.801Z] 								Performing FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: [538] | Locator: //input[@aria-controls='select2-connection-id-results']
+[2026-03-09T15:44:18.116Z] 						->Checking if the connection is visible with the connection string: [538]
+[2026-03-09T15:44:18.138Z] 								Connection 1st option innerText: Aerialink - API Test [538]
+[2026-03-09T15:44:18.138Z] 					🧪 Val-step II.3.3.0 Validate if the 1st option in the Connection dropdown contains the connection string: [538]
+[2026-03-09T15:44:18.138Z] 					 🆔 → II.3.3.0
+[2026-03-09T15:44:18.138Z] 						✅ Val-step II.3.3.0: Connection "[538]" is found in the 1st option text: Aerialink - API Test [538])
+[2026-03-09T15:44:18.138Z] 						->Clicking first connection option (DDI-1stConnection.Connections.default)
+[2026-03-09T15:44:18.473Z] 						->Clicking Search button
+[2026-03-09T15:44:19.446Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:44:19.446Z] 								WAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: //h4[contains(text(),'Search Results')][contains(text(),'1')]
+[2026-03-09T15:44:19.446Z] 						->Waiting for Search Results accountID: 1
+[2026-03-09T15:44:25.310Z] 								Search Results text: Search Results accountIdentifiers: 1 connectionIdentifiers: 538 excludeChildren: true
+[2026-03-09T15:44:25.310Z] 						Connection count for [1] from API is 3535
+[2026-03-09T15:44:25.310Z] 						->Reading pagination summary (TXT-TotalEntries)
+[2026-03-09T15:44:25.318Z] 								Performing READ action | Element: TXT-TotalEntries.Connections.default | Locator: //div[contains(text(),'entries')]
+[2026-03-09T15:44:25.318Z] 						UI Showing entries text: "Showing 1 to 1 of 1 entries"
+[2026-03-09T15:44:25.318Z] 									Parsed start index: 1
+[2026-03-09T15:44:25.318Z] 									Parsed end index: 1
+[2026-03-09T15:44:25.318Z] 									Parsed total entries: 1
+[2026-03-09T15:44:25.318Z] 								Expected visible rows (end - start + 1): 1
+[2026-03-09T15:44:25.318Z] 						->Counting table rows (TRW-AllRows.Connections.default)
+[2026-03-09T15:44:25.324Z] 								Performing COUNT action | Element: TRW-AllRows.Connections.default | Locator: //tbody/tr
+[2026-03-09T15:44:25.324Z] 						Actual table row count: 1
+[2026-03-09T15:44:25.329Z] 						->Verifying if the 'No matching records' text is visible on the screen
+[2026-03-09T15:44:25.329Z] 							Verification of Element's presence | Element: TXT-NoMatchingRecords.CommonTable.NoRecords | Locator: //td[text()='No matching records found']
+[2026-03-09T15:44:25.329Z] 						Validating for Account: '[1]' & Connection: '[538]'
+[2026-03-09T15:44:25.339Z] ❌ Verify 'No matching records found' is NOT visible | Assignment to constant variable.
+[2026-03-09T15:44:25.339Z] 						❌ Val-step II.3.3.2: Total Connections count from the API does not match the total entries from the UI. Expected: 3535, Found: 1
+[2026-03-09T15:44:25.339Z] 						✅ Val-step II.3.3.3: Visible row count matched with the expected number. Expected: 1, Found: 1
+[2026-03-09T15:44:25.339Z] ❌ 
+
+
+									Validate record counts and pagination | Total entry mismatch for [1]. UI: 1, API: 3535
+[2026-03-09T15:44:25.339Z] ➡️  				Validation V.3: Validate the Connection GUID field (account: [1])
+[2026-03-09T15:44:25.339Z] 						->Closing any open dropdowns by clicking on the ConnectionGUID input field
+[2026-03-09T15:44:25.364Z] 								Performing CLICK action | Element: INP-ConnectionGUID.Connections.default | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:44:25.364Z] 						->Reading first row first cell (Connection GUID)
+[2026-03-09T15:44:25.374Z] 								Performing READ action | Element: TRW-1stRow.Connections.default/td[1] | Locator: //tbody/tr[1]/td[1] | Value: 71D64436-7545-4058-84BC-4F221F93DD8A
+[2026-03-09T15:44:25.374Z] 						✅ Validation IV.3.1: GUID length validated (36 characters)
+[2026-03-09T15:44:25.374Z] 						->GUID test IV.3.2:1/5: trimmed
+[2026-03-09T15:44:25.385Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (36 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:44:26.401Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:44:32.483Z] 								READ first row td[1] after search | Expected: 71D64436-7545-4058-84BC-4F221F93DD8A | Actual: 71D64436-7545-4058-84BC-4F221F93DD8A | Match: true
+[2026-03-09T15:44:32.484Z] 						->GUID test IV.3.2:2/5: spaces at beginning
+[2026-03-09T15:44:32.496Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (39 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:44:33.478Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:44:42.837Z] 								READ first row td[1] after search | Expected: 71D64436-7545-4058-84BC-4F221F93DD8A | Actual: 71D64436-7545-4058-84BC-4F221F93DD8A | Match: true
+[2026-03-09T15:44:42.837Z] 						->GUID test IV.3.2:3/5: spaces at end
+[2026-03-09T15:44:42.851Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (39 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:44:43.678Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:44:52.347Z] 								READ first row td[1] after search | Expected: 71D64436-7545-4058-84BC-4F221F93DD8A | Actual: 71D64436-7545-4058-84BC-4F221F93DD8A | Match: true
+[2026-03-09T15:44:52.347Z] 						->GUID test IV.3.2:4/5: spaces at both ends
+[2026-03-09T15:44:52.368Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (42 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:44:53.488Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:44:59.519Z] 								READ first row td[1] after search | Expected: 71D64436-7545-4058-84BC-4F221F93DD8A | Actual: 71D64436-7545-4058-84BC-4F221F93DD8A | Match: true
+[2026-03-09T15:44:59.519Z] 						->GUID test IV.3.2:5/5: 30 character substring
+[2026-03-09T15:44:59.530Z] 								Performing FILL action | Element: INP-ConnectionGUID.Connections.default | Value: (30 chars) | Locator: //input[@id='connectionGUID']
+[2026-03-09T15:45:00.322Z] 								Performing CLICK action | Element: BTN-Search.Connections.default | Locator: //button[@id='option-search']
+[2026-03-09T15:45:04.961Z] 								✅ Validation IV.3.2: Expecting No matching records | Visible: false
+[2026-03-09T15:45:04.961Z] 						✅ Validation IV.3.2: GUID tests completed
+[2026-03-09T15:45:04.961Z] 
+
+
+						Validation VI.3: Validate the Reset button | Account: [1]
+[2026-03-09T15:45:04.961Z] 						->Collecting Previous Values (before Reset)
+[2026-03-09T15:45:04.967Z] 								READ selected Account | Element: DDN-Account.Connections.default/../../span[1]/span | Value: Aerialink Inc. [1]
+[2026-03-09T15:45:04.971Z] 								READ selected Connection | Element: DDN-Connection.Connections.default/../../span[1]/span | Value: Aerialink - API Test [538]
+[2026-03-09T15:45:04.975Z] 								READ selected Sort | Locator: //select[@id='sort']/option[@selected][last()] | Value: Last Updated Descending
+[2026-03-09T15:45:04.980Z] 								READ selected Output | Locator: //select[@id='options-output']/option[@selected='selected'] | Value: Screen
+[2026-03-09T15:45:04.988Z] 								READ Connection GUID input | Element: INP-ConnectionGUID.Connections.default | Value: 71D64436-7545-4058-84BC-4F221F
+[2026-03-09T15:45:04.988Z] 						Previous Values: {"selectedAccount":"Aerialink Inc. [1]","selectedConnection":"Aerialink - API Test [538]","sortBy":"Last Updated Descending","output":"Screen","connectionGuid":"71D64436-7545-4058-84BC-4F221F"}
+[2026-03-09T15:45:04.988Z] 						->Clicking Reset button
+[2026-03-09T15:45:06.187Z] 								Performing CLICK action | Element: BTN-Reset.Connections.default | Locator: //button[@id='option-search-reset']
+[2026-03-09T15:45:13.522Z] 						->Verifying values after Reset
+[2026-03-09T15:45:13.540Z] 								READ Account after Reset | Value: Aerialink Inc. [1]
+[2026-03-09T15:45:13.546Z] 								READ Connection after Reset | Value: All Connections
+[2026-03-09T15:45:13.553Z] 								READ Sort after Reset | Value: Last Updated Descending
+[2026-03-09T15:45:13.559Z] 								READ Output after Reset | Value: Screen
+[2026-03-09T15:45:13.569Z] 								READ Connection GUID after Reset | Value: (empty)
+[2026-03-09T15:45:13.588Z] 						After Reset: Account=Aerialink Inc. [1] (expected Aerialink Inc. [1]) ✅ | Connection=All Connections ✅ | GUID empty=✅ | Output=Screen ✅ | Sort=Last Updated Descending ✅ | No NMR=✅ | Rows=33
+[2026-03-09T15:45:13.588Z] 
+
+
+[2026-03-09T15:45:13.588Z] ════════════════════════════════════════════════════════════════════════════════
+[2026-03-09T15:45:13.588Z] 					  VALIDATION SUMMARY — TABLES
+[2026-03-09T15:45:13.588Z] ════════════════════════════════════════════════════════════════════════════════
+
+[2026-03-09T15:45:13.588Z] 	📋 TABLE 1 — VALIDATION I
+[2026-03-09T15:45:13.588Z] 	+------+------------------+--------------------------------------------------+----------+----------+--------+----------------------------------------------------------+
+[2026-03-09T15:45:13.588Z] 	| Val  | Scenario         | APIs Used                                        | API #    | UI #     | Result | Remarks                                                  |
+[2026-03-09T15:45:13.588Z] 	+------+------------------+--------------------------------------------------+----------+----------+--------+----------------------------------------------------------+
+[2026-03-09T15:45:13.588Z] 	| 1    | Account dropdown | http://localhost:3000/api/connections/category-c | 88       | match    | PASS   | Excluded accounts: 'All Accounts', 'Aerialink Inc. Globa |
+[2026-03-09T15:45:13.588Z] 	+------+------------------+--------------------------------------------------+----------+----------+--------+----------------------------------------------------------+
+[2026-03-09T15:45:13.588Z] 
+[2026-03-09T15:45:13.588Z] 	📋 TABLE 2 — VALIDATION II
+[2026-03-09T15:45:13.588Z] 	+----------+--------------+-----------------+---------------------------------------------------+------------+----------------+----------+-----------------+------------------+
+[2026-03-09T15:45:13.588Z] 	| Validati | Account      | Collection      | API Used                                          | API Count  | UI Entries     | NMR      | API-UI Count    | UI Rows          |
+[2026-03-09T15:45:13.588Z] 	+----------+--------------+-----------------+---------------------------------------------------+------------+----------------+----------+-----------------+------------------+
+[2026-03-09T15:45:13.588Z] 	| II.1.1   | [347]        | All Connections | http://localhost:3000/api/connections/account/347 | 137        | 137            | PASS     | PASS (II.1.1.2) | PASS e:100 a:100 |
+[2026-03-09T15:45:13.588Z] 	| II.1.2   | [347]        | [4344]          | http://localhost:3000/api/connections/account/347 | 137        | 1              | PASS     | FAIL (II.1.2.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.1.3   | [347]        | [1084]          | http://localhost:3000/api/connections/account/347 | 137        | 1              | PASS     | FAIL (II.1.3.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.1.4   | [347]        | [1083]          | http://localhost:3000/api/connections/account/347 | 137        | 1              | PASS     | FAIL (II.1.4.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.1.5   | [347]        | [1024]          | http://localhost:3000/api/connections/account/347 | 137        | 1              | PASS     | FAIL (II.1.5.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.1.6   | [347]        | [1023]          | http://localhost:3000/api/connections/account/347 | 137        | 1              | PASS     | FAIL (II.1.6.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.1.7   | [347]        | [4727]          | http://localhost:3000/api/connections/account/347 | 137        | 1              | PASS     | FAIL (II.1.7.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.1.8   | [347]        | [5146]          | http://localhost:3000/api/connections/account/347 | 137        | 1              | PASS     | FAIL (II.1.8.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.2.1   | [224]        | All Connections | http://localhost:3000/api/connections/account/224 | 33         | 33             | PASS     | PASS (II.2.1.2) | PASS e:33 a:33   |
+[2026-03-09T15:45:13.588Z] 	| II.2.2   | [224]        | [2620]          | http://localhost:3000/api/connections/account/224 | 33         | 1              | PASS     | FAIL (II.2.2.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.2.3   | [224]        | [2839]          | http://localhost:3000/api/connections/account/224 | 33         | 1              | PASS     | FAIL (II.2.3.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.3.1   | [1]          | All Connections | http://localhost:3000/api/connections/account/1   | 3535       | 33             | PASS     | FAIL (II.3.1.2) | PASS e:33 a:33   |
+[2026-03-09T15:45:13.588Z] 	| II.3.1   | [1]          | All Connections | http://localhost:3000/api/connections/account/1   | 3535       | N/A            | N/A      | FAIL (II.3.1.2) | N/A              |
+[2026-03-09T15:45:13.588Z] 	| II.3.2   | [1]          | [10128]         | http://localhost:3000/api/connections/account/1   | 3535       | 1              | PASS     | FAIL (II.3.2.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	| II.3.3   | [1]          | [538]           | http://localhost:3000/api/connections/account/1   | 3535       | 1              | PASS     | FAIL (II.3.3.2) | PASS e:1 a:1     |
+[2026-03-09T15:45:13.588Z] 	+----------+--------------+-----------------+---------------------------------------------------+------------+----------------+----------+-----------------+------------------+
+[2026-03-09T15:45:13.588Z] 
+[2026-03-09T15:45:13.589Z] 	📋 TABLE 3 — SHOW ENTRIES & SORT VALIDATION
+[2026-03-09T15:45:13.589Z] 	+----------------------------+----------+------------+----------------+----------------+----------------+--------+
+[2026-03-09T15:45:13.589Z] 	| Sort Option                | Entries  | Pages Nav. | Page 1st       | Page 3rd       | Page Last      | Sort   |
+[2026-03-09T15:45:13.589Z] 	+----------------------------+----------+------------+----------------+----------------+----------------+--------+
+[2026-03-09T15:45:13.589Z] 	| Last Updated Ascending     | 100      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Last Updated Ascending     | 300      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Last Updated Ascending     | 500      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Last Updated Ascending     | 1000     | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Ascending    | 100      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Ascending    | 300      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Ascending    | 500      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Ascending    | 1000     | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Ascending  | 100      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Ascending  | 300      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Ascending  | 500      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Ascending  | 1000     | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Last Updated Descending    | 100      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Last Updated Descending    | 300      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Last Updated Descending    | 500      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Last Updated Descending    | 1000     | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Descending   | 100      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Descending   | 300      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Descending   | 500      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection ID Descending   | 1000     | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Descending | 100      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Descending | 300      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Descending | 500      | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	| Connection Name Descending | 1000     | 1st        | PASS e:33 a:33 | N/A            | PASS e:33 a:33 | PASS   |
+[2026-03-09T15:45:13.589Z] 	+----------------------------+----------+------------+----------------+----------------+----------------+--------+
+[2026-03-09T15:45:13.589Z] 	Page columns: PASS/FAIL e:expected a:actual | NMR = No Matching Records | N/A = not applicable
+[2026-03-09T15:45:13.589Z] 
+[2026-03-09T15:45:13.589Z] 	📋 TABLE 4 — VALIDATION IV: CONNECTION GUID TEST
+[2026-03-09T15:45:13.589Z] 	+--------------+------------------------+---------------------+----------+------------------------------------------+
+[2026-03-09T15:45:13.589Z] 	| Account      | Input Type             | Expected            | Actual   | Detail                                   |
+[2026-03-09T15:45:13.589Z] 	+--------------+------------------------+---------------------+----------+------------------------------------------+
+[2026-03-09T15:45:13.589Z] 	| [347]        | trimmed                | PASS                | PASS     | Match: 10D3BFB0-27B4-4639-A2D0-F404F9270 |
+[2026-03-09T15:45:13.589Z] 	| [347]        | spaces at beginning    | PASS                | PASS     | Match: 10D3BFB0-27B4-4639-A2D0-F404F9270 |
+[2026-03-09T15:45:13.589Z] 	| [347]        | spaces at end          | PASS                | PASS     | Match: 10D3BFB0-27B4-4639-A2D0-F404F9270 |
+[2026-03-09T15:45:13.589Z] 	| [347]        | spaces at both ends    | PASS                | PASS     | Match: 10D3BFB0-27B4-4639-A2D0-F404F9270 |
+[2026-03-09T15:45:13.589Z] 	| [347]        | 30 character substring | No matching records | FAIL     | NMR not displayed                        |
+[2026-03-09T15:45:13.589Z] 	| [224]        | trimmed                | PASS                | PASS     | Match: 82DCF598-02C5-46E9-ABA6-0A26DE23A |
+[2026-03-09T15:45:13.589Z] 	| [224]        | spaces at beginning    | PASS                | PASS     | Match: 82DCF598-02C5-46E9-ABA6-0A26DE23A |
+[2026-03-09T15:45:13.589Z] 	| [224]        | spaces at end          | PASS                | PASS     | Match: 82DCF598-02C5-46E9-ABA6-0A26DE23A |
+[2026-03-09T15:45:13.589Z] 	| [224]        | spaces at both ends    | PASS                | PASS     | Match: 82DCF598-02C5-46E9-ABA6-0A26DE23A |
+[2026-03-09T15:45:13.589Z] 	| [224]        | 30 character substring | No matching records | FAIL     | NMR not displayed                        |
+[2026-03-09T15:45:13.589Z] 	| [1]          | trimmed                | PASS                | PASS     | Match: 71D64436-7545-4058-84BC-4F221F93D |
+[2026-03-09T15:45:13.589Z] 	| [1]          | spaces at beginning    | PASS                | PASS     | Match: 71D64436-7545-4058-84BC-4F221F93D |
+[2026-03-09T15:45:13.589Z] 	| [1]          | spaces at end          | PASS                | PASS     | Match: 71D64436-7545-4058-84BC-4F221F93D |
+[2026-03-09T15:45:13.589Z] 	| [1]          | spaces at both ends    | PASS                | PASS     | Match: 71D64436-7545-4058-84BC-4F221F93D |
+[2026-03-09T15:45:13.589Z] 	| [1]          | 30 character substring | No matching records | FAIL     | NMR not displayed                        |
+[2026-03-09T15:45:13.589Z] 	+--------------+------------------------+---------------------+----------+------------------------------------------+
+[2026-03-09T15:45:13.589Z] 
+[2026-03-09T15:45:13.589Z] 	📋 TABLE 5 — VALIDATION IV: RESET VERIFICATION
+[2026-03-09T15:45:13.589Z] 	+--------------+------------+------------+------------+------------+------------+------------+------------+
+[2026-03-09T15:45:13.589Z] 	| Account      | Acc OK     | Conn OK    | GUID OK    | Out OK     | Sort OK    | No NMR     | Rows OK    |
+[2026-03-09T15:45:13.589Z] 	+--------------+------------+------------+------------+------------+------------+------------+------------+
+[2026-03-09T15:45:13.589Z] 	| [347]        | PASS       | PASS       | PASS       | PASS       | PASS       | PASS       | PASS       |
+[2026-03-09T15:45:13.589Z] 	| [224]        | PASS       | PASS       | PASS       | PASS       | PASS       | PASS       | PASS       |
+[2026-03-09T15:45:13.589Z] 	| [1]          | PASS       | PASS       | PASS       | PASS       | PASS       | PASS       | PASS       |
+[2026-03-09T15:45:13.589Z] 	+--------------+------------+------------+------------+------------+------------+------------+------------+
+[2026-03-09T15:45:13.589Z] 
+[2026-03-09T15:45:13.589Z] 	📋 TABLE 6 — CSV DOWNLOAD VALIDATION
+[2026-03-09T15:45:13.589Z] 	+------------+-----------------+----------------------------+----------------+--------+------------+------------+--------------+----------+--------------------------------------------------------------+
+[2026-03-09T15:45:13.589Z] 	| Account    | Connection      | Sort (Screen)              | Sort (File)    | Sort   | UI Entries | DL Records | File Lines   | Entries  | File Name                                                    |
+[2026-03-09T15:45:13.589Z] 	+------------+-----------------+----------------------------+----------------+--------+------------+------------+--------------+----------+--------------------------------------------------------------+
+[2026-03-09T15:45:13.589Z] 	| [1]        | All Connections | Last Updated Ascending     | N/A            | N/A    | 33         | 33         | 34 (1h+33r)  | PASS     | III.II..3.1.Last Updated Ascending.[1].All Connections.csv   |
+[2026-03-09T15:45:13.589Z] 	| [1]        | All Connections | Connection ID Ascending    | N/A            | N/A    | 33         | 33         | 34 (1h+33r)  | PASS     | III.II..3.2.Connection ID Ascending.[1].All Connections.csv  |
+[2026-03-09T15:45:13.589Z] 	| [1]        | All Connections | Connection Name Ascending  | N/A            | N/A    | 33         | 33         | 34 (1h+33r)  | PASS     | III.II..3.3.Connection Name Ascending.[1].All Connections.cs |
+[2026-03-09T15:45:13.589Z] 	| [1]        | All Connections | Last Updated Descending    | N/A            | N/A    | 33         | 33         | 34 (1h+33r)  | PASS     | III.II..3.4.Last Updated Descending.[1].All Connections.csv  |
+[2026-03-09T15:45:13.589Z] 	| [1]        | All Connections | Connection ID Descending   | N/A            | N/A    | 33         | 33         | 34 (1h+33r)  | PASS     | III.II..3.5.Connection ID Descending.[1].All Connections.csv |
+[2026-03-09T15:45:13.589Z] 	| [1]        | All Connections | Connection Name Descending | N/A            | N/A    | 33         | 33         | 34 (1h+33r)  | PASS     | III.II..3.6.Connection Name Descending.[1].All Connections.c |
+[2026-03-09T15:45:13.589Z] 	+------------+-----------------+----------------------------+----------------+--------+------------+------------+--------------+----------+--------------------------------------------------------------+
+[2026-03-09T15:45:13.589Z] 	DL Records = data rows (excl. header) | File Lines = header + records | Sort (File) = column used for sort verification
+[2026-03-09T15:45:13.589Z] 
+[2026-03-09T15:45:13.589Z] ════════════════════════════════════════════════════════════════════════════════
+
+[2026-03-09T15:45:13.589Z] 
+❌ Total failures: 32
+[2026-03-09T15:45:13.589Z] STEP END: 8: Then the user verifies the Connections page as a {word} (8m 15s)
+[2026-03-09T15:45:13.589Z] STEP FAILED: 8: Then the user verifies the Connections page as a {word}
+[2026-03-09T15:45:13.589Z] ERROR: Connections validation failed

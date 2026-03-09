@@ -1,11 +1,15 @@
-
+const fs = require('fs');
+const path = require('path');
 const { Then } = require('../hooks/bdd');
 const { expect, request } = require('@playwright/test');
 const config = require('../../config');
 
 Then(
-  'the user verifies the Connections page at the exhaustive factor of {int} percent',
-  async ({ page }, testInfo, exhaustiveFactor) => {
+  'the user verifies the Connections page as a {word}',
+  async ({ page }, testInfo, role) => {
+
+    const exhaustiveFactor = config.exhaustiveFactor;
+
     testInfo?.setTimeout(12000000);
     const logger = testInfo?.logger;
 
@@ -33,11 +37,35 @@ Then(
       }
     };
 
+
+    const excludeSubAccountsLocator = locators['CHK-ExcludeSubAccounts.Connections.default'];
+    await safe('Click on the Exclude Sub-accounts checkbox', async () => {
+      logger?.log('Clicking on the Exclude Sub-accounts checkbox');
+      await page.locator(excludeSubAccountsLocator).click();
+      logger?.log(`\t\t\t\t\t\t\t\tPerforming CLICK action | Element: CHK-ExcludeSubAccounts.Connections.default | Locator: ${excludeSubAccountsLocator}`);
+    });
+
+    if (role === 'admin') {
+      logger?.log('The selected role is "admin"');
+      console.log('Lets verify the Connections page as an admin');
+    } else if (role === 'parent') {
+      logger?.log('The selected role is "parent"');
+      console.log('Lets verify the Connections page as a parent');
+    } else if (role === 'user') {
+      logger?.log('The selected role is "user"');
+      console.log('Lets verify the Connections page as a user');
+    } else {
+      logger?.log('The selected role is invalid');
+      console.log('Lets verify the Connections page as a admin');
+      role = 'admin';
+    }
+
+    logger?.log(`\t\t\t\t\t\t Exhaustive Factor from config (exhaustiveFactor in config.js) = ${exhaustiveFactor}\n\n`);
     /* -------------------------------
        Validation 1. Step 1.1: Load category-counts
     --------------------------------*/
-    logStep('\n\n\nValidation I. Checking the number of parent accounts in the API against the UI');
-    logger?.log('\t\t\tVal-Step I.1: Loading the data from the category-counts API');
+    logStep('Validation I. Checking the number of parent accounts in the API against the UI');
+    logger?.log('\t\tSELECTION-Step I.1: Loading the data from the category-counts API');
 
     const categoryCountsUrl = `${config.databaseUrl}/api/connections/category-counts`;
     logger?.log(`\t\t\t\tCalling category-counts API: ${categoryCountsUrl}`);
@@ -50,75 +78,167 @@ Then(
       .filter((a) => a.parent === true)
       .sort((a, b) => b.connectionCount - a.connectionCount);
 
+    const allAccounts = categoryJson.data.byAccount || [];
+
     logPlain(`\t\t\t\tParents: ${JSON.stringify(parents)}`);
-    logOk(`\t\t\t\tLoaded ${parents.length} parent accounts from API`);
+    logger?.log(`\t\t\t\tLoaded ${parents.length} parent accounts from API`);
 
     /* All Accounts total: use API grandTotal when present, else sum of parents' connectionCount */
     const totalConnectionsAllAccounts =
       typeof categoryJson.data.grandTotal === 'number'
         ? categoryJson.data.grandTotal
         : parents.reduce((s, p) => s + (p.connectionCount || 0), 0);
-    logger?.log(`\t\t\t\tAll Accounts expected total (grandTotal): ${totalConnectionsAllAccounts}`);
+    logger?.log(`\t\t\t\tAll Accounts expected total (grandTotal): ${totalConnectionsAllAccounts}\n`);
+
+    /* -------------------------------
+       Account Switch for parent/user roles (before exhaustive factor)
+       Required locators: BTN-AccoutSelectPen, INP-AccountName, DDI-AccountNameWithID,
+       DDI-1stAccount, BTN-Switch (all .AccountSwitch.default)
+    --------------------------------*/
+    let switchedAccount = null;
+    if (role === 'parent' || role === 'user') {
+      const required = [
+        'BTN-AccoutSelectPen.AccountSwitch.default',
+        'INP-AccountName.AccountSwitch.default',
+        'BTN-Switch.AccountSwitch.default',
+      ];
+      for (const k of required) {
+        if (!locators[k]) throw new Error(`Missing locator for account switch: ${k}`);
+      }
+      if (role === 'parent' && !locators['DDI-AccountNameWithID.AccountSwitch.default']) {
+        throw new Error('Missing locator: DDI-AccountNameWithID.AccountSwitch.default');
+      }
+      if (role === 'user' && !locators['DDI-1stAccount.AccountSwitch.default']) {
+        throw new Error('Missing locator: DDI-1stAccount.AccountSwitch.default');
+      }
+    }
+    if (role === 'parent') {
+      const parentAccounts = parents;
+      if (parentAccounts.length === 0) {
+        throw new Error('No parent accounts found in category-counts API');
+      }
+      const selectedParent = parentAccounts[Math.floor(Math.random() * parentAccounts.length)];
+      const uIRep = selectedParent.uIRep || '';
+      const match = uIRep.match(/^(.+?)\s*\[(\d+)\]/);
+      const A = match ? match[1].trim() : uIRep;
+      const B = match ? `${match[1].trim()} (${match[2]})` : uIRep;
+      logger?.log(`\t\t\t\tParent role: selected random parent: ${JSON.stringify(selectedParent)}`);
+      logger?.log(`\t\t\t\tInput text A: "${A}", Search text B: "${B}"`);
+
+      await safe('Click Account Select Pen (parent switch)', async () => {
+        await page.locator(locators['BTN-AccoutSelectPen.AccountSwitch.default']).click();
+        logger?.log(`\t\t\t\tPerforming CLICK | BTN-AccoutSelectPen.AccountSwitch.default`);
+      });
+      await safe('Enter account name and select (parent)', async () => {
+        await page.locator(locators['INP-AccountName.AccountSwitch.default']).fill(A);
+        await page.waitForTimeout(1000);
+        const ddiLocator = locators['DDI-AccountNameWithID.AccountSwitch.default'].replace('AccountName', B);
+        await page.locator(ddiLocator).click();
+        logger?.log(`\t\t\t\tPerforming FILL then SELECT | INP-AccountName, DDI-AccountNameWithID with B="${B}"`);
+      });
+      await safe('Click Switch button (parent)', async () => {
+        await page.locator(locators['BTN-Switch.AccountSwitch.default']).click();
+        logger?.log(`\t\t\t\tPerforming CLICK | BTN-Switch.AccountSwitch.default`);
+      });
+      await page.waitForTimeout(10000);
+      switchedAccount = selectedParent;
+      logger?.log(`\t\t\t\tSwitched to parent account: ${switchedAccount.uIRep}\n`);
+    } else if (role === 'user') {
+      const childAccounts = allAccounts.filter(
+        (a) => a.parent === false && a.accountID >= 1000 && a.accountID <= 9999
+      );
+      if (childAccounts.length === 0) {
+        throw new Error('No child accounts with 4-digit accountID found in category-counts API');
+      }
+      const selectedChild = childAccounts[Math.floor(Math.random() * childAccounts.length)];
+      const A = String(selectedChild.accountID);
+      logger?.log(`\t\t\t\tUser role: selected random 4-digit child: ${JSON.stringify(selectedChild)}`);
+      logger?.log(`\t\t\t\tInput text A (accountID): "${A}"`);
+
+      await safe('Click Account Select Pen (user switch)', async () => {
+        await page.locator(locators['BTN-AccoutSelectPen.AccountSwitch.default']).click();
+        logger?.log(`\t\t\t\tPerforming CLICK | BTN-AccoutSelectPen.AccountSwitch.default`);
+      });
+      await safe('Enter account ID and select first (user)', async () => {
+        await page.locator(locators['INP-AccountName.AccountSwitch.default']).fill(A);
+        await page.waitForTimeout(1000);
+        await page.locator(locators['DDI-1stAccount.AccountSwitch.default']).click();
+        logger?.log(`\t\t\t\tPerforming FILL then SELECT first | INP-AccountName, DDI-1stAccount.AccountSwitch.default`);
+      });
+      await safe('Click Switch button (user)', async () => {
+        await page.locator(locators['BTN-Switch.AccountSwitch.default']).click();
+        logger?.log(`\t\t\t\tPerforming CLICK | BTN-Switch.AccountSwitch.default`);
+      });
+      await page.waitForTimeout(10000);
+      switchedAccount = selectedChild;
+      logger?.log(`\t\t\t\tSwitched to user account: ${switchedAccount.uIRep}\n`);
+    }
 
     /* -------------------------------
        Validation 1. Step 1.3: Populating the Accounts from Account dropdown on the UI
+       (Skipped for parent/user - we switched to a single account scope)
     --------------------------------*/
-    logger?.log('\t\t\t\tVal-Step I.2: Populating the Accounts from Account dropdown on the UI');
-    await safe('Open Account dropdown', async () => {
-      logger?.log('\t\t\t\t->Opening Account dropdown');
-      await page.locator(locators['DDN-Account.Connections.default']).click();
-    });
-    logger?.log(`\t\t\t\t\tPerforming CLICK action | Element: DDN-Account.Connections.default | Locator: ${locators['DDN-Account.Connections.default']}`);
+    if (!switchedAccount) {
+      logger?.log('\t\tSELECTION-Step I.2: Populating the Accounts from Account dropdown on the UI');
+      await safe('Open Account dropdown', async () => {
+        logger?.log('\t\t\t\t->Opening Account dropdown');
+        await page.locator(locators['DDN-Account.Connections.default']).click();
+      });
+      logger?.log(`\t\t\t\t\tPerforming CLICK action | Element: DDN-Account.Connections.default | Locator: ${locators['DDN-Account.Connections.default']}`);
 
-    /* -------------------------------
-       Populatinf dropdown items
-    --------------------------------*/
-    await safe('Validate Account dropdown contents', async () => {
-      logger?.log('\t\t\t\t->Reading all account dropdown items');
-      const uiItems = await page
-        .locator(locators['DDI-AllAccounts.Connections.default'])
-        .allTextContents();
-      logger?.log(`\t\t\t\t\tPerforming READ action | Element: DDI-AllAccounts.Connections.default | Locator: ${locators['DDI-AllAccounts.Connections.default']}`);
+      /* -------------------------------
+         Populating dropdown items
+      --------------------------------*/
+      await safe('Validate Account dropdown contents (UI vs API)', async () => {
+        logger?.log('\t\t\t\t->Reading all account dropdown items');
+        const uiItems = await page
+          .locator(locators['DDI-AllAccounts.Connections.default'])
+          .allTextContents();
+        logger?.log(`\t\t\t\t\tPerforming READ action | Element: DDI-AllAccounts.Connections.default | Locator: ${locators['DDI-AllAccounts.Connections.default']}`);
 
-      const uiAccounts = uiItems.filter(item => item !== 'All Accounts');
-      logger?.log(`\t\t\t\tUI Accounts: ${JSON.stringify(uiAccounts)}`);
-      const apiParentIDs = parents.map(p => p.accountID);
-      const uiAccountIDs = uiAccounts
-        .map(text => {
-          const match = text.match(/\[(\d+)\]/);
-          return match ? Number(match[1]) : null;
-        })
-        .filter(id => id !== null);
+        const uiAccounts = uiItems.filter(item => item !== 'All Accounts');
+        logger?.log(`\t\t\t\tUI Accounts: ${JSON.stringify(uiAccounts)}`);
+        const apiParentIDs = parents.map(p => p.accountID);
+        const uiAccountIDs = uiAccounts
+          .map(text => {
+            const match = text.match(/\[(\d+)\]/);
+            return match ? Number(match[1]) : null;
+          })
+          .filter(id => id !== null);
 
-      logger?.log(`\t\t\t\tNumber of API Parent IDs: ${apiParentIDs.length}`);
-      logger?.log(`\t\t\t\tAPI Parent IDs: ${JSON.stringify(apiParentIDs)}`);
+        logger?.log(`\t\t\t\tNumber of API Parent IDs: ${apiParentIDs.length}`);
+        logger?.log(`\t\t\t\tAPI Parent IDs: ${JSON.stringify(apiParentIDs)}`);
 
-      logger?.log(`\t\t\t\tNumber of UI Account IDs: ${uiAccountIDs.length}`);
-      logger?.log(`\t\t\t\tUI Account IDs: ${JSON.stringify(uiAccountIDs)}`);
+        logger?.log(`\t\t\t\tNumber of UI Account IDs: ${uiAccountIDs.length}`);
+        logger?.log(`\t\t\t\tUI Account IDs: ${JSON.stringify(uiAccountIDs)}`);
 
-      const missingInUI = apiParentIDs.filter(id => !uiAccountIDs.includes(id));
-      const missingInAPI = uiAccountIDs.filter(id => !apiParentIDs.includes(id));
+        logger?.log('\n\t\t\t\tThe 2 additional accounts allowed in the UI are: 1. All Accounts, and 2. Aerialink Inc. Global Data [0]');
 
-      const difference = uiAccountIDs.length - apiParentIDs.length;
-      logger?.log(`\t\t\t\tDifference between UI and API account IDs: ${difference}`);
 
-      if (difference > 2) {
-        let errorMessage = 'Validation I. FAILED | The accountIDs count on UI has exceeded the accountIDs count on API by more than 2\n';
-        throw new Error(errorMessage);
-      } else {
-        if (missingInUI.length > 0) {
-          logger?.log(`\t\t\t\tIDs in API but missing in UI: ${missingInUI.join(', ')}`);
+        logger?.log(`\n`);
+
+        const missingInUI = apiParentIDs.filter(id => !uiAccountIDs.includes(id));
+        const missingInAPI = uiAccountIDs.filter(id => !apiParentIDs.includes(id));
+
+        const difference = uiAccountIDs.length - apiParentIDs.length;
+        logger?.log(`\t\t 🆔 → I.1.0`);
+        logger?.log(`\t\t\t\tDifference between UI and API account IDs: ${difference}`);
+
+
+        if (difference > 2) {
+          let errorMessage = '\n\t\t\t\t\t\t❌Validation I. FAILED | The accountIDs count on UI has exceeded the accountIDs count on API by more than 2\n';
+          throw new Error(errorMessage);
+        } else {
+          logger?.log('\n\t\t\t\t\t\t✅Validation I. PASSED | The accountIDs count on UI has exceeded the accountIDs count on API by more than 2\n');
+          if (missingInUI.length > 0) {
+            logger?.log(`\t\t\t\tIDs in API but missing in UI: ${missingInUI.join(', ')}`);
+          }
+          if (missingInAPI.length > 0) {
+            logger?.log(`\t\t\t\tIDs in UI but missing in API: ${missingInAPI.join(', ')}`);
+          }
         }
-        if (missingInAPI.length > 0) {
-          logger?.log(`\t\t\t\tIDs in UI but missing in API: ${missingInAPI.join(', ')}`);
-        }
-      }
-      logger?.log('\t\t\t\tThe 2 additional accounts allowed in the UI are: 1. All Accounts, and 2. Aerialink Inc. Global Data [0]');
-
-      logOk(
-        `Validation I. PASSED | Account dropdown validated by IDs | API=${apiParentIDs.length}, UI=${uiAccountIDs.length}. The count difference between UI and API is ${difference} which is not more than 2`
-      );
-    });
+      });
+    }
 
     const tableRows = [];
     const validationITableRows = [];
@@ -135,6 +255,7 @@ Then(
     let showEntriesReportRows = [];
     const guidReportRows = [];
     const resetReportRows = [];
+    const csvDownloadReportRows = [];
 
     tableRows.push({
       validation: '1',
@@ -241,7 +362,9 @@ Then(
         .slice(0, targetCount);
     };
 
-    const selectedParents = selectParentsForExhaustiveCoverage(parents, exhaustiveFactor);
+    const selectedParents = switchedAccount
+      ? [switchedAccount]
+      : selectParentsForExhaustiveCoverage(parents, exhaustiveFactor);
 
     logger?.log(`\t\t\t\tSelected parents (${selectedParents.length}): ${JSON.stringify(
       selectedParents.map(p => ({
@@ -251,32 +374,41 @@ Then(
     )}`);
 
     logger?.log(
-      `🧠 Parent selection applied | Exhaustive=${exhaustiveFactor}% | Selected ${selectedParents.length} of ${parents.length} parents based on distribution\n\n\n`
+      switchedAccount
+        ? `🧠 Role=${role} | Single account scope: ${switchedAccount.uIRep}\n\n\n`
+        : `🧠 Parent selection applied | Exhaustive=${exhaustiveFactor}% | Selected ${selectedParents.length} of ${parents.length} parents based on distribution\n\n\n`
     );
 
-    /* Build list to process: mandatory 1st = All Accounts, then selected parents */
+    /* Build list to process: admin = All Accounts + selected parents; parent/user = single switched account */
     const percentCount = (total) => Math.max(1, Math.ceil((total * exhaustiveFactor) / 100));
-    const accountsToProcess = [
-      { label: 'All Accounts', accountID: null, uIRep: 'All Accounts', connectionCount: totalConnectionsAllAccounts },
-      ...selectedParents.map((p) => ({ ...p, label: `[${p.accountID}]`, uIRep: p.uIRep })),
-    ];
-    logger?.log(`\t\t\t\tAccounts to process: ${accountsToProcess.length} (1 All Accounts + ${selectedParents.length} parents)`);
+    const accountsToProcess = switchedAccount
+      ? [{ ...switchedAccount, label: `[${switchedAccount.accountID}]`, uIRep: switchedAccount.uIRep }]
+      : [
+          ...selectedParents.map((p) => ({ ...p, label: `[${p.accountID}]`, uIRep: p.uIRep })),
+          { label: '[1]', accountID: 1, uIRep: 'Aerialink Inc. [1]', connectionCount: totalConnectionsAllAccounts },
+        ];
+    const totalAccounts = accountsToProcess.length;
+    logger?.log(`\t\t\t\tTotal accounts: ${totalAccounts}`);
+    logger?.log(`\t\t\t\tAccounts to process: ${accountsToProcess.length} (${selectedParents.length} parents + account [1])`);
 
     /* -------------------------------
        Validation 2. For the accounts in the selected parents, perform the following steps: 1. 
     --------------------------------*/
     logger?.log('\t\t\t\tValidation II. Connections table validation: Record Counts(UI and API), Number of Rows Connection Selection,');
     logger?.log('\t\t\t\tWe will be validating the connections table for the accounts in the selected parents');
-    logger?.log(`\t\t\t\tselected parents: ${JSON.stringify(selectedParents)}\n`);
+    logger?.log(`\t\t\t\tselected parents: ${JSON.stringify(selectedParents)}`);
 
     let accountCount = 1;
     for (const account of accountsToProcess) {
-      let connectionsToTest = [];
-      const accountLabel = account.accountID === null ? 'All Accounts' : account.label;
-      const accountID = account.accountID;
-      logger?.log(`\n\n\n\n\t\t\t\tValidation II.${accountCount}: ${accountLabel} (connectionCount=${account.connectionCount})`);
 
-      logStep(`\t\t\t\tValidation II.${accountCount}: Validate record counts between API and UI | For account ${account}`);
+      const isLastAccount = accountCount === totalAccounts;
+      logger?.log(`\t\t\t\t\t\tIs this the last account: ${isLastAccount}\n\n\n\n`);
+      let connectionsToTest = [];
+      const accountLabel = account.label;
+      const accountID = account.accountID;
+      logger?.log(`SELECTION II.${accountCount}: ${accountLabel} Selecting CONNECTIONS for the account: ${accountLabel} whose connection-Count is:${account.connectionCount})`);
+
+      logStep(`\t\t\tSELECTION II.${accountCount}: Choosing the Accounts dropdown and selecting the account: ${accountLabel} and opening the Connections dropdown to list its Connections options`);
       await safe('Close any open dropdowns by clicking on the ConnectionGUID field', async () => {
         logger?.log('\t\t\t\t\t\t->Closing any open dropdowns by clicking on the ConnectionGUID input field');
         await page.locator(locators['INP-ConnectionGUID.Connections.default']).click();
@@ -325,7 +457,7 @@ Then(
           .allTextContents();
 
         logger?.log(
-          `\t\t\t\t\t\t\t\tPerforming READ action | Element: DDI-AllConnections.Connections.default | Locator: ${locators['DDI-AllConnections.Connections.default']} | Raw count: ${texts.length}`
+          `\t\t\t\t\t\t\t\tPerforming READ action | Element: DDI-AllConnections.Connections.default | Locator: ${locators['DDI-AllConnections.Connections.default']} | List of Connections count: ${texts.length}\n`
         );
 
         // Normalize + trim
@@ -344,22 +476,34 @@ Then(
           .filter(Boolean);
 
         const toTake = percentCount(accountIds.length);
+
+        if (toTake > 7) {
+          toTake = 7;
+          logger?.log('As the connection count is more than 7, we will only select 8 connections to test including "All Connections"');
+        }
+       
+
         const selectedIds = accountIds.slice(0, toTake);
 
         connectionsToTest.push(...selectedIds);
 
-        logger?.log(`\t\t\t\t\t\tconnectionsToTest after load: ${JSON.stringify(connectionsToTest)}`);
-        logger?.log(`\t\t\t\t\t\tConnections to test: ${connectionsToTest.join(', ')}`);
+        logger?.log(`\t\t\t\tconnectionsToTest after load: ${JSON.stringify(connectionsToTest)}`);
+        logger?.log(`\t\t\t\tConnections to test: ${connectionsToTest.join(', ')}`);
+
+
 
         logger?.log(
-          `\t\t\t\t\t\tConnections in dropdown: ${accountIds.length}. ` +
+          `\t\t\t\tConnections in dropdown: ${accountIds.length}. ` +
           `Using ${toTake} ( exhaustive factor: ${exhaustiveFactor}%): ` +
           `${connectionsToTest.slice(0, 4).join(', ')}${connectionsToTest.length > 4 ? '...' : ''}`
         );
       });
+      logger?.log(`\n`);
+
+
 
       logger?.log(
-        `\n\n\n\n\t\t\t\t\t\t\t\t\t\t\t\tConnections selected for testing the account: ${accountLabel}`
+        `\t\t\t\t\t\t\t\t\t\t\t\tConnections selected for testing the account: ${accountLabel}`
       );
 
 
@@ -370,21 +514,51 @@ Then(
         );
       }
 
+
       for (let i = 0, connectCount = 1; i < connectionsToTest.length; i++, connectCount++) {
+        logger?.log(`\t\t\t\t\t\t\t\Account # ${accountCount} of ${totalAccounts}`);
+        logger?.log(`\t\t\t\t\t\t\t\tConnection #${connectCount} of ${connectionsToTest.length}`);
+
+
+       
+        // logger?.log(`\t\t\t\t\t\t\t\tPage URL Before Refresh: ${await page.url()}`);
+        // logger?.log(`\t\t\t\t\t\t\t\tPage refreshed after each connection`);
+        // await page.reload();
+        // logger?.log(`\t\t\t\t\t\t\t\tPage URL After Refresh: ${await page.url()}`);
+
+        const isLastConnection = i === connectionsToTest.length - 1;
+        logger?.log(`\t\t\t\t\t\t\t\tIs this the last connection: ${isLastConnection}`);
         const connection = connectionsToTest[i];
         logger?.log(
-          `\n\n\t\t\t\t\tValidation II.${accountCount}.${connectCount}: Testing connection filter: ${connection} | ${accountLabel}.${connection}`
+          `Validation II.${accountCount}.${connectCount}: Testing connection filter: ${connection} | ${accountLabel}.${connection}`
         );
 
 
         await safe('Select the Connections and Search', async () => {
 
-          if (connection !== 'All Connections') {
-            await page.locator(locators['DDN-Connection.Connections.default']).click();
-          }
+          await page.locator(locators['DDN-Connection.Connections.default']).click();
 
-          logger?.log(`\t\t\t\t\t\t->Entering ${connection} in INP-ConnectionSearchText and selecting`);
-          await page.locator(locators['INP-ConnectionSearchText.Connections.default']).fill(connection);
+
+          logger?.log(`\t\t\t\t\t\t->Entering '${connection}' in INP-ConnectionSearchText and selecting`);
+          // if INP-ConnectionSearchText.Connections.default is not visible, then click on DDN-Connection.Connections.default else dont click on it  
+          logger?.log(`\t\t\t\t\t\t->Checking if INP-ConnectionSearchText.Connections.default is visible`);
+          const connectionSearchTextLocator = locators['INP-ConnectionSearchText.Connections.default'];
+          const connectionSearchTextVisible = await page.locator(connectionSearchTextLocator).isVisible();
+          if (connectionSearchTextVisible) {
+            logger?.log(`\t\t\t\t\t\t->INP-ConnectionSearchText.Connections.default is visible, so we will fill the connection string in the input`);
+            logger?.log(`\t\t\t\t\t\t->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default`);
+          } else {
+            logger?.log(`\t\t\t\t\t\t->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default`);
+            await page.locator(locators['DDN-Connection.Connections.default']).click();
+            logger?.log(`\t\t\t\t\t\t->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: ${locators['DDN-Connection.Connections.default']}`);
+            await page.waitForTimeout(500);
+          }
+          
+          await page.locator(locators['INP-ConnectionSearchText.Connections.default']).fill(connection + " ");
+          await page.waitForTimeout(1000);
+          // delete the space fron the input
+          await page.locator(locators['INP-ConnectionSearchText.Connections.default']).press('Backspace');
+          await page.waitForTimeout(1000);
           logger?.log(`\t\t\t\t\t\t\t\tPerforming FILL action | Element: INP-ConnectionSearchText.Connections.default | Value: ${connection} | Locator: ${locators['INP-ConnectionSearchText.Connections.default']}`);
           await page.waitForTimeout(300);
 
@@ -394,12 +568,17 @@ Then(
           const optionLoc = page.locator(connectionLocator).first();
           await optionLoc.waitFor({ state: 'visible', timeout: 5000 });
           const connectionText = (await optionLoc.innerText()).trim();
+
           logger?.log(`\t\t\t\t\t\t\t\tConnection 1st option innerText: ${connectionText}`);
 
+
+          logger?.log(`\t\t\t\t\t🧪 Val-step II.${accountCount}.${connectCount}.0 Validate if the 1st option in the Connection dropdown contains the connection string: ${connection}`);
+          logger?.log(`\t\t\t\t\t 🆔 → II.${accountCount}.${connectCount}.0`);
           if (!connectionText.includes(connection)) {
             throw new Error(`\t\t\t\t\t\t❌ Val-step II.${accountCount}.${connectCount}.0: Connection "${connection}" not found in 1st option text: "${connectionText}"`);
+          } else {
+            logger?.log(`\t\t\t\t\t\t✅ Val-step II.${accountCount}.${connectCount}.0: Connection "${connection}" is found in the 1st option text: ${connectionText})`);
           }
-          logger?.log(`\t\t\t\t\t\t✅ Val-step II.${accountCount}.${connectCount}.0: Connection "${connection}" validated (1st option text: ${connectionText})`);
 
           logger?.log('\t\t\t\t\t\t->Clicking first connection option (DDI-1stConnection.Connections.default)');
           await optionLoc.click();
@@ -412,9 +591,13 @@ Then(
         if (accountID != null && locators['TXT-SearchResultsAccountID.Connections.default']) {
           const searchResultLocator = locators['TXT-SearchResultsAccountID.Connections.default'].replace('$^$', accountID);
           await safe(`Wait for Search Results accountID: ${accountID}`, async () => {
+            logger?.log(`\t\t\t\t\t\t\t\tWAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: ${searchResultLocator}`);
+
             logger?.log(`\t\t\t\t\t\t->Waiting for Search Results accountID: ${accountID}`);
             await page.locator(searchResultLocator).waitFor({ state: 'visible', timeout: 60_000 });
-            logger?.log(`\t\t\t\t\t\t\t\tWAIT action | Element: TXT-SearchResultsAccountID.Connections.default | Locator: ${searchResultLocator}`);
+            
+            const searchResultText = await page.locator(searchResultLocator).innerText();
+            logger?.log(`\t\t\t\t\t\t\t\tSearch Results text: ${searchResultText}`);
           });
         } else {
           logger?.log('\t\t\t\t\t\t->Waiting for networkidle (All Accounts path)');
@@ -596,9 +779,12 @@ Then(
         }
 
         /*  Pagination (first/mid/last), Sort, Reset, Show entries, Connection GUID, API verify - when main validation passed */
+        var csvDownloadCount = 0;
 
-        // if (accountCount === 1 && connection === 'All Connections') {
-          if (connection === 'All Connections') {
+        if (accountID === 1 && connection === 'All Connections') {
+
+          logger?.log(`\n\n\n\t\t\t\t\t\t TRIAGING Account: ${accountLabel} and Connection: ${connection}`);
+
           logger?.log(`\n\n\n\t\t\t\t\t\t Validation III.: Pagination, Sorting and reset | For account: '${accountLabel}' & Connection: '${connection}'`); logger?.log(`\t\t\t\t\t\tWe will perform the Pagination, Sorting and reset to only  this is account number ${accountCount}`);
           logger?.log(`\t\t\t\t\t\t Looping over the SortBy options`);
 
@@ -627,6 +813,31 @@ Then(
             logger?.log(
               `\t\t\t\t\t\tIII.${i + 1}. Selecting Sort By "${sort}" | Locator: ${sortBySelect}`
             );
+
+            // Click on connection dropdown and enter the connectio name in the input and select the connection  
+            await safe('Click on connection dropdown and enter the connection name in the input and select the connection', async () => {
+              logger?.log(`\t\t\t\t\t\t->Clicking on connection dropdown and entering the connection name in the input and selecting the connection`);
+              // Check if INP-ConnectionSearchText.Connections.default is visible and if it is dont click on DDN-Connection.Connections.default' else click on it
+              const connectionSearchTextLocator = locators['INP-ConnectionSearchText.Connections.default'];
+              const connectionSearchTextVisible = await page.locator(connectionSearchTextLocator).isVisible();
+              if (connectionSearchTextVisible) {
+                logger?.log(`\t\t\t\t\t\t->INP-ConnectionSearchText.Connections.default is already visible, so we will not click on DDN-Connection.Connections.default`);
+              } else {
+                logger?.log(`\t\t\t\t\t\t->INP-ConnectionSearchText.Connections.default is not visible, so we will click on DDN-Connection.Connections.default`);
+                await page.locator(locators['DDN-Connection.Connections.default']).click();
+                logger?.log(`\t\t\t\t\t\t->Clicking on the dropdown | Element: DDN-Connection.Connections.default | Locator: ${locators['DDN-Connection.Connections.default']}`);
+                await page.waitForTimeout(500);
+              }
+
+
+              await page.locator(locators['INP-ConnectionSearchText.Connections.default']).fill(connection + " ");
+              logger?.log(`\t\t\t\t\t\t->Filling the connection name in the input | Element: INP-ConnectionSearchText.Connections.default | Locator: ${locators['INP-ConnectionSearchText.Connections.default']} | Value: ${connection + " "}`);
+              await page.waitForTimeout(300);
+              await page.locator(locators['INP-ConnectionSearchText.Connections.default']).press('Backspace');
+              logger?.log(`\t\t\t\t\t\t->Pressing backspace to delete the space | Element: INP-ConnectionSearchText.Connections.default | Locator: ${locators['INP-ConnectionSearchText.Connections.default']}`);
+              await page.waitForTimeout(300);
+              await page.locator(locators['DDN-Connection.Connections.default']).selectOption({ label: connection });
+            });
 
             // Execute search
             await page.locator(locators['BTN-Search.Connections.default']).click();
@@ -674,7 +885,7 @@ Then(
 
               try {
                 logger?.log(
-                  `\n\t\t\t\t\t\t\t\t\t\t ---------- III.${i + 1}.${e + 1} Show entries: ${entriesLabel} | Sort: ${sort} ----------`
+                  `\n\t\t\t\t\t\t\t\t\t\t ---------- III.${i + 1}.${e + 1} Show entries: ${entriesLabel} | Sort: ${sort} ---------- account: ${accountLabel} & connection: ${connection}`
                 );
 
 
@@ -923,13 +1134,125 @@ Then(
                 logger?.log(`\t\t\t\t\t\t (continuing to next Show entries option)`);
               }
             }
+
+            // Download the CSV and validate the data
+
+            csvDownloadCount = csvDownloadCount + 1;
+            const outputSelectLoc = locators['DDN-Output.Connections.default'];
+            const summaryLocatorForCsv = locators['TXT-TotalEntries.Connections.default'] || locators['TXT-TotalEntries.CommonPagination.default'];
+            const summaryTextForCsv = await page.locator(summaryLocatorForCsv).first().innerText();
+            const totalMatchCsv = summaryTextForCsv.match(/of\s+([\d,]+)\s+entries?/i);
+            const uiEntriesCount = totalMatchCsv ? Number(totalMatchCsv[1].replace(/,/g, '')) : 0;
+
+
+            const beforeDownloadUrl = page.url();
+            logger?.log(`\t\t\t\t\t\t->URL before Download | URL: ${beforeDownloadUrl}`);
+
+
+            logger?.log(`\n\n\n\t\t\t\t\t\tValidation III.II.${accountCount}.${csvDownloadCount}: CSV Download: UI Entries (before download) = ${uiEntriesCount} | Sort: ${sort} | Locator: ${summaryLocatorForCsv}`);
+            logger?.log(`\n\n\n\t\t\t\t\t\t Account Count: ${accountCount} and Connection: ${connection}`);
+            await safe('Select Download from Output and download CSV', async () => {
+              logger?.log(`\t\t\t\t\t\t->Selecting Download from Output dropdown`);
+              await page.selectOption(outputSelectLoc, { label: 'Download' });
+              logger?.log(`\t\t\t\t\t\t\t\tPerforming SELECT action | Element: DDN-Output.Connections.default | Locator: ${outputSelectLoc} | Value: Download`);
+              logger?.log(`\t\t\t\t\t\t->Clicking Search button to trigger download`);
+              const downloadPromise = page.waitForEvent('download', { timeout: 60000 });
+              await page.locator(locators['BTN-Search.Connections.default']).click();
+              logger?.log(`\t\t\t\t\t\t\t\tPerforming CLICK action | Element: BTN-Search.Connections.default | Locator: ${locators['BTN-Search.Connections.default']}`);
+              const download = await downloadPromise;
+              const downloadDir = path.isAbsolute(config.csvDownloadLocation) ? config.csvDownloadLocation : path.resolve(process.cwd(), config.csvDownloadLocation);
+              fs.mkdirSync(downloadDir, { recursive: true });
+              const savePath = path.join(downloadDir, download.suggestedFilename());
+              await download.saveAs(savePath);
+              logger?.log(`\t\t\t\t\t\t\t\tDownload saved to: ${savePath}`);
+
+              const content = fs.readFileSync(savePath, 'utf8');
+              const lines = content.split(/\r?\n/).filter(Boolean);
+              const headerLine = lines[0] || '';
+              const dataRows = lines.slice(1);
+              const downloadedCount = dataRows.length;
+              let entriesResult = 'PASS';
+
+              // The actual expected rows in csv should be same as uiEntriesCount if it is less than 1000 rows or at maximum 1000 rows
+              if (uiEntriesCount < 1000) {
+                if (downloadedCount === uiEntriesCount) {
+                  entriesResult = 'PASS';
+                } else {
+                  entriesResult = 'FAIL';
+                }
+              } else {
+                if (downloadedCount === 1000) {
+                  entriesResult = 'PASS';
+                } else {
+                  entriesResult = 'FAIL';
+                }
+              }
+              if (entriesResult === 'PASS') {
+                logger?.log(`\t\t\t\t\t\t✅ Validation III.II.${accountCount}.${csvDownloadCount}: CSV: Downloaded rows = ${downloadedCount} | UI entries = ${uiEntriesCount} | Entries Result: PASS`);
+              } else {
+                logger?.log(`\t\t\t\t\t\t❌Validation III.II.${accountCount}.${csvDownloadCount}: CSV: Downloaded rows = ${downloadedCount} | UI entries = ${uiEntriesCount} | Entries Result: FAIL`);
+              }
+
+              //Print the header of the csv
+              logger?.log(`\t\t\t\t\t\t Header of the csv: \n${headerLine}`);
+              // print first 10 rows of the csv and last 10 rows of the csv
+              logger?.log(`\t\t\t\t\t\t First 2 rows of the csv: \n${dataRows.slice(0, 2).join('\n')}`);
+              logger?.log(`\t\t\t\t\t\t Last 2 rows of the csv: \n${dataRows.slice(-2).join('\n')}`);
+
+              const ascending = /Ascending/i.test(sort);
+              const headerCols = headerLine.split(',').map(h => h.trim().replace(/^"|"$/g, ''));
+              const sortColName = /Last Updated/i.test(sort) ? 'Last Updated' : /Connection ID/i.test(sort) ? 'Connection ID' : /Connection Name/i.test(sort) ? 'Connection Name' : null;
+              const sortColIndex = sortColName ? headerCols.findIndex(c => (c && c.includes(sortColName)) || c === sortColName) : -1;
+              let sortPassFail = 'N/A';
+              if (sortColIndex >= 0 && dataRows.length > 1) {
+                const values = dataRows.map(row => {
+                  const parts = row.split(',');
+                  return (parts[sortColIndex] || '').trim().replace(/^"|"$/g, '');
+                });
+                let sorted = true;
+                for (let v = 0; v < values.length - 1; v++) {
+                  const cmp = (values[v] || '').localeCompare(values[v + 1] || '', undefined, { numeric: true });
+                  if (ascending && cmp > 0) sorted = false;
+                  if (!ascending && cmp < 0) sorted = false;
+                }
+                sortPassFail = sorted ? 'PASS' : 'FAIL';
+                logger?.log(`\t\t\t\t\t\t CSV: Sort column "${sortColName}" (index ${sortColIndex}) | Sort Pass/Fail: ${sortPassFail}`);
+              }
+
+              // Save the csv at the config file csvDownloadLocation location with III.II.${csvDownloadCount}.${sort}.${accountLabel}.${connection}.uiEntriesCount.downloadedCount.entriesResult.sortPassFail.csv file
+              const csvDownloadLocation = config.csvDownloadLocation;
+              const csvFileName = `III.II..${accountCount}.${csvDownloadCount}.${sort}.${accountLabel}.${connection}.csv`;
+              const csvFilePath = path.join(csvDownloadLocation, csvFileName);
+              fs.writeFileSync(csvFilePath, content);
+              logger?.log(`\n\t\t\t\t\t\t CSV saved to: ${csvFilePath}`);
+
+              const totalLinesInFile = lines.length;
+              csvDownloadReportRows.push({
+                account: accountLabel,
+                connection,
+                sortOnScreen: sort,
+                sortInFile: sortColName && sortColIndex >= 0 ? `${sortColName} (col ${sortColIndex})` : 'N/A',
+                sortPassFail,
+                uiEntriesCount: String(uiEntriesCount),
+                downloadedRecords: String(downloadedCount),
+                totalLinesInFile: `${totalLinesInFile} (1h+${downloadedCount}r)`,
+                entriesResult,
+                fileName: csvFileName,
+              });
+            });
+
+            await page.goto(beforeDownloadUrl);
+            logger?.log(`\t\t\t\t\t\t->Entering the URL later | URL: ${beforeDownloadUrl}`);
+            await page.waitForLoadState('networkidle');
+            await page.waitForTimeout(500);
+
           }
           /* Show Entries report printed at end with other tables */
         }
       }
 
-      // Validate the Connection GUID field and reset (Validation IV)
-      logStep(`\t\t\t\tValidation IV.${accountCount}: Validate the Connection GUID field (account: ${accountLabel})`);
+      // Validate the Connection GUID field and reset (Validation V)
+      logStep(`\t\t\t\tValidation V.${accountCount}: Validate the Connection GUID field (account: ${accountLabel})`);
       await safe('Close any open dropdowns by clicking on the ConnectionGUID field', async () => {
         logger?.log('\t\t\t\t\t\t->Closing any open dropdowns by clicking on the ConnectionGUID input field');
         await page.locator(locators['INP-ConnectionGUID.Connections.default']).click();
@@ -938,7 +1261,7 @@ Then(
 
       const firstRowCellLocator = (locators['TRW-1stRow.Connections.default'] || '//tbody/tr[1]') + '/td[1]';
       await safe('Get Connection GUID from first row', async () => {
-        logger?.log('\t\t\t\t\t\t->Reading first row first cell (Connection GUID)');
+        logger?.log(`\t\t\t\t\t\t->Reading first row first cell (Connection GUID)`);
         const guidFromTable = (await page.locator(firstRowCellLocator).first().innerText()).trim();
         logger?.log(`\t\t\t\t\t\t\t\tPerforming READ action | Element: TRW-1stRow.Connections.default/td[1] | Locator: ${firstRowCellLocator} | Value: ${guidFromTable}`);
         if (guidFromTable.length !== 36) {
@@ -986,7 +1309,7 @@ Then(
 
 
       // Validate the Reset button
-      logger?.log(`\n\n\n\t\t\t\t\t\tValidation V.${accountCount}: Validate the Reset button | Account: ${accountLabel}`);
+      logger?.log(`\n\n\n\t\t\t\t\t\tValidation VI.${accountCount}: Validate the Reset button | Account: ${accountLabel}`);
 
 
 
@@ -1213,6 +1536,30 @@ Then(
         logger?.log(`\t| ${pad(row.accountLabel, wAcc)} | ${pad(row.accountOk, wCol)} | ${pad(row.connectionOk, wCol)} | ${pad(row.guidOk, wCol)} | ${pad(row.outputOk, wCol)} | ${pad(row.sortOk, wCol)} | ${pad(row.noNmrOk, wCol)} | ${pad(row.rowCountOk, wCol)} |`);
       }
       logger?.log('\t' + sep5);
+      logger?.log('');
+    }
+
+    if (csvDownloadReportRows.length > 0) {
+      const wAcc = Math.min(28, Math.max(10, ...csvDownloadReportRows.map((r) => String(r.account).length)));
+      const wConn = Math.min(20, Math.max(12, ...csvDownloadReportRows.map((r) => String(r.connection).length)));
+      const wSortScr = Math.min(32, Math.max(14, ...csvDownloadReportRows.map((r) => String(r.sortOnScreen).length)));
+      const wSortFile = Math.min(28, Math.max(14, ...csvDownloadReportRows.map((r) => String(r.sortInFile).length)));
+      const wSortPF = 6;
+      const wUi = Math.min(14, Math.max(10, ...csvDownloadReportRows.map((r) => String(r.uiEntriesCount).length)));
+      const wDl = Math.min(14, Math.max(10, ...csvDownloadReportRows.map((r) => String(r.downloadedRecords).length)));
+      const wTotal = Math.min(20, Math.max(12, ...csvDownloadReportRows.map((r) => String(r.totalLinesInFile).length)));
+      const wEnt = 8;
+      const wFile = Math.min(60, Math.max(12, ...csvDownloadReportRows.map((r) => String(r.fileName).length)));
+      const sep6 = `+${'-'.repeat(wAcc + 2)}+${'-'.repeat(wConn + 2)}+${'-'.repeat(wSortScr + 2)}+${'-'.repeat(wSortFile + 2)}+${'-'.repeat(wSortPF + 2)}+${'-'.repeat(wUi + 2)}+${'-'.repeat(wDl + 2)}+${'-'.repeat(wTotal + 2)}+${'-'.repeat(wEnt + 2)}+${'-'.repeat(wFile + 2)}+`;
+      logger?.log('\t📋 TABLE 6 — CSV DOWNLOAD VALIDATION');
+      logger?.log('\t' + sep6);
+      logger?.log(`\t| ${pad('Account', wAcc)} | ${pad('Connection', wConn)} | ${pad('Sort (Screen)', wSortScr)} | ${pad('Sort (File)', wSortFile)} | ${pad('Sort', wSortPF)} | ${pad('UI Entries', wUi)} | ${pad('DL Records', wDl)} | ${pad('File Lines', wTotal)} | ${pad('Entries', wEnt)} | ${pad('File Name', wFile)} |`);
+      logger?.log('\t' + sep6);
+      for (const row of csvDownloadReportRows) {
+        logger?.log(`\t| ${pad(row.account, wAcc)} | ${pad(row.connection, wConn)} | ${pad(row.sortOnScreen, wSortScr)} | ${pad(row.sortInFile, wSortFile)} | ${pad(row.sortPassFail, wSortPF)} | ${pad(row.uiEntriesCount, wUi)} | ${pad(row.downloadedRecords, wDl)} | ${pad(row.totalLinesInFile, wTotal)} | ${pad(row.entriesResult, wEnt)} | ${pad(row.fileName, wFile)} |`);
+      }
+      logger?.log('\t' + sep6);
+      logger?.log('\tDL Records = data rows (excl. header) | File Lines = header + records | Sort (File) = column used for sort verification');
       logger?.log('');
     }
 
